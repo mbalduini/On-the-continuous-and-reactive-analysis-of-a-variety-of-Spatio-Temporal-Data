@@ -1,0 +1,77 @@
+Idea of TOC
+
+Velocity
+* modelli, linguaggi e architetture
+  models
+    CQL(figura 2.1), SECRET
+  linguaggi
+    CQL, EPL 
+  architecture
+    k arch (tutto stream e in tempo reale)
+    lambda arch
+* vertically scalable engines
+  ESPER
+* horizontally scalable engines
+  KAFKA
+  SPARK/SPARK STREAMING
+  FLINK
+
+Variety
+* modelli, linguaggi e architetture
+  models
+    RDF, OWL
+  linguaggi
+    SPARQL 
+  architecture
+    OBDI
+* vertically scalable engines
+  un po' di RDF rep (jena, RDF4J, Virtuoso)
+  un po' di reasoners (hermit, RDFox, Ontop)
+* horizontally scalable engines
+  ...
+
+velocity + variety
+* modelli, linguaggi e architetture
+	* Stream Reasoning
+    * RDF stream, RSPQL
+    * Cascading reasoning
+* vertically scalable engines
+	* RDFox
+    * Laser ?
+* horizontally scalable engines
+	* CQELS Cloud
+    * Strider
+    * Laser ?
+    
+RSP Middlewares
+* principles
+  * tutto è uno stream
+  * continuous ingestion
+  * publish/subscribe system 
+  * reliable message-passing
+  * minimises latency
+* implementation
+  * SLD
+    * Linked Stream Middleware
+    
+    * RSP Services
+    * Triplewave
+    
+    
+* RSP Middlewares
+  * principles/requirements/design alternatives
+    * tutto è uno stream
+    * continuous ingestion
+    * publish/subscribe system 
+    * reliable message-passing
+    * minimises latency
+  * existing approaches
+  * my implementation experiences
+    * SLD
+    * RSP Services
+    
+* Urban Data analysis
+  * relevance/motivation
+    * existing approaches
+    * my experiences
+

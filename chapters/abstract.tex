@@ -1,0 +1,25 @@
+\chapter*{Abstract}
+
+In recent years, an increasing number of situations call for reactive decision making process based on a heterogeneous streaming data.
+In this context, the urban environment results particularly relevant thanks to the dense network of interactions between people and urban spaces that produces a great amount of spatio-temporal fast evolving data. Moreover, a modern city offers a multitude of stakeholders are interested in reactive decisions for urban planning, commuters, tourists.
+The growing use of location-based social networks, and, in general, the diffusion of mobile devices improved the ability to create an accurate and up-to-date representation of reality (a.k.a. Digital footprint or Digital reflection or Digital twin) exploiting either social media or mobile phones data, i.e. Call Data Records (CDR).
+However, better decisions can result from the analyses of multiple data sources simultaneously. 
+In this context, we investigate the problem of how to create an holistic conceptual model to represent heterogeneous spatio-temporal data and how to develop a streaming computational model to enable reactive decisions.
+The main outcomes of this research are \frappe{} conceptual model and \river{} streaming computational model with its implementations.
+
+\frappe{} is a conceptual model, more precisely an ontology, that exploits digital image processing terms to model spatio-temporal data and to enable space, time, and content analysis.
+It uses image processing common terms to bridge the gap between the data creators and visual interface creators and to enable visual analytics on spatio-temporal data.
+We first formalize the spatial and temporal concepts in \frappe{} 1.0, and then we add concepts related to the provenance and the content in \frappe{} 2.0.
+We check the adherence of both versions of \frappe{} to the five Tom Gruber's principles, and demonstrate the validity of the conceptual model in real world use cases.
+
+\river{} is a streaming computational model that postpones the data transformation until a system can benefit from it (\textit{lazy transformation} approach). In this thesis we present \river{} from conceptual and logical point of view and propose an example of architecture for a system that implements it (physical plan).
+We, then, present different implementations of \river{}, a single-threaded one (namely \sti{}) and two implementations based on distributed technologies (\sparkdi{} and \hivedi{}).
+We demonstrate the validity of \river{} by evaluating its implementations against already available system and one against the other.
+
+We propose real world use cases in Milan and Como to validate the approach of \frappe{} and \river{} in enabling visual analytics for spatio-temporal heterogeneous urban data.
+
+Finally, we reflect on limitations and state the future directions of this research work.
+In particular, those reflections involve the reasoning capabilities enabled by \frappe{}, the future evaluations of \river{} and the evolution of the graphic syntax we propose together with \river{}.
+
+
+

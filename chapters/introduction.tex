@@ -1,0 +1,119 @@
+\chapter{Introduction}\label{ch:intro}
+
+\textcolor{red}{FINAL - TO BE READ ONE LAST TIME}
+
+\section{Relevancy}\label{sec:relevancy}
+In an increasing number of situations, a decision must be reactive\footnote{Deciding an action in response to a stimulus before new incoming information makes the planned action ineffective.} and must be based on a variety of streaming data.
+In the electricity management domain, a reactive anomaly detection system, which processes the consumption data, must react in \textit{seconds} to avoid network problems. In oil and gas extraction sites, the analyses of sensors' readings from the wells have at most \textit{minutes} for the reactive detection of dangerous situations.
+
+The urban environment is particularly relevant when talking about reactive decisions. In modern cities, a dense network of interactions between people and urban spaces produces a great amount of spatio-temporal fast evolving data~\cite{kitchin2014real} and a multitude of stakeholders are interested in reactive decisions. 
+Tourists would value information about the \textit{current} top rated and less crowded attractions around the city~\cite{DBLP:journals/ws/BalduiniCDVHLKT12}. Commuters would like to know the \textit{current} busiest roads to choose the fastest way home~\cite{DBLP:journals/ws/LecueTHTBST14}. Public safety agencies would like to learn about over-crowded area \textit{during} a public event.
+
+In the mid 2000s, the growing use of location-based social networks via mobile devices, improved the ability to capture the people's interests, habits, and preferences in a privacy-preserving manner and enabled innovative scenarios.
+It became possible to create an accurate and up-to-date representation of reality (a.k.a. Digital footprint or Digital reflection or Digital twin) exploiting either social media or mobile phones data, i.e. Call Data Records (CDR). 
+For instance, analyzing social media Cho et al.~\cite{cho2011friendship} were able to identify mobility patterns, while we built a location-based recommendation engine for restaurant in Korea~\cite{DBLP:conf/semweb/BalduiniVDTPC13}.
+Parallel works exploited CDR to create models to estimate the density of crowds and vehicles~\cite{eagle2006reality,becker2011tale,calabrese2011real}.
+
+However, better decisions can result from the analyses of multiple data sources simultaneously. 
+The growing availability of new urban data sources (e.g., IoT and WI-FI logs) stimulated the research of a holistic conceptual model to manage data variety in a comprehensive way. 
+The current interest is for solutions that fuse streaming heterogeneous data to enable reactive decisions.
+
+\section{Problem Statement and Research Question}\label{sec:prob_rq}
+
+In the first years of the 2010s the interest of the Semantic Web community for the heterogeneous streaming urban data was growing~\cite{cho2011friendship,hristova2016if}.
+We started investigating the modeling and the analysis of streaming data from social media~\cite{DBLP:journals/semweb/BalduiniCDVHLKT14,DBLP:conf/semweb/BalduiniVDTPC13} exploiting  Stream Reasoning~\cite{della2009s} and state-of-the-art techniques based on RDF Stream Processing (RSP)\cite{DBLP:journals/ijsc/BarbieriBCVG10}, named entity recognition and linking, and machine learning~\cite{DBLP:journals/semweb/BalduiniCDVHLKT14,DBLP:journals/internet/BalduiniBVHH14}.
+
+Reflecting on those results, we identified two main findings from previous research: (i) when dealing with data streams, a Continuous Ingestion mechanism avoids data losses, but continuous analysis is not always needed; an analysis can be reactive even if postponed. (ii) Ontologies are an adequate knowledge representation technique for modeling data characterized by high variety.
+However Stream Reasoning researchers count on two Assumptions:
+
+\begin{itemize}
+\item[\textbf{A}] ontologies (adequate to model a domain) are available or they can be obtained with minimal effort by extending existing ones. For instance, SMA~\cite{DBLP:journals/ws/BalduiniCDVHLKT12}, an ontology that we created to represent location-based social media data, was defined starting from SIOC\footnote{\url{http://sioc-project.org}} by adding only few axioms.
+\item[\textbf{B}] Data streams can be RDF-ized at a negligible cost. For instance, in our previous works we used social media streams. Social media APIs return statuses in JSON that can be easily transformed in JSON-LD\footnote{\url{https://json-ld.org}} exploiting standard format, such as Activity Stream\footnote{\url{http://activitystrea.ms}}.
+\end{itemize}
+
+Aiming at continuously and reactively analyzing a variety of spatio-temporal data, we develop the research question with the Macro, Mezzo and Micro method~\cite{lacasse2015making}.
+
+At Macro level we focus on relevancy and formulate the question: \textit{Is it possible to support reactive decisions by managing data characterized by velocity and variety without forgetting volume?}
+
+At Mezzo level, we focus the attention on a question for which we can find a viable solution. We concentrate our effort on spatio-temporal streaming data and, focusing on previous findings, we characterize the way to support reactive decisions, i.e. visually making sense of data. So, the Mezzo level question is: \textit{Is it possible to visually making sense of a variety of spatio-temporal streaming data by enabling continuous ingestion and reactive analysis?}
+
+Finally, at Micro level, we formalize a question that can be evaluated. We concentrate our effort on the streaming urban data and we specify a way to exploit the visual analytics instrument to support reactive decision making, i.e. find emerging patterns and data dynamics. As a result, the research question of this PhD thesis is: \textit{Is it possible to continuously ingest and reactively analyses a variety of streaming urban data in order to visualize emerging patterns and their dynamics?}
+
+Within the scope of this research question, the  assumptions A does not hold. In our previous work, we focused on social media data. Social media data is semi-structured: only time and space information is presented in a structured way; the content is unstructured, e.g. free texts or images.
+On the contrary in this work we aim at integrate IoT data, WI-FI logs, CDRs, which are structured.
+While the integration of semi-structured data is generally based on the content analysis (e.g. named entity recognition and linking), the integration of structured data requires other methods, e.g., Ontology Based Data Integration (OBDI)~\cite{LenzeriniOBDI}.
+So, a first problem emerges:
+\begin{enumerate}[leftmargin=32pt,label=\textsf{Rp.\arabic*}]
+\item Defining a conceptual model to represent a variety of streaming data.
+\end{enumerate}
+
+Moreover, also Assumption B holds only for social media data. Therefore, we need to face two problems :
+\begin{enumerate}[leftmargin=32pt,label=\textsf{Rp.\arabic*}]
+\setcounter{enumi}{1}
+\item Defining a streaming computational model to enable analysis on a variety of data.
+\item Defining appropriate technical instantiations of the computational model in \textsf{Rp.2}.
+\end{enumerate}
+
+Last, but not least, to verify and validate the solutions proposed to solve the problems above, we need to:
+\begin{enumerate}[leftmargin=32pt,label=\textsf{Rp.\arabic*}]
+\setcounter{enumi}{3}
+\item Assess, in real world scenarios, the feasibility and the effectiveness of the instantiations developed addressing \textsf{Rp.3} using the models developed in solving \textsf{Rp.1} and \textsf{Rp.2}.
+\end{enumerate}
+
+The three levels of the research question are strictly correlated to the research problems.
+In fact, they aim at probing the validity (\textsf{Rp.4}) of the conceptual model (\textsf{Rp.1}), of the  computational model for streaming heterogeneous data (\textsf{Rp.2}) and of its technical instantiations (\textsf{Rp.3}).
+
+In answering to the Micro level question, we are directly contributing to answer the Mezzo level question, and, indirectly, to cast some light on the Macro level question. 
+
+\section{Approach}\label{sec:approach}
+Inspired by OBDI methods, we approach the research problems in a modular way by relaxing, in parallel, the two original assumptions presented in Section~\ref{sec:prob_rq}.
+This modularity reflects the research problem structure and allows performing a continuous evaluation.
+
+On the one hand, relaxing Assumption A, we create a conceptual model in the form of an ontology by following the METHONTOLOGY~\cite{fernandez1997methontology} methodology and evaluate the result using Tom Gruber's principles~\cite{gruber1995toward} (See Chapter~\ref{ch:conceptual}).
+
+On the other hand, relaxing Assumption B, we develop a computational model that enables continuous ingestion, wrangling and reactive analysis of heterogeneous data streams.
+We implement such a computational model using different technologies, i.e. single-threaded and distributed, in order to prove its adequacy in different work conditions (see Chapter~\ref{ch:computational}).
+We, then, evaluate those implementations against already existing system (SLD~\cite{DBLP:conf/semweb/BalduiniVDTPC13}) and one against the other (see Section~\ref{sec:comp-mod-eval-performace}). In particular, inspired by COST~\cite{mcsherry2015scalability}, we evaluated the cost-effectiveness of the single-threaded system against the distributed one (see Section~\ref{sec:comp-mod-eval-cost}).
+
+We, finally, put at work a complete system, composed by an implementation of the computational model that exploits the conceptual model, in different scenario (see Chapter~\ref{ch:case-studies}).
+
+\section{Outline}
+The thesis is structured as follows:
+\begin{itemize}
+\item Chapter \ref{ch:background} offers an overview on the relevant background concepts used by the Semantic Web community to tame velocity, variety and both of them in a single system. It, then, defines the basic concepts of RSP Middleware systems and offers an overview of the benchmarking principles.
+
+\item Chapter \ref{ch:uda} offers an overview on the urban data analysis by setting the main characteristics of urban data, by reviewing the state of the art, and ,finally, by offering significant examples of application of RDF stream processing in the field.
+
+\item Chapter \ref{ch:conceptual} introduces \frappe{} ontology, the conceptual model we proposed to tame with the problem \textsf{Rp.1}. The chapter presents the motivation, the genesis and a first evaluation of the original \frappe{} 1.0. Moreover, it offers an overview of the \frappe{} 2.0 extension while casting some light on how the proposed conceptual model helps the user in spotting emerging patterns and understanding data dynamics in the urban data analysis field.
+
+\item Chapter \ref{ch:computational} introduces the stream processing computational model we proposed to face the research problems \textsf{Rp.2} and \textsf{Rp.3}. In this chapter we present an overview of the principles at the basis of our computational model, the genesis of the model, its implementations and different evaluations based on performance and cost-effectiveness metrics.
+
+\item Chapter \ref{ch:case-studies} presents real world use-cases where we put at work our conceptual model (\frappe{} ontology) and the different implementations of our computational model in order to verify the solution to the research problem \textsf{Rp.4} and, consequently, validate the solutions proposed for the problems \textsf{Rp.1}, \textsf{Rp.2}, \textsf{Rp.3}. 
+
+\item Chapter \ref{ch:conclusion} concludes the dissertation with an overall review of the contributions and with a discussion of the future work based on the limits of the actual solutions.
+\end{itemize}
+
+\section{Publications}
+
+\textcolor{red}{TBC}
+
+This thesis is based on the articles \cite{DBLP:conf/avi/AntonelliABCVL14,DBLP:conf/semweb/BalduiniV15,DBLP:conf/bis/ValleB15,DBLP:conf/esws/BalduiniV017a,DBLP:journals/ieeemm/BalduiniVALAC15,DBLP:conf/debs/BalduiniPV18,BalduiniJBD2018,BalduiniISWC2018DC}
+
+\begin{itemize}
+\item Fabrizio Antonelli, Matteo Azzi, Marco Balduini, Paolo Ciuccarelli, Emanuele Della Valle, Roberto Larcher:
+"City sensing: visualising mobile and social data about a city scale event". AVI 2014: 337-338
+\item Marco Balduini, Emanuele Della Valle:
+"FraPPE: A Vocabulary to Represent Heterogeneous Spatio-temporal Data to Support Visual Analytics". International Semantic Web Conference (2) 2015: 321-328
+\item 	Emanuele Della Valle, Marco Balduini:
+"Listening to and Visualising the Pulse of Our Cities Using Social Media and Call Data Records". BIS (Workshops) 2015: 3-14
+\item 	Marco Balduini, Emanuele Della Valle, Riccardo Tommasini:
+"SLD Revolution: A Cheaper, Faster yet More Accurate Streaming Linked Data Framework". ESWC (Satellite Events) 2017: 263-279
+\item Marco Balduini, Emanuele Della Valle, Matteo Azzi, Roberto Larcher, Fabrizio Antonelli, Paolo Ciuccarelli:
+"CitySensing: Fusing City Data for Visual Storytelling". IEEE MultiMedia 22(3): 44-53 (2015)
+\item Marco Balduini, Sivam Pasupathipillai, Emanuele Della Valle:
+"Cost-Aware Streaming Data Analysis: Distributed vs Single-Thread". DEBS 2018: 160-170
+\item \textcolor{red}{Marco Balduini, Marco Brambilla, Emanuele Della Valle, Christian Marazzi, Tahereh Arabghalizi, Behnam Rahdari, and Michele Vescovi:
+"Models and prac- tices in urban data science at scale". Big Data Research, 2018.}
+\item \textcolor{red}{Marco Balduini:
+"On the continuous and reactive analysis of a variety of Spatio-Temporal Data". ISWC-DC 2018}
+\end{itemize}
