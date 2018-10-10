@@ -22,7 +22,7 @@ Section~\ref{sec:stream-proc} presents an overview of the models and languages t
 In order to introduce the concepts related to the analysis of streaming data, we need to introduce the concepts of Time and Time Instant.
 
 \begin{Definition}
-(Time) The time Ti is an infinite, discrete, ordered sequence of time instants $(t_1,t_2,..., t_n)$, where $t_i \in \mathbb{N}$. A time unit is the difference between two consecutive time instants $(t_{i+1} - t_i)$ and it is constant.
+(Time) The time $\mathcal{T}$ is an infinite, discrete, ordered sequence of time instants $(\tau_1,\tau_2,..., \tau_n)$, where $\tau_i \in \mathbb{N}$. A time unit is the difference between two consecutive time instants $(\tau_{i+1} - \tau_i)$ and it is constant.
 \end{Definition}
 
 \begin{Definition}
@@ -32,16 +32,16 @@ In order to introduce the concepts related to the analysis of streaming data, we
 Now that we have formally defined the Time concept, we can introduce the Stream.
 
 \begin{Definition}
-(Stream) A stream S is a bag (multiset) of elements $\langle s,\tau \rangle$, where s is a tuple belonging to the schema of S and $\tau \in Ti$ is the timestamp of the element.
+(Stream) A stream S is a bag (multiset) of elements $\langle s,\tau \rangle$, where s is a tuple belonging to the schema of S and $\tau \in \mathcal{T}$ is the timestamp of the element.
 \end{Definition}
 
 This definition of stream does not consider the time as a part of the data schema. 
-At any time instant $\tau \in Ti$, zero or more elements could be in the stream and, consequently, share the timestamp.
+At any time instant $\tau \in \mathcal{T}$, zero or more elements could be in the stream and, consequently, share the timestamp.
 
-We finally present a formal definition of Relation, an unordered bag of tuples at any time instant $\tau \in Ti$, or simply $R(\tau)$.
+We finally present a formal definition of Relation, an unordered bag of tuples at any time instant $\tau \in \mathcal{T}$, or simply $R(\tau)$.
 
 \begin{Definition}
-(Relation) A relation R is a mapping from T to a finite but unbounded bag of tuples belonging to the schema of R.
+(Relation) A relation R is a mapping from $\mathcal{T}$ to a finite but unbounded bag of tuples belonging to the schema of R.
 \end{Definition}
  
 \subsubsection{CQL}\label{sec:CQL}
@@ -83,10 +83,10 @@ The stream-to-relation operators in CQL are based on the sliding window concept 
 
 Time-based sliding window operator's output is defined by sliding an interval of T time units over the stream $S$. 
 \begin{Definition}
-(Time-based sliding window) A time-based sliding window on a stream S takes a time-interval T as a parameter and is specified by following S in the query with [Range T].
-The output relation R of S[Range T] is defined as:
+(Time-based sliding window) A time-based sliding window on a stream S takes a time-interval $\mathrm{Ti}$ as a parameter and is specified by following S in the query with [Range $\mathrm{Ti}$].
+The output relation R of S[Range $\mathrm{Ti}$] is defined as:
 \noindent\begin{align*}
-R(\tau)=\{s \mid \langle s,\tau' \rangle \in S \wedge (\tau' \leq \tau) \wedge (\tau' \geq \max\{\tau - T,0\})\}
+R(\tau)=\{s \mid \langle s,\tau' \rangle \in S \wedge (\tau' \leq \tau) \wedge (\tau' \geq \max\{\tau - \mathrm{Ti},0\})\}
 \end{align*}  
 \end{Definition}
 
@@ -488,24 +488,24 @@ Due to the limited amount of information carried by a single statement, in order
 The definition of a Timestamped RDF data item can be formalized as:
 
 \begin{Definition}
-(Timestamped RDF data item) A timestamped RDF data items is a pair (d,t), where d is an RDF graph and $t \in Ti$ is a time instant. 
+(Timestamped RDF data item) A timestamped RDF data items is a pair (d,$\tau$), where d is an RDF graph and $\tau \in \mathcal{T}$ is a time instant. 
 \end{Definition}
 
 Once defined the possible nature of the RDF data item, we can now define a RDF stream.
 \begin{Definition}
 (RDF stream) An RDF stream S is an unbounded sequence of timestamped RDF data items in non-decreasing time order:
 \noindent\begin{align*}
-S = ((d_1, t_1), (d_2, t_2), ..., (d_{n-1}, t_{n-1}), (d_n, t_n), ...)
+S = ((d_1, \tau_1), (d_2, \tau_2), ..., (d_{n-1}, \tau_{n-1}), (d_n, \tau_n), ...)
 \end{align*}  
-where, for every $i > 0, d_i$ is a timestamped RDF item and $t_i <= t_{i+1}$.
+where, for every $i > 0, d_i$ is a timestamped RDF item and $\tau_i <= \tau_{i+1}$.
 \end{Definition}
 
 A time-varying RDF graph capture the evolution of graph content over time, contrariwise, instantaneous graph represents the content of the graph at a fixed time instant
 
 \begin{Definition}
-(Time-varying Graph) A time-varying graph G is a function that relates time instants $t \in Ti$ to RDF graphs:
+(Time-varying Graph) A time-varying graph G is a function that relates time instants $\tau \in \mathcal{T}$ to RDF graphs:
 \noindent\begin{align*}
-G : T \rightarrow {g | g\, is\, an\, RDF\, graph}
+G : \mathcal{T} \rightarrow {g | g\, is\, an\, RDF\, graph}
 \end{align*}
 \end{Definition}
 
@@ -566,9 +566,9 @@ In a continuous environment a definition o a time-varying sequence of solution m
 
 \begin{Definition}
 (Time-varying sequence of solution mappings)
-A time-varying sequence of solution mappings $\psi$ maps time instants $t \in Ti$ to the set of solution mapping sequences:
+A time-varying sequence of solution mappings $\psi$ maps time instants $\tau \in \mathcal{T}$ to the set of solution mapping sequences:
 \noindent\begin{align*}
-\psi : T \rightarrow \{\Psi | \psi\, is\, a\, sequence\, of\, solution\, mappings\}
+\psi : \mathcal{T} \rightarrow \{\Psi | \psi\, is\, a\, sequence\, of\, solution\, mappings\}
 \end{align*}  
 \end{Definition}
 
@@ -576,11 +576,11 @@ The RSP-QL evaluation semantic is an evolution of SPARQL evaluation semantic def
 
 \begin{Definition}
 (RSP-QL evaluation semantic)
-Given an RSP-QL dataset SDS, an algebraic expression SE and an evaluation time instant t, we define
+Given an RSP-QL dataset SDS, an algebraic expression SE and an evaluation time instant $\tau$, we define
 \noindent\begin{align*}
-eval(SDS(G), SE, t)
+eval(SDS(G), SE, \tau)
 \end{align*}  
-as the evaluation of SE at time t with respect to the RSP-QL dataset SDS having active time-varying graph G.
+as the evaluation of SE at time $\tau$ with respect to the RSP-QL dataset SDS having active time-varying graph G.
 \end{Definition}
 
 \subsection{Open Source Solutions} \label{sec:vel-var-solutions}
@@ -657,7 +657,7 @@ SLD is designed to address five different requirements:
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=1\textwidth]{img/SLD-arch}
+\includegraphics[width=.9\textwidth]{img/SLD-arch}
 \caption{The architecture of the Streaming Linked Data framework.}
 \label{fig:sld-arch}
 \end{center}

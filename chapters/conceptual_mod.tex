@@ -2,17 +2,17 @@
 
 \textcolor{red}{FINAL - TO BE READ ONE LAST TIME.}
 
-In this chapter, we propose a conceptual model named \frappe{}~\cite{DBLP:conf/semweb/BalduiniV15}. \frappe{} is a vocabulary that bridge the gap between the data enginner and visual interface creators for enabling visual analytics for the detection, understanding and interpretation of spatio-temporal data.
+In this chapter, we propose a conceptual model named \frappe{}~\cite{DBLP:conf/semweb/BalduiniV15}. \frappe{} is a vocabulary that bridge the gap between the data engineer and visual interface designers for enabling visual analytics for the detection, the understanding and the interpretation of spatio-temporal data.
 We introduce the problem, solved by \frappe{}, in Section~\ref{sec:conc-intro}.
-In Section~\ref{sec:conc-fr-1}, we present an overview the first version of \frappe{}.
-In Section~\ref{sec:conc-fr-2}, we propose \frappe{} 2.0, an extension of the original ontology where we expand the provenance fragment and add a content related fragment.
+In Section~\ref{sec:conc-fr-1}, we present an overview of the first version of \frappe{}.
+In Section~\ref{sec:conc-fr-2}, we propose \frappe{} 2.0, an extension of the original vocabulary where we expand the provenance fragment and add a content related fragment.
 Finally, Section~\ref{sec:conc-fr-2-analysis} presents an overview of the analysis enabled by \frappe{} 2.0.
 
 \section{Introduction and Problem Statement}\label{sec:conc-intro}
 Since the last decade, the rapid increase of sources, which expose geo-located time-varying data, has been drawing attention of those who are looking for data-driven decision making. 
 The availability of social media, telecommunication, traffic and weather data improved the ability to capture peoples' interests, habits and preferences.
 
-In particular, the growing availability of urban data sources (see Chapter~\ref{ch:uda}) stimulated the research of a holistic conceptual model to manage data variety in a comprehensive way. The current interest is for solutions that fuse streaming heterogeneous data to enable reactive decisions.
+In particular, the growing availability of urban data sources (see Chapter~\ref{ch:uda}) stimulated the research of a holistic conceptual model to manage data variety in a comprehensive way. The current interest is for solutions that enable the fusion of streaming heterogeneous data to enable reactive decisions.
 
 One of the main assumptions of any smart-city approach is to work upon a layer of data collected from the city itself that describes its dynamics. The city evolution can span multiple layers, from architecture to urban design, from population composition and migrations to citizen behaviors and interests. Each of these layers has a different dynamics and speed of change.
 Therefore, it should be monitored collecting data from different sources and using multiple analysis techniques (see Section~\ref{sec:uda-analysis}). 
@@ -25,7 +25,7 @@ Therefore, it should be monitored collecting data from different sources and usi
 \end{figure} 
 
 In particular, our research question, presented in Section~\ref{sec:prob_rq}, refers to visual analytics\footnote{The science of analytical reasoning facilitated by interactive visual interfaces~\cite{cook2005illuminating}.} as a way for making sense of heterogeneous spatio-temporal streaming data.
-For instance, Figure~\ref{fig:real-world-rep} illustrates a real case of visual analytics for a general audience we experimented with during the Milano Design Week events (see Section~\ref{sec:cs-mdw-2014}).
+For instance, Figure~\ref{fig:real-world-rep} illustrates a real case of visual analytics for a general audience we experimented during the Milano Design Week events (see Section~\ref{sec:cs-mdw-2014}).
 The Figure presents a grid of 6x3 cells overlaid to a city street map. Green circles can appear in each cell. They visually represent the number of tweets posted in a time interval from each cell. The fill color opacity value of each cell is, instead, mapped to the number of mobile calls from each cell. As we showed in Section~\ref{sec:cs-mdw-2014}, people without specific expertise in data analytics can easily guess the cells where the two signals are correlated.
 
 Unfortunately, data is not often ready for visual analytics.
@@ -33,7 +33,7 @@ A gap exists between the terms used by the designers who create the visual analy
 For instance, in 2012, during the BOTTARI experiment (see Section~\ref{sec:uda-bottari}) in the city of Seoul, we model data using SMA ontology (see Figure~\ref{fig:sma-onto}).
 SMA extends the SIOC vocabulary\footnote{\url{http://sioc-project.org/}} adding the spatial aspect. To do so, it exploits terms from W3C WGS-84 vocabulary\footnote{\url{https://www.w3.org/2003/01/geo/}}.
 SMA poses the attention only on the raw data representation.
-It does not include any specific concept to represent data aggregations or data abstractions to enable advanced analytics, which is the goal of this thesis.
+It does not include any specific concept to represent data aggregations or data abstractions to enable advanced analytics, which is one of the goal of this thesis.
 
 \begin{figure}[t]
 \centering
@@ -94,9 +94,9 @@ More formally, \textsf{Place}, \textsf{Cell} and \textsf{Grid} belong to the geo
 \textsf{Event}, \textsf{Pixel} and \textsf{Frame} are in the time-varying part. The \textsf{Event} term is borrowed from the Event ontology~\cite{RaimondAbdallahEventOntology2007}. 
 The provenance part includes the activities \textsf{Capture} and \textsf{Synthesize} and reuses the PROV Ontology~\cite{w3c-prov-o} (PROV-O).
 
-An \textsf{Event} has a \textsf{location} in a \textsf{Place} within a \textsf{Cell} -- the basic spatial unit of aggregation of information in \frappe{} -- which, in turn, is within a \textsf{Grid}.
+An \textsf{Event} has a \textsf{location} in a \textsf{Place} in a \textsf{Cell} -- the basic spatial unit of aggregation of information in \frappe{} -- which, in turn, is in a \textsf{Grid}.
 
-A \textsf{Pixel} is the time-varying representation of a \textsf{Cell}. It is the only element in \frappe{} 1.0 that carries information through the \textsf{hasValue} data property. As in image processing, this value represents a measure of intensity of some phenomena in the real world. For instance, it can represent the number of micro-posts posted in a given time interval within a certain \textsf{Cell}. Each \textsf{Pixel} \textsf{refersTo} a single \textsf{Cell}, contrariwise a \textsf{Cell} could be \textsf{referredBy} many different \textsf{Pixel}s that captures different information associated to the same \textsf{Cell}, e.g., the already mentioned number of micro-posts, but also the number of mobile phone calls or the number of goods' pick-ups.
+A \textsf{Pixel} is the time-varying representation of a \textsf{Cell}. It is the only element in \frappe{} 1.0 that carries information through the \textsf{hasValue} data property. As in image processing, this value represents a measure of intensity of some phenomenon in the real world. For instance, it can represent the number of micro-posts posted in a given time interval in a certain \textsf{Cell}. Each \textsf{Pixel} \textsf{refersTo} a single \textsf{Cell}, contrariwise a \textsf{Cell} could be \textsf{referredBy} many different \textsf{Pixel}s that captures different information associated to the same \textsf{Cell}, e.g., the already mentioned number of micro-posts, but also the number of mobile phone calls or the number of goods' pick-ups.
 
 Similarly, a \textsf{Frame} is the time-varying counterpart of a \textsf{Grid} and a sequence of \textsf{Frame}s composes the film of the evolution of a physical portion of the world over time. 
 \frappe{} distinguishes between two specializations of \textsf{Frame}s: the \textsf{CapturedFrame}s and the \textsf{SyntheticFrame}s. 
@@ -113,7 +113,7 @@ We started from the specification phase following, in the scoping activity, a mi
 %conceptualization
 We then conceptualized the specification and produced a complete  Glossary of Terms (GT).
 %integration
-Most of the concepts in \frappe{} are directly integrated from other domain specific ontology (e.g., Instant from Time ontology~\cite{Hobbs2006}, Activity from PROV-O ontology~\cite{w3c-prov-o}, etc.)
+Most of the concepts in \frappe{} are directly integrated from other domain specific ontologies (e.g., Instant from Time ontology~\cite{Hobbs2006}, Activity from PROV-O ontology~\cite{w3c-prov-o}, etc.)
 %Evaluation
 
 \subsection{Adherence to the Tom Gruber's Principles} \label{sec:conc-fr-1-eval}
@@ -130,11 +130,6 @@ We tested in details that \frappe{} is \textit{extendable} by successfully model
 Moreover, we check the extendibility of \frappe{} while using it in the experiences reported in the Chapter~\ref{ch:case-studies}. For further details see Section~\ref{sec:cs-conclusion}.
 
 Last but not least, \frappe{} is \textit{coherent}, i.e., all \frappe{} inferences at T-box level are consistent with the definitions and in modeling A-boxes containing social, telecommunication, environment, traffic, and energy consumption data, we never inferred inconsistent or meaningless data.
-
-\subsection{Working Example} \label{sec:conc-fr-1-synth-ex}
-
-The ACM DEBS 2015 Grand Challenge proposes a taxi route analysis scenario based on a grid of 150x150 Kms with cells of 500x500 m. A stream of data represents the route of a taxi rides in terms of: (i) taxi description, (ii) pick-up and drop-off information (e.g., geographical coordinates of the place and time of the event), and (iii) ride information (e.g., tip, payment type and total amount).
-In Listing~\ref{lst:debs}, we report a subset of the information representing a single taxi ride in \frappe{}. The pick-up \textsf{Event} represents the start of the ride and contains the taxi id. The drop-off \textsf{Event} represents the end of the trip and it is connected to all the information about the ride. The fragment models the geographical part of the ride using two \textsf{Place}s within two different \textsf{Cell}s of a single \textsf{Grid}. Moreover, it models the time varying-part of the ride using two \textsf{Event}s captured in two \textsf{Pixel}s of a single \textsf{Frame} along with the provenance part through the \textsf{Capture} activity. Indeed, we use all \frappe{} concepts, we specialise \textsf{Event} in \textsf{PickUpEvent} and \textsf{DropOffEvent}, and we extend the vocabulary adding two attributes (e.g., \textsf{tripTime}, and \textsf{totalAmount}) and an object property (i.e., \textsf{connected}) specific of the taxi ride domain.
 
 \begin{figure}[p]
 \begin{minipage}{0.95\linewidth}
@@ -197,6 +192,8 @@ frFrame:1356995100000 a fr:CapturedFrame ;
 \end{minipage}
 \end{figure} 
 
+\subsection{Working Example} \label{sec:conc-fr-1-synth-ex}
+
 \begin{figure}[t]
 \begin{minipage}[t]{0.95\linewidth}
 \begin{lstlisting}[label={lst:sparql-debs}, caption={Sparql query to create the \textsc{SytheticFrame}s containing the \textsc{Pixel}s with the profitability value.}, style=SPARQL]
@@ -237,7 +234,8 @@ GROUP BY ?pixel ?cell ?cellLabel
 \end{minipage}
 \end{figure} 
 
-Synthetic frames are also important in representing the data of the challenge. One of the problems, assigned to the challengers, asks to compute the top profitable cells for a given time interval. Listing~\ref{lst:synthetic-debs} contains the representation of the \textsf{SytheticFrame}, named \textsf{frFrame:1356995700000}, computed by the \textsf{Synthesize} activity (\textsf{frSynthesize:1356995700000}) represented by the SPARQL query presented in Listing~\ref{lst:sparql-debs}. The \textsf{SyntheticFrame}, \textsf{wasSynthesizedFrom} four different \textsf{CapturedFrame}s, and contains two \textsf{Pixel}s, associated to two different \textsf{Cell}s with different values of profitability (number of \textsf{DropOffEvent}).
+The ACM DEBS 2015 Grand Challenge proposes a taxi route analysis scenario based on a grid of 150x150 Kms with cells of 500x500 m. A stream of data represents the route of a taxi rides in terms of: (i) taxi description, (ii) pick-up and drop-off information (e.g., geographical coordinates of the place and time of the event), and (iii) ride information (e.g., tip, payment type and total amount).
+In Listing~\ref{lst:debs}, we report a subset of the information representing a single taxi ride in \frappe{}. The pick-up \textsf{Event} represents the start of the ride and contains the taxi id. The drop-off \textsf{Event} represents the end of the trip and it is connected to all the information about the ride. The fragment models the geographical part of the ride using two \textsf{Place}s within two different \textsf{Cell}s of a single \textsf{Grid}. Moreover, it models the time varying-part of the ride using two \textsf{Event}s captured in two \textsf{Pixel}s of a single \textsf{Frame} along with the provenance part through the \textsf{Capture} activity. Indeed, we use all \frappe{} concepts, we specialize \textsf{Event} in \textsf{PickUpEvent} and \textsf{DropOffEvent}, and we extend the vocabulary adding two attributes (e.g., \textsf{tripTime}, and \textsf{totalAmount}) and an object property (i.e., \textsf{connected}) specific of the taxi ride domain.
 
 \begin{figure}[t]
 \begin{minipage}{0.95\linewidth}
@@ -269,6 +267,8 @@ frPixel:1356995700000_39463 a fr:Pixel ;
 \end{minipage}
 \end{figure} 
 
+Synthetic frames are also important in representing the data of the challenge. One of the problems, assigned to the challengers, asks to compute the top profitable cells for a given time interval. Listing~\ref{lst:synthetic-debs} contains the representation of the \textsf{SytheticFrame}, named \textsf{frFrame:1356995700000}, computed by the \textsf{Synthesize} activity (\textsf{frSynthesize:1356995700000}) represented by the SPARQL query presented in Listing~\ref{lst:sparql-debs}. The \textsf{SyntheticFrame}, \textsf{wasSynthesizedFrom} four different \textsf{CapturedFrame}s, and contains two \textsf{Pixel}s, associated to two different \textsf{Cell}s with different values of profitability (number of \textsf{DropOffEvent}).
+
 \section{\frappe{} 2.0} \label{sec:conc-fr-2}
 In order to extend the expressiveness of \frappe{} and enable more advanced analysis (see Section~\ref{sec:conc-fr-2-analysis}), we propose \frappe{} 2.0.
 We, mainly, extended the original \frappe{} by improving the provenance fragment, in order to specialize the \textsf{Agent} concept, and by adding the content related fragment, in order to enable more fine grained analysis. 
@@ -279,7 +279,7 @@ As highlighted by different colors, \frappe{} 2.0 is organized in different inte
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.95\textwidth]{img/conceptual-model-extended-core}
-\caption{The extended version of the \frappe{} model, represented as a colored UML\ diagram highlighting time-, content-, and provenance- related concepts.}
+\caption{The extended version of the \frappe{} model, represented as a colored UML diagram highlighting time-, content-, and provenance- related concepts.}
 \label{fig:extended-core}
 \end{figure} 
 
@@ -396,7 +396,7 @@ Finally, \frappe{} exploits the links between \textsf{Cell} and \textsf{Pixel}, 
 
 \section{Conclusion}
 In this chapter, we study the problem of modeling spatio-temporal data to enable analyses that involve time, space and content aspects of the data. 
-The growing availability of geo-located time-varying data increased the needs for an holistic conceptual model to describe the data itself, its dynamics and to enable advanced analysis.
+The growing availability of geo-located time-varying data, in particular in the urban environment, increased the needs for an holistic conceptual model to describe the data itself, its dynamics and to enable advanced analysis.
 
 To address this problem, we proposed \frappe{} conceptual model. 
 \frappe{} exploits digital image processing terms to tame three main dimensions of analysis: space, time, and content.

@@ -31,6 +31,7 @@ However Stream Reasoning researchers count on two Assumptions:
 \item[\textbf{B}] Data streams can be RDF-ized at a negligible cost. For instance, in our previous works we used social media streams. Social media APIs return statuses in JSON that can be easily transformed in JSON-LD\footnote{\url{https://json-ld.org}} exploiting standard format, such as Activity Stream\footnote{\url{http://activitystrea.ms}}.
 \end{itemize}
 
+\sloppy
 Aiming at continuously and reactively analyzing a variety of spatio-temporal data, we develop the research question with the Macro, Mezzo and Micro method~\cite{lacasse2015making}.
 
 At Macro level we focus on relevancy and formulate the question: \textit{Is it possible to support reactive decisions by managing data characterized by velocity and variety without forgetting volume?}
@@ -86,16 +87,14 @@ The thesis is structured as follows:
 
 \item Chapter \ref{ch:conceptual} introduces \frappe{} ontology, the conceptual model we proposed to tame with the problem \textsf{Rp.1}. The chapter presents the motivation, the genesis and a first evaluation of the original \frappe{} 1.0. Moreover, it offers an overview of the \frappe{} 2.0 extension while casting some light on how the proposed conceptual model helps the user in spotting emerging patterns and understanding data dynamics in the urban data analysis field.
 
-\item Chapter \ref{ch:computational} introduces the stream processing computational model we proposed to face the research problems \textsf{Rp.2} and \textsf{Rp.3}. In this chapter we present an overview of the principles at the basis of our computational model, the genesis of the model, its implementations and different evaluations based on performance and cost-effectiveness metrics.
+\item Chapter \ref{ch:computational} introduces \river{} the streaming computational model we proposed to face the research problems \textsf{Rp.2} and \textsf{Rp.3}. In this chapter we present an overview of the principles at the basis of \river{}, its genesis, its internals, its implementations and different evaluations based on performance and cost-effectiveness metrics.
 
-\item Chapter \ref{ch:case-studies} presents real world use-cases where we put at work our conceptual model (\frappe{} ontology) and the different implementations of our computational model in order to verify the solution to the research problem \textsf{Rp.4} and, consequently, validate the solutions proposed for the problems \textsf{Rp.1}, \textsf{Rp.2}, \textsf{Rp.3}. 
+\item Chapter \ref{ch:case-studies} presents real world use-cases where we put at work \frappe{} and the different implementations of \river{} in order to verify the solution to the research problem \textsf{Rp.4} and, consequently, validate the solutions proposed for the problems \textsf{Rp.1}, \textsf{Rp.2}, \textsf{Rp.3}. 
 
 \item Chapter \ref{ch:conclusion} concludes the dissertation with an overall review of the contributions and with a discussion of the future work based on the limits of the actual solutions.
 \end{itemize}
 
 \section{Publications}
-
-\textcolor{red}{TBC}
 
 This thesis is based on the articles \cite{DBLP:conf/avi/AntonelliABCVL14,DBLP:conf/semweb/BalduiniV15,DBLP:conf/bis/ValleB15,DBLP:conf/esws/BalduiniV017a,DBLP:journals/ieeemm/BalduiniVALAC15,DBLP:conf/debs/BalduiniPV18,BalduiniJBD2018,BalduiniISWC2018DC}
 
@@ -113,7 +112,7 @@ This thesis is based on the articles \cite{DBLP:conf/avi/AntonelliABCVL14,DBLP:c
 \item Marco Balduini, Sivam Pasupathipillai, Emanuele Della Valle:
 "Cost-Aware Streaming Data Analysis: Distributed vs Single-Thread". DEBS 2018: 160-170
 \item \textcolor{red}{Marco Balduini, Marco Brambilla, Emanuele Della Valle, Christian Marazzi, Tahereh Arabghalizi, Behnam Rahdari, and Michele Vescovi:
-"Models and prac- tices in urban data science at scale". Big Data Research, 2018.}
+"Models and prac- tices in urban data science at scale". Big Data Research, 2018: In Press}
 \item \textcolor{red}{Marco Balduini:
 "On the continuous and reactive analysis of a variety of Spatio-Temporal Data". ISWC-DC 2018}
 \end{itemize}

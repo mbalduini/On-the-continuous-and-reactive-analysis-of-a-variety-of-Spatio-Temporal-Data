@@ -145,18 +145,18 @@ In 2011, an average of three million tweets per day was posted in Seoul and many
 The stream of data, which we continuously collected, results (i) incomplete, i.e. only 41\% of users rated at least the same POI, and (ii) inconsistent, i.e. many users rates a POI several times in different way.
 BOTTARI~\cite{DBLP:journals/ws/BalduiniCDVHLKT12} exploits inductive and deductive stream reasoning (see Section \ref{sec:sr-rsp}) to continuously perform \textit{content}, \textit{spatial} and \textit{temporal} analysis on Social Media streams (i.e., Twitter) in order to understand how the Social Media users collectively perceive the POIs in a given area (e.g., Insadong's restaurants) and build a recommendation engine.
 
-BOTTARI is designed following an OBDI architecture (see Section \ref{sec:obdi-obda}). 
-The infrastructure behind BOTTARI application is pluggable and is based on SLD framework (see Section \ref{sec:sld}). 
-A first component in SLD pipeline casts in RDF the data item in the stream. 
-A second downstream component performs the analysis exploiting the C-SPARQL Engine (see Section \ref{sec:vel-var-solutions}) as deductive stream reasoner
-A last downstream component, based on the Statistical Unit Node Set (SUNS) \cite{tresp2009materializing,huang2010multivariate} approach, acts as inductive stream reasoner.
-The data was continuously collected and modeled using BOTTARI ontology, an extension of SIOC vocabulary, to cope with the variety.
-
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.75\textwidth]{img/bottari2.pdf}.
     \caption{BOTTARI visualizations (source~\cite{DBLP:conf/semweb/BalduiniVDTPC13}).}
     \label{fig:bottari-vis}
 \end{figure}
+
+BOTTARI is designed following an OBDI architecture (see Section \ref{sec:obdi-obda}). 
+The infrastructure behind BOTTARI application is pluggable and is based on SLD framework (see Section \ref{sec:sld}). 
+A first component in SLD pipeline casts in RDF the data item in the stream. 
+A second downstream component performs the analysis exploiting the C-SPARQL Engine (see Section \ref{sec:vel-var-solutions}) as deductive stream reasoner
+A last downstream component, based on the Statistical Unit Node Set (SUNS) \cite{tresp2009materializing,huang2010multivariate} approach, acts as inductive stream reasoner.
+The data was continuously collected and modeled using BOTTARI ontology, an extension of SIOC vocabulary, to cope with the variety.
 
 Figure~\ref{fig:bottari-vis} shows the various visualization offered by the augmented reality Android application that returns BOTTARI results to the end user. Such an application guides the user to the POI choice. The presented POIs are based on the deductive/inductive stream reasoning results and are personalized for the user.

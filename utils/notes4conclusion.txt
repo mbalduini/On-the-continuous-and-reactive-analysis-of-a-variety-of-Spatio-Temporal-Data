@@ -1,0 +1,96 @@
+\textbf{Wrap Up}
+
+\textbf{RQ}: macro, mezzo, micro
+
+frase che dice: ora ripercorro il filo logico e metto in evidenza i contributi
+
+\textbf{RPs}
+RP1 -> Hp1.1 (può esistere onto che usa image proc. terms) -> C1 / Hp1.2 (guessability) -> C2
+RP2/3 -> P1/2 C3/C4/C5 -> Hp 2.1 -> C6, C7 -> P3 -> Hp 2.2 (cost effective) -> C8,C9,C10
+RP4 -> Hp 3 -> C11
+
+manca la nozione di contributo
+
+C1 FraPPE
+C2 evidence that FraPPE works (also thanks to the separation of concern enabled by OBDA)
+C3 Lazy Transformation
+C4 RIVER
+C5 PDL
+C6 Natron
+C7 evidence that lazy transf. works
+C8 applicazione di COST a stream processing
+C9 rvr@spark/hive
+C10 evidence of cost effectiveness at medium scale di single thread impl vs distributed impl 
+C11 extensive real-world deployments
+
+limitazioni e future works
+
+C1
+Limite: 
+- scelta di importare external terms without axiomatization per poter usare FraPPE per OBDA
+- particolarmente problematico il non poter usare contemporaneamente OBDA e spatial reasoning, OBDA e data analytics, OBDA e time series
+FW: 
+- (FW1) è una challenge molto ampia. 
+- (FW2) portare evidenza di lavori in corso in OBDA e spatial reasoning TODO EDV
+- (FW3) portare evidenza di lavori in corso in OBDA e data analytics TODO EDV
+- (FW4) portare evidenza di lavori in corso in OBDA e time-series TODO EDV
+
+C3/C4/C7 (potresti accennare che C6/C9 sono delle proof of concept di C3/4/7 e non ne discuti i limiti)
+Limiti:
+- al momento è solo un design patter che aiuta lo sviluppatore a creare pipeline in cui usa con arte una pletora di linguaggi fisici
+- servirebbe mostrare che è utile per automatizzare task (ottimizzazione, compile down/code generation) 
+WP:
+- ottimizzazione
+	- definire delle algebraic equivalences con cui trasformare i piani
+	- sviluppare un cost model per misurare il costo di un piano
+	- deterinare in automatico quando è meglio fare una trasformazione
+	- ottimizzazione statica (a tempo di design)
+	- ottimizzazione dinamica (durante l'esecuzione della pipeline)
+- compile down/code generation (in linea con sforzi Big Data come quelli di Spark, SAMOA, etc.)
+	- allineare nel dettaglio le algebre dei linguaggi utilizzati per gli operatori fisici e RIVER
+	- scrivere generatori di codice per ciascun linguaggio
+
+C5
+Limiti:
+- solo un linguaggio grafico ad alto livello (presentare una pipeline)
+- mancano i dettagli per poterlo usare come execution language
+WP:
+- editor
+- compilatore (vedi sopra)
+
+C8/C10
+Limiti:
+- solo per quel caso e per quei dati
+WP:
+- di più in questo contesto (confronto con CQELS Cloud, Strider, etc.)
+- di più anche fuori dal contesto specifico
+	- COST per stream usando Yahoo! benchmark
+	- COST per streaming analytics (MOA vs SAMOA)
+
+C2
+Limite:
+- risposata valida a Micro/Mezzo, ma solo un inizio di risposta rispetto a Macro
+FW:
+- develop other investigations along the same line
+
+C11
+Limite:
+- risposata valida a Micro, ma solo un inizio di risposta rispetto a Mezzo/Macro
+FW:
+- develop other investigations along the same line
+
+\textbf{EDV Pointers}
+
+Per FW2 in C1
+https://dblp.org/rec/bibtex/conf/esws/EiterPS17 -> approccio per query rewriting nell'abito traffico, basato sull'utilizzo di un modello DL-lite
+https://dblp.org/rec/bibtex/journals/itsr/EiterKPRSS16 -> due casi d'uso nell'ambito dell'automatic routing (neighborhood routing per esplorare il vicinato e via routing su strada)
+https://dblp.org/rec/bibtex/conf/ijcai/KontchakovPPRZ16 -> caso d'uso nell'ambito della spatial analysis, nuovo linguaggio di query basato su datalog (buono anche per FW4 in C1)
+
+Per FW3 in C1
+https://dblp.org/rec/bibtex/conf/ijcai/MehdiBRR16 -> approccio per ontologia e data analysis (vedi anche related work per estrarre qualcos'altro)
+https://dblp.org/rec/bibtex/journals/ws/KharlamovMMNORS17 -> caso d'uso di esplorazione della problematica
+
+Per FW4 in C1
+https://dblp.org/rec/bibtex/conf/dlog/BienvenuKKPZ16 -> metodologia
+https://dblp.org/rec/bibtex/conf/time/ArtaleKKRWZ17 -> il tema è caldo e lo si vede da questa survey
+https://dblp.org/rec/bibtex/conf/aaai/BrandtKKRXZ17 -> metodologia
