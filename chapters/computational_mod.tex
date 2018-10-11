@@ -1,10 +1,10 @@
 \chapter{Computational Model}\label{ch:computational}
+
+\textcolor{red}{FINAL - TO BE READ ONE LAST TIME}
+
 In this chapter, we propose \river{}\footnote{The name \river, and its graphics, is inspired by the data continuously flowing one way into the system.} -- a variety-proof computational model to deal with streaming data.
-Section~\ref{sec:comp-mod-intro} introduces the problem of dealing with data characterized by high \textit{Variety} and \textit{Velocity}without forgetting \textit{Volume}.
+Section~\ref{sec:comp-mod-intro} introduces the problem of dealing with data characterized by high \textit{Variety} and \textit{Velocity} without forgetting \textit{Volume}.
 In Section~\ref{sec:comp-mod-sol}, we propose a) the background concepts that underpin \river{}, b) the semantics and textual syntax of the operators of \river{} and c) the Pipeline Definition Language -- a graphic language to ease the modeling of \river{} plans.
-
-
-the computational model operators together with their semantics and textual syntaxes and the Pipeline Definition Language, -- a graphic language to ease the development of computational plans.
 
 \section{Introduction and Problem Statement} \label{sec:comp-mod-intro}
 In our case studies (see Chapter~\ref{ch:case-studies}), we noticed that data can come from different sources that vary in format (\textit{Variety}) and size (\textit{Volume}), but it  always flows (\textit{Velocity}). Even what we normally call "\textit{static data}", e.g.,  a city street network, is not immutable over time, it  slowly evolves.
@@ -36,13 +36,13 @@ Based on the considerations resulting from the development of our conceptual mod
 
 \textbf{(P1)} \textit{everything is a data stream}. According to this principle, a variety-proof stream processing engine must indifferently ingest data with different velocities from any sources and of any size. 
 
-For instance, the movements of a car is a \textit{fast} data stream where the information flow records the identity, the positions and the speeds of the cars. In this case, the distance between two subsequent observations can be seconds. On the other side, a city road is a \textit{slowly evolving} data stream, where the information flow records, for instance, the addition of a bike lane.
+For instance, the movements of a car is a \textit{fast} data stream where the information flow records the identity, the positions and the speeds of the cars. In this case, the distance between two subsequent observations can be seconds. On the other side, a city road is a \textit{slowly evolving} data stream, where the information flow contains, for instance, the information about the addition of a bike lane.
 In this second case, the distance between two subsequent observations can be days or months. 
 
 The continuous nature of data streams, and the importance of the information extracted by the most fresh data, require such a category of engine to avoid data loss and, consequently, to implement our second principle: \textbf{(P2)} \textit{Continuous Ingestion}. The data in input is continuously captured by the system and, once arrived, it is marked with an increasing timestamp. Notably, some data sources may natively include their own timestamp too (namely, the application timestamp, presented in Section~\ref{sec:secret}). It is worth to note that a continuous ingestion mechanism helps to avoid data losses, but continuous analysis is not always needed; an analysis can be reactive even if postponed (see Section~\ref{sec:comp-mod-eval-cost}).
 
-In order to challenge the hypothesis \textsf{Hp.2.1}, we propose the \textit{lazy transformation} approach. 
-A variety-proof stream processing engine operates on the data in its original format as long as it can, and it transforms data only if it really needs to do so. Indeed, operations like projections, filters or aggregations can operate on generic data without requiring to cast all data in a single format (such as RDF). Therefore, for those operations, we can delay transformations. Contrariwise, a join operation on data of different data format (e.g., a CVS table and a JSON tree), normally, first requires to cast data in a common format (e.g., the relational one) and then perform the join. 
+In order to challenge the hypothesis \textsf{Hp.2.1}, we propose the \textit{Lazy Transformation} approach. 
+A variety-proof stream processing engine operates on the data in its original format as long as it can, and it transforms data only if it really needs to do so. Indeed, operations like projections, filters or aggregations can operate on generic data without requiring to cast all data in a single format (such as RDF). Therefore, for those operations, we can delay transformations. Contrariwise, a join operation, normally, first requires to cast data in a common format (e.g., the relational one). 
 
 So, this kind of system must rely on data of generic type $\mathrm{T}$.
 
@@ -67,7 +67,7 @@ where $d_i$ is of type $\mathrm{T}$, $\tau_i \in \mathcal{T}$ is the associated 
 Note that the time instants associated to data items is monotonically increasing. We do not allow contemporary ingestion, because we consider the time as a form of punctuation. 
 So, the data items $d_i$ in a Generic Data Stream S$\langle\mathrm{T}\rangle$ is of \textit{types to-be-specified-later} $\mathrm{T}$, and, for instance, it can be, indifferently, a tree representation of a JSON document, a set of tuples in CSV or in parquet format, or a graph in RDF.
 
-\textit{Generic Functions} and \textit{Generic Types}~\cite{DBLP:conf/dagstuhl/1998gp} represents the natural abstraction to model the operations that manipulate information in accordance with the \textit{lazy transformation} approach. 
+\textit{Generic Functions} and \textit{Generic Types}~\cite{DBLP:conf/dagstuhl/1998gp} represents the natural abstraction to model the operations that manipulate information in accordance with the \textit{Lazy Transformation} approach. 
 
 Let us now define a Generic Time-Varying Collection as:
 
@@ -105,7 +105,7 @@ The inputs to the pipeline are the post stream S$_A$ and the users' friend netwo
 More formally, Figure~\ref{fig:cm-op} depicts the five classes of \river{} operators and their interactions. 
 The operators, defined as S2C$\langle\mathrm{T}\rangle$, C2C$\langle\mathrm{T},\mathrm{T^{\prime}}\rangle$ and C2S$\langle\mathrm{T}\rangle$ in \river{}, are inspired to the CQL processing model (see Section~\ref{sec:CQL}), and allow to move from S$\langle\mathrm{T}\rangle$ to C$\langle\mathrm{T}\rangle$ and vice-versa.
 In addition to the CQL-like operators, we introduce the \textit{ingestion} (defined as IN$\langle\mathrm{T}\rangle$ in \river{}) and \textit{emission} (defined as OUT$\langle\mathrm{T}\rangle$ in \river{}) operators.
-They, respectively, ingest and emit streams of data to/from a system implemented using \river{} computational model.
+They, respectively, ingest and emit external data flow to/from a system implemented using \river{} computational model.
 
 In the next paragraphs, we report the details of the operators and present, for each of them, its formal definition, its graphical syntax in PDL, the examples of physical languages for its implementation and its role in the running example (see Figure~\ref{fig:sti_ex}).
 
@@ -183,7 +183,7 @@ Listing~\ref{lst:o2_res} shows the resulting RDF Graph.
 
 \begin{Definition}
 (Stream-to-collection operator) A S2C$\langle\mathrm{T}\rangle$ operator transforms a portion of a potentially infinite Generic Data Stream S$\langle\mathrm{T}\rangle$ into a Generic Time-Varying Collection C$\langle\mathrm{T}\rangle$.
-S2C$\langle\mathrm{T}\rangle$ operator type-agnostic, the operation is completely independent from $\mathrm{T}$.
+S2C$\langle\mathrm{T}\rangle$ operator is type-agnostic, the operation is completely independent from $\mathrm{T}$.
 \end{Definition}
 
 Similarly to CQL, the implementations of the S2C$\langle\mathrm{T}\rangle$ operator are based on the concept of \textit{sliding window}.
@@ -496,6 +496,7 @@ In PDL, we propose the symbol $\Diamond$ to represent the C2S$\langle\mathrm{T}\
 
 \noindent
 In PDL we propose the symbol $\bigtriangledown$ to represent the OUT$\langle\mathrm{T}\rangle$ operator. 
+
 In the running example, the operator O$_9$ is an implementation of an OUT$\langle\mathrm{T}\rangle$ operator for a relational database. It takes a S$\langle\mathrm{T}\rangle$ in input, where $\mathrm{T}$ is relational table with a defined schema, and exploits custom operation to connect and push the results on a target database. 
 
 Moreover, in PDL we add packages, represented by $\hexagon$ symbols, as a general purpose mechanism for organizing \river{} operators into groups. It allows to graphically group different semantically related operators.

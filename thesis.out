@@ -1,0 +1,96 @@
+\BOOKMARK [0][]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][]{section.1.1}{Relevancy}{chapter.1}% 2
+\BOOKMARK [1][]{section.1.2}{Problem Statement and Research Question}{chapter.1}% 3
+\BOOKMARK [1][]{section.1.3}{Approach}{chapter.1}% 4
+\BOOKMARK [1][]{section.1.4}{Outline}{chapter.1}% 5
+\BOOKMARK [1][]{section.1.5}{Publications}{chapter.1}% 6
+\BOOKMARK [0][]{chapter.2}{Preliminary Concepts: Taming Velocity and Variety}{}% 7
+\BOOKMARK [1][]{section.2.1}{Velocity}{chapter.2}% 8
+\BOOKMARK [2][]{subsection.2.1.1}{Models and Languages}{section.2.1}% 9
+\BOOKMARK [3][]{subsubsection*.5}{Stream Processing}{subsection.2.1.1}% 10
+\BOOKMARK [3][]{subsubsection*.6}{CQL}{subsection.2.1.1}% 11
+\BOOKMARK [3][]{subsubsection*.11}{SECRET}{subsection.2.1.1}% 12
+\BOOKMARK [2][]{subsection.2.1.2}{Information Flow Processing and Architectures}{section.2.1}% 13
+\BOOKMARK [2][]{subsection.2.1.3}{Open Source Solutions}{section.2.1}% 14
+\BOOKMARK [3][]{subsubsection*.16}{ESPER \046 EPL}{subsection.2.1.3}% 15
+\BOOKMARK [3][]{subsubsection*.17}{Apache Kafka \046 KSQL}{subsection.2.1.3}% 16
+\BOOKMARK [3][]{subsubsection*.18}{Apache Spark}{subsection.2.1.3}% 17
+\BOOKMARK [3][]{subsubsection*.19}{Apache Hive}{subsection.2.1.3}% 18
+\BOOKMARK [3][]{subsubsection*.20}{Apache Flink}{subsection.2.1.3}% 19
+\BOOKMARK [1][]{section.2.2}{Variety}{chapter.2}% 20
+\BOOKMARK [2][]{subsection.2.2.1}{Models, Languages and Methodologies}{section.2.2}% 21
+\BOOKMARK [3][]{subsubsection*.21}{RDF \046 SPARQL}{subsection.2.2.1}% 22
+\BOOKMARK [3][]{subsubsection*.22}{R2RML}{subsection.2.2.1}% 23
+\BOOKMARK [3][]{subsubsection*.24}{OWL}{subsection.2.2.1}% 24
+\BOOKMARK [3][]{subsubsection*.25}{Ontology Engineering}{subsection.2.2.1}% 25
+\BOOKMARK [3][]{subsubsection*.27}{OBDI \046 OBDA}{subsection.2.2.1}% 26
+\BOOKMARK [2][]{subsection.2.2.2}{Open Source Solutions}{section.2.2}% 27
+\BOOKMARK [1][]{section.2.3}{Velocity and Variety}{chapter.2}% 28
+\BOOKMARK [2][]{subsection.2.3.1}{Models and Languages}{section.2.3}% 29
+\BOOKMARK [3][]{subsubsection*.29}{Stream Reasoning \046 RDF Stream Processing}{subsection.2.3.1}% 30
+\BOOKMARK [3][]{subsubsection*.31}{RSP-QL}{subsection.2.3.1}% 31
+\BOOKMARK [2][]{subsection.2.3.2}{Open Source Solutions}{section.2.3}% 32
+\BOOKMARK [1][]{section.2.4}{RSP Middleware}{chapter.2}% 33
+\BOOKMARK [2][]{subsection.2.4.1}{Streaming Linked Data \(SLD\)}{section.2.4}% 34
+\BOOKMARK [2][]{subsection.2.4.2}{Linked Stream Middleware}{section.2.4}% 35
+\BOOKMARK [1][]{section.2.5}{Benchmarking}{chapter.2}% 36
+\BOOKMARK [2][]{subsection.2.5.1}{Domain-Specific Benchmarks}{section.2.5}% 37
+\BOOKMARK [2][]{subsection.2.5.2}{Benchmarking Velocity Oriented Systems}{section.2.5}% 38
+\BOOKMARK [2][]{subsection.2.5.3}{Cost-Aware approach}{section.2.5}% 39
+\BOOKMARK [0][]{chapter.3}{Urban Data analysis}{}% 40
+\BOOKMARK [1][]{section.3.1}{Relevance and Motivation}{chapter.3}% 41
+\BOOKMARK [1][]{section.3.2}{Urban Data Analysis Dimensions}{chapter.3}% 42
+\BOOKMARK [2][]{subsection.3.2.1}{Content Analysis}{section.3.2}% 43
+\BOOKMARK [2][]{subsection.3.2.2}{Spatial Analysis}{section.3.2}% 44
+\BOOKMARK [2][]{subsection.3.2.3}{Temporal Analysis}{section.3.2}% 45
+\BOOKMARK [2][]{subsection.3.2.4}{Combined Time and Space Analysis}{section.3.2}% 46
+\BOOKMARK [1][]{section.3.3}{Existing Semantic Web-Based Solutions}{chapter.3}% 47
+\BOOKMARK [2][]{subsection.3.3.1}{Monitoring Traffic Using Semantic and Stream Technologies}{section.3.3}% 48
+\BOOKMARK [2][]{subsection.3.3.2}{Semantic Traffic-Aware Routing}{section.3.3}% 49
+\BOOKMARK [2][]{subsection.3.3.3}{Monitoring Crowd Movement During London 2012 Olympics Games}{section.3.3}% 50
+\BOOKMARK [2][]{subsection.3.3.4}{Bottari}{section.3.3}% 51
+\BOOKMARK [0][]{chapter.4}{Conceptual Model}{}% 52
+\BOOKMARK [1][]{section.4.1}{Introduction and Problem Statement}{chapter.4}% 53
+\BOOKMARK [1][]{section.4.2}{FraPPE 1.0}{chapter.4}% 54
+\BOOKMARK [2][]{subsection.4.2.1}{The Conceptual Model}{section.4.2}% 55
+\BOOKMARK [2][]{subsection.4.2.2}{Adherence to the Tom Gruber's Principles}{section.4.2}% 56
+\BOOKMARK [2][]{subsection.4.2.3}{Working Example}{section.4.2}% 57
+\BOOKMARK [1][]{section.4.3}{FraPPE 2.0}{chapter.4}% 58
+\BOOKMARK [1][]{section.4.4}{FraPPE 2.0 and Urban Data Analysis}{chapter.4}% 59
+\BOOKMARK [1][]{section.4.5}{Conclusion}{chapter.4}% 60
+\BOOKMARK [0][]{chapter.5}{Computational Model}{}% 61
+\BOOKMARK [1][]{section.5.1}{Introduction and Problem Statement}{chapter.5}% 62
+\BOOKMARK [1][]{section.5.2}{RIVER}{chapter.5}% 63
+\BOOKMARK [2][]{subsection.5.2.1}{Preliminaries}{section.5.2}% 64
+\BOOKMARK [2][]{subsection.5.2.2}{RIVER's Operators and the Pipeline Definition Language}{section.5.2}% 65
+\BOOKMARK [1][]{section.5.3}{Reference Architecture}{chapter.5}% 66
+\BOOKMARK [1][]{section.5.4}{Conclusion}{chapter.5}% 67
+\BOOKMARK [0][]{chapter.6}{RIVER Implementations and Evaluations}{}% 68
+\BOOKMARK [1][]{section.6.1}{Introduction and Problem Statement}{chapter.6}% 69
+\BOOKMARK [1][]{section.6.2}{Implementations}{chapter.6}% 70
+\BOOKMARK [2][]{subsection.6.2.1}{Natron - A Vertically Scalable Implementation}{section.6.2}% 71
+\BOOKMARK [2][]{subsection.6.2.2}{rvr@Spark - A Horizontally Scalable Implementation Based on Spark}{section.6.2}% 72
+\BOOKMARK [2][]{subsection.6.2.3}{rvr@Hive - A Horizontally Scalable Implementation Based on Hive}{section.6.2}% 73
+\BOOKMARK [1][]{section.6.3}{Validation of the Lazy Transformation Approach}{chapter.6}% 74
+\BOOKMARK [2][]{subsection.6.3.1}{Problem Settings}{section.6.3}% 75
+\BOOKMARK [2][]{subsection.6.3.2}{Solution Design and Experimental Settings}{section.6.3}% 76
+\BOOKMARK [2][]{subsection.6.3.3}{Results and Discussion}{section.6.3}% 77
+\BOOKMARK [1][]{section.6.4}{COST-Aware Evaluation: Distributed vs. Single-Threaded}{chapter.6}% 78
+\BOOKMARK [2][]{subsection.6.4.1}{Problem Settings}{section.6.4}% 79
+\BOOKMARK [2][]{subsection.6.4.2}{Solution Design}{section.6.4}% 80
+\BOOKMARK [2][]{subsection.6.4.3}{Experimental Settings}{section.6.4}% 81
+\BOOKMARK [2][]{subsection.6.4.4}{Results and Discussion}{section.6.4}% 82
+\BOOKMARK [1][]{section.6.5}{Conclusion}{chapter.6}% 83
+\BOOKMARK [0][]{chapter.7}{Case Studies}{}% 84
+\BOOKMARK [1][]{section.7.1}{Milano Design Week}{chapter.7}% 85
+\BOOKMARK [2][]{subsection.7.1.1}{MDW2013 - Understanding the Data}{section.7.1}% 86
+\BOOKMARK [2][]{subsection.7.1.2}{MDW2014 - CitySensing Public Installation}{section.7.1}% 87
+\BOOKMARK [2][]{subsection.7.1.3}{MDW2016 - Advanced Visualizations}{section.7.1}% 88
+\BOOKMARK [1][]{section.7.2}{Milano Fashion Week}{chapter.7}% 89
+\BOOKMARK [1][]{section.7.3}{Como Smart City for Smart Citizens}{chapter.7}% 90
+\BOOKMARK [1][]{section.7.4}{Conclusion}{chapter.7}% 91
+\BOOKMARK [0][]{chapter.8}{Conclusion}{}% 92
+\BOOKMARK [1][]{section.8.1}{Review of the Contributions}{chapter.8}% 93
+\BOOKMARK [1][]{section.8.2}{Limitations and Future Directions}{chapter.8}% 94
+\BOOKMARK [1][]{section.8.3}{Reflections}{chapter.8}% 95
+\BOOKMARK [0][]{section*.108}{Bibliography}{}% 96

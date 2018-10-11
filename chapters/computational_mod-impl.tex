@@ -1,7 +1,10 @@
 \chapter{\texorpdfstring{\protect\river{}}{RIVER} Implementations and Evaluations}\label{ch:computational-impl}
+
+\textcolor{red}{FINAL - TO BE READ ONE LAST TIME - READ FROM \ref{sec:comp-mod-eval-performace} ON}
+
 In this chapter, we propose different implementations of \river{} computational model (see Chapter~\ref{ch:computational}) and the evaluations of such implementations from different points of view.
 Section~\ref{sec:comp-mod-impl-intro} introduces the problem of implementing \river{} from the scalability perspective.
-In Section~\ref{sec:comp-mod-impl} we propose \sti{} --a vertically-scalable implementation of \river{} -- and \sparkdi{} and \hivedi{} -- two horizontally-scalable implementations of \river{}.
+In Section~\ref{sec:comp-mod-impl} we propose \sti{} -- a vertically-scalable implementation of \river{} --, \sparkdi{} and \hivedi{} -- two horizontally-scalable implementations of \river{}.
 The Section~\ref{sec:comp-mod-eval-performace} and the Section~\ref{sec:comp-mod-eval-cost} presents, respectively, the evaluation of \sti{} against an already existing system, and an evaluation of \sti{} against \sparkdi{} based on cost-effectiveness.
 
 \section{Introduction and Problem Statement} \label{sec:comp-mod-impl-intro}
@@ -12,10 +15,10 @@ In particular, inspired by the benchmarking basic principles (see Section~\ref{s
 When the amount of data is small and the cost of a complex infrastructure is unaffordable, an ad-hoc implementation results suitable.
 In this situation, there is no need for scalability and the final artifact can be developed in any language or using any framework, e.g. Python or Java.
 We work following this direction~\cite{BalduiniJBD2018}, but we do not report the results because they are out of the scope of this thesis.
-If the amount of data grows, a scalability requirement arises. An ad-hoc solution results hard to be cost effective, if compared to a more generic and reusable implementation. 
+If the amount of data grows, a scalability requirement arises. An ad-hoc solution results hard to be cost-effective, if compared to a more generic and reusable implementation. 
 
 Conscious that distribution and parallelization does not pay at all scales~\cite{bodendistributed}, we developed (i) a vertically scalable single threaded implementation -- \sti{} -- and (ii) two horizontally scalable implementations based on Spark -- \sparkdi{} -- and Hive -- \hivedi{}.
-In the next sections, we present \sti{}, \sparkdi{} and \hivedi{}, and the evaluation results that validated the Hypotheses \textsf{Hp.2.1} (formulated in Chapter~\ref{ch:computational}).
+In the next sections, we present \sti{}, \sparkdi{} and \hivedi{}, and the evaluation results that validated the Hypothesis \textsf{Hp.2.1} (formulated in Chapter~\ref{ch:computational}).
 
 Moreover, in order to cast some light on the research questions taking in account possible alternative implementations, w.r.t. scalability, we formulate the hypothesis: 
 \begin{itemize}[leftmargin=42pt]
@@ -24,13 +27,13 @@ Moreover, in order to cast some light on the research questions taking in accoun
 
 \section{Implementations} \label{sec:comp-mod-impl}
 Section~\ref{sec:comp-mod-impl-v} proposes \sti{}, an implementation based on single-threaded technology able to manage heterogeneous streaming data characterized by medium Volume.
-When scaling to large volume is required, a single threaded implementation is at risk of loosing cost effectiveness because, even if the entry cost is much lower than a Big Data implementation, its costs grows exponentially in the size of the data. Therefore, an horizontally scalable solution, using Big Data technology, represents a good choice.
+When scaling to large volume is required, a single threaded implementation is at risk of loosing cost-effectiveness because, even if the entry cost is much lower than a Big Data implementation, its cost grows exponentially in the size of the data. Therefore, an horizontally scalable solution, using Big Data technology, represents a good choice.
 The results of the evaluation reported in Section~\ref{sec:comp-mod-eval-performace}, convinced us to assume the \textsf{Lazy Transformation} as a principle to be applied in the horizontally scalable implementations of \river{} computational model.
 In our work, we employed two different solutions respectively based on Spark (\sparkdi{}) and Hive (\hivedi{}).
 Section~\ref{sec:comp-mod-impl-h-spark} and Section~\ref{sec:comp-mod-impl-h-hive} present an overview of those implementations.
 
 \subsection{\sti{} - A Vertically Scalable Implementation} \label{sec:comp-mod-impl-v}
-\sti{} is a single threaded implementation of \river{} reference architecture able to deal with continuously flowing data characterized by medium Volume, high Variety and very high Velocity. 
+\sti{} is a single threaded implementation of \river{} reference architecture (see Section~\ref{sec:comp-mod-sol-arch}) able to deal with continuously flowing data characterized by medium Volume, high Variety and very high Velocity. 
 It continuously ingests streaming data represented as a time-stamped data items that are typed, only when needed. The type is declared as an annotation to the captured information.
 
 \begin{figure}[t]
@@ -41,8 +44,8 @@ It continuously ingests streaming data represented as a time-stamped data items 
 \end{figure} 
 
 Figure~\ref{fig:sti} depicts an overview of the \sti{} internals.
-The Ingesters allow ingesting external data flows, and push the data on the Generic Stream Bus. Data items remain in their original format, only the ingestion time is added.
-As recommended by the \textit{Lazy Transformation} approach, we postpone the transformation as long as possible in the process. 
+The Ingesters allow ingesting external data flows, and push the data on the Generic Stream Bus.
+As recommended by the \textit{Lazy Transformation} approach, we postpone the transformation as long as possible in the process, only the ingestion time is added. 
 The Processors, e.g. an Information Flow Processor as Esper (see Section~\ref{sec:esper-epl}), listens to one or more streams S$\langle\mathrm{T}\rangle$, computes different operations and produces a new stream S$^{\prime}\langle\mathrm{T^{\prime}}\rangle$. 
 Emitters allow \sti{} producing a new external data flow in multiple formats. 
 In \sti{}, the window operator can be implemented in two different ways: either using the ingestion timestamp added during the Continuous Capturing Phase, or using an application timestamp, e.g. a time mark added during the Augmentation \& Synthesis Phase referring to the notion of Frame in \frappe{}.
@@ -54,12 +57,12 @@ It enables the users to create pipeline of streaming computation as they are cre
 
 \sparkdi{} offers different implementations of the IN$\langle\mathrm{T}\rangle$ operator that exploits the DataFrames and Datasets API offered by Spark to ingest data from different sources (e.g., filesystem, Kafka, socket, etc.).
 In the same way, \sparkdi{} exploits the sink of Spark Structured Streaming as implementations of the OUT$\langle\mathrm{T}\rangle$ operators (e.g., filesystem sink, Kafka sink, Console sink, etc.).
-The access to the data, during the Ingestion and Augmentation and Synthesis Phases,  is guaranteed by OBDA techniques implemented in the various components that exploit \frappe{} as data schema.
-Moreover, the Dataframe APIs enable the implementation of all the \river{}'s operators and allow the development of the complete stack of layers presented in the \river{} reference architecture (see Section~\ref{sec:comp-mod-sol}).
+The access to the data, during the Ingestion and Augmentation \& Synthesis Phase,  is guaranteed by OBDA techniques implemented in the various components that exploit \frappe{} as data schema.
+Moreover, the Dataframe APIs enable the implementation of all the \river{}'s operators and allow the development of the complete stack of layers presented in the \river{} reference architecture (see Section~\ref{sec:comp-mod-sol-arch}).
 
 \begin{figure}[ht]
 \begin{minipage}{0.95\linewidth}
-\begin{lstlisting}[caption={Example of Window operator in Spark},label=lst:spark-ex,style=SPARKCODE]
+\begin{lstlisting}[caption={Example of Window operator in Spark.},label=lst:spark-ex,style=SPARKCODE]
    val itemsCounts = inputStream.groupBy(
         window($"ts", "40 seconds", "20 seconds"),
         $"Agg(Count)"
@@ -76,23 +79,22 @@ In particular, the \sparkdi{} implementation of the S2C$\langle\mathrm{T}\rangle
 \hivedi{} is a distributed implementation of \river{} computational model based on Hive (see Section~\ref{sec:hive}).
 Hive is a Big Data warehouse solution and is not originally ready for managing streaming data.
 This limitation can be overcome by chaining, during the Ingestion Phase, the implementations of a IN$\langle\mathrm{T}\rangle$ operator and a S2C$\langle\mathrm{T}\rangle$ operator (window). This chain enable the system to add the ingestion timestamp, \textit{ts} to each incoming data and to transform the time-varying input into a Hive compatible static format (e.g., Parquet) partitioned by \textit{ts}. 
-The Augmentation and Synthesis Phase exploits OBDA techniques to access data using \frappe{} ontology as data schema.
+The Augmentation \& Synthesis Phase exploits OBDA techniques to access data using \frappe{} ontology as data schema.
 The \frappe{} Commons Abstractions layer contains the concepts to enrich and transform data according to the \frappe{} conceptual model (e.g., adding a reference to \frappe{} Frame that groups the data items by time and space).
 The final result is then served to the user through implementations of different OUT$\langle\mathrm{T}\rangle$ operators that allow the system to save the data in different format (e.g., filesystem, Kafka, websocket).
 
-As for the \sparkdi{}, we now focus on the S2C$\langle\mathrm{T}\rangle$ window operator in \hivedi{} that exploits the Hive window operator. Differently from Spark, the window operator is not natively supported due to the batch nature of the framework. However, if we augment the data items with a frame ID during the Augmentation and Synthesis Phase, tumbling windows can be implemented grouping by Frame ID. 
+As for the \sparkdi{}, we now focus on the S2C$\langle\mathrm{T}\rangle$ window operator in \hivedi{} that exploits the Hive window operator. Differently from Spark, the window operator is not natively supported due to the batch nature of the framework. However, if we augment the data items with a frame ID during the Augmentation \& Synthesis Phase, tumbling windows can be implemented grouping by Frame ID. 
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.92\textwidth]{img/hive_example}
-\caption{Example of data operation using hive}
+\caption{Example of Window operator using Hive.}
 \label{fig:hive-ex}
 \end{figure} 
 
 Figure~\ref{fig:hive-ex} shows a simple example of a chain of operations that ingest a data stream, augment it with a Frame ID and simulates a tumbling window that counts the number of data items per frame. \textit{I$_1$} represents the data saved on HDFS during the ingestion phase. \textit{I$_1$} is in form of a table containing various attributes and partitioned by the ingestion timestamp \textit{ts}. The data is augmented using a query that uses a User Defined Function (UDF) to attach a Frame ID based on the \textit{ts} and save the result incrementally in a parquet file partitioned by Frame ID. Such an UDF is configured passing the opening time t$_0$ of the first window, and the length of a Frame  $\omega$. In the example t$_0$ = 0 and $\omega$ = 20. The Frame groups the data items in windows and enables operation on time-varying data in a batch oriented system such as Hive. \textit{I$_2$} represents the augmented data. The Window Based Operation exploits the Frame ID to perform a simple count aggregation by applying a Group by on the Frame ID.  \textit{I$_3$} represents the aggregated data.
 
 \section{Validation of the Lazy Transformation Approach} \label{sec:comp-mod-eval-performace}
-%\section{Performance Driven Evaluation: SLD vs. \sti{}} \label{sec:comp-mod-eval-performace}
 
 As a first evaluation step, we compared \sti{} against SLD (see Section~\ref{sec:rsp-mid}). Both of them are single-threaded but, while SLD is based on RDF streams, \sti{} implements the \textit{Lazy Transformation} approach.
 

@@ -1,0 +1,110 @@
+\babel@toc {greek}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Relevancy}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Problem Statement and Research Question}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Approach}{4}{section.1.3}
+\contentsline {section}{\numberline {1.4}Outline}{5}{section.1.4}
+\contentsline {section}{\numberline {1.5}Publications}{5}{section.1.5}
+\contentsline {chapter}{\numberline {2}Preliminary Concepts: Taming Velocity and Variety}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Velocity}{8}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Models and Languages}{8}{subsection.2.1.1}
+\contentsline {subsubsection}{Stream Processing}{8}{subsubsection*.5}
+\contentsline {subsubsection}{CQL}{9}{subsubsection*.6}
+\contentsline {paragraph}{Stream-to-relation operators}{10}{paragraph*.8}
+\contentsline {paragraph}{Relation-to-relation operators}{11}{paragraph*.9}
+\contentsline {paragraph}{Relation-to-stream operators}{11}{paragraph*.10}
+\contentsline {subsubsection}{SECRET}{12}{subsubsection*.11}
+\contentsline {subsection}{\numberline {2.1.2}Information Flow Processing and Architectures}{13}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Open Source Solutions}{16}{subsection.2.1.3}
+\contentsline {subsubsection}{ESPER \& EPL}{16}{subsubsection*.16}
+\contentsline {subsubsection}{Apache Kafka \& KSQL}{17}{subsubsection*.17}
+\contentsline {subsubsection}{Apache Spark}{17}{subsubsection*.18}
+\contentsline {subsubsection}{Apache Hive}{18}{subsubsection*.19}
+\contentsline {subsubsection}{Apache Flink}{19}{subsubsection*.20}
+\contentsline {section}{\numberline {2.2}Variety}{20}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Models, Languages and Methodologies}{20}{subsection.2.2.1}
+\contentsline {subsubsection}{RDF \& SPARQL}{20}{subsubsection*.21}
+\contentsline {subsubsection}{R2RML}{22}{subsubsection*.22}
+\contentsline {subsubsection}{OWL}{23}{subsubsection*.24}
+\contentsline {subsubsection}{Ontology Engineering}{24}{subsubsection*.25}
+\contentsline {subsubsection}{OBDI \& OBDA}{25}{subsubsection*.27}
+\contentsline {subsection}{\numberline {2.2.2}Open Source Solutions}{27}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Velocity and Variety}{28}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Models and Languages}{28}{subsection.2.3.1}
+\contentsline {subsubsection}{Stream Reasoning \& RDF Stream Processing}{28}{subsubsection*.29}
+\contentsline {subsubsection}{RSP-QL}{31}{subsubsection*.31}
+\contentsline {subsection}{\numberline {2.3.2}Open Source Solutions}{32}{subsection.2.3.2}
+\contentsline {paragraph}{C-SPARQL Engine}{32}{paragraph*.32}
+\contentsline {paragraph}{CQELS}{33}{paragraph*.33}
+\contentsline {paragraph}{Morph\textsubscript {stream}}{33}{paragraph*.34}
+\contentsline {paragraph}{INSTANS}{33}{paragraph*.35}
+\contentsline {paragraph}{ETALIS and EP-SPARQL}{33}{paragraph*.36}
+\contentsline {paragraph}{CQELS Cloud}{34}{paragraph*.37}
+\contentsline {paragraph}{Strider}{34}{paragraph*.39}
+\contentsline {section}{\numberline {2.4}RSP Middleware}{35}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Streaming Linked Data (SLD)}{35}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Linked Stream Middleware}{37}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Benchmarking}{39}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Domain-Specific Benchmarks}{39}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Benchmarking Velocity Oriented Systems}{40}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Cost-Aware approach}{41}{subsection.2.5.3}
+\contentsline {chapter}{\numberline {3}Urban Data analysis}{43}{chapter.3}
+\contentsline {section}{\numberline {3.1}Relevance and Motivation}{44}{section.3.1}
+\contentsline {section}{\numberline {3.2}Urban Data Analysis Dimensions}{46}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Content Analysis}{46}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Spatial Analysis}{47}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Temporal Analysis}{48}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Combined Time and Space Analysis}{48}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Existing Semantic Web-Based Solutions}{48}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Monitoring Traffic Using Semantic and Stream Technologies}{49}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Semantic Traffic-Aware Routing}{50}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Monitoring Crowd Movement During London 2012 Olympics Games}{51}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Bottari}{52}{subsection.3.3.4}
+\contentsline {chapter}{\numberline {4}Conceptual Model}{55}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction and Problem Statement}{55}{section.4.1}
+\contentsline {section}{\numberline {4.2}FraPPE{} 1.0}{58}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}The Conceptual Model}{58}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Adherence to the Tom Gruber's Principles}{61}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Working Example}{63}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}FraPPE{} 2.0}{65}{section.4.3}
+\contentsline {section}{\numberline {4.4}FraPPE{} 2.0 and Urban Data Analysis}{66}{section.4.4}
+\contentsline {section}{\numberline {4.5}Conclusion}{69}{section.4.5}
+\contentsline {chapter}{\numberline {5}Computational Model}{71}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction and Problem Statement}{71}{section.5.1}
+\contentsline {section}{\numberline {5.2}\river {}}{72}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Preliminaries}{73}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}\river {}'s Operators and the Pipeline Definition Language}{74}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Reference Architecture}{83}{section.5.3}
+\contentsline {section}{\numberline {5.4}Conclusion}{85}{section.5.4}
+\contentsline {chapter}{\numberline {6}\river {} Implementations and Evaluations}{87}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction and Problem Statement}{87}{section.6.1}
+\contentsline {section}{\numberline {6.2}Implementations}{88}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Natron{} - A Vertically Scalable Implementation}{89}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}\sparkdi {} - A Horizontally Scalable Implementation Based on Spark}{89}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}\hivedi {} - A Horizontally Scalable Implementation Based on Hive}{90}{subsection.6.2.3}
+\contentsline {section}{\numberline {6.3}Validation of the Lazy Transformation Approach}{91}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Problem Settings}{92}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Solution Design and Experimental Settings}{93}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Results and Discussion}{97}{subsection.6.3.3}
+\contentsline {section}{\numberline {6.4}COST-Aware Evaluation: Distributed vs. Single-Threaded}{102}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Problem Settings}{103}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Solution Design}{106}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Experimental Settings}{109}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.4}Results and Discussion}{114}{subsection.6.4.4}
+\contentsline {section}{\numberline {6.5}Conclusion}{117}{section.6.5}
+\contentsline {chapter}{\numberline {7}Case Studies}{119}{chapter.7}
+\contentsline {section}{\numberline {7.1}Milano Design Week}{120}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}MDW2013 - Understanding the Data}{120}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}MDW2014 - CitySensing Public Installation}{123}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}MDW2016 - Advanced Visualizations}{129}{subsection.7.1.3}
+\contentsline {section}{\numberline {7.2}Milano Fashion Week}{133}{section.7.2}
+\contentsline {section}{\numberline {7.3}Como Smart City for Smart Citizens}{136}{section.7.3}
+\contentsline {section}{\numberline {7.4}Conclusion}{140}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion}{143}{chapter.8}
+\contentsline {section}{\numberline {8.1}Review of the Contributions}{144}{section.8.1}
+\contentsline {section}{\numberline {8.2}Limitations and Future Directions}{146}{section.8.2}
+\contentsline {section}{\numberline {8.3}Reflections}{147}{section.8.3}
+\contentsline {chapter}{Bibliography}{149}{section*.108}

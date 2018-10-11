@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: thesis.aux
+The style file: unsrt.bst
+Database file #1: thesis.bib
+Warning--empty journal in fernandez1997methontology
+Warning--empty booktitle in BalduiniISWC2018DC
+Warning--empty year in BalduiniISWC2018DC
+Warning--empty publisher in jacobs1961death
+Warning--empty booktitle in quercia2011mobile
+Warning--empty journal in bokanyi2015race
+Warning--empty journal in cook2005illuminating
+Warning--there's a number but no volume in moyes1993icon
+You've used 145 entries,
+            1791 wiz_defined-function locations,
+            1277 strings with 34874 characters,
+and the built_in function-call counts, 42251 in all, are:
+= -- 3796
+> -- 2126
+< -- 80
++ -- 759
+- -- 614
+* -- 2992
+:= -- 6348
+add.period$ -- 490
+call.type$ -- 145
+change.case$ -- 135
+chr.to.int$ -- 0
+cite$ -- 153
+duplicate$ -- 1954
+empty$ -- 3941
+format.name$ -- 614
+if$ -- 9693
+int.to.chr$ -- 0
+int.to.str$ -- 145
+missing$ -- 142
+newline$ -- 725
+num.names$ -- 154
+pop$ -- 514
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1043
+stack$ -- 0
+substring$ -- 2704
+swap$ -- 708
+text.length$ -- 80
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 8
+while$ -- 399
+width$ -- 148
+write$ -- 1640
+(There were 8 warnings)

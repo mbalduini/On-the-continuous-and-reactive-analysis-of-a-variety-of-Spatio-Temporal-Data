@@ -1,0 +1,916 @@
+\begin{thebibliography}{100}
+
+\bibitem{kitchin2014real}
+Rob Kitchin.
+\newblock The real-time city? big data and smart urbanism.
+\newblock {\em GeoJournal}, 79(1):1--14, 2014.
+
+\bibitem{DBLP:journals/ws/BalduiniCDVHLKT12}
+Marco Balduini, Irene Celino, Daniele Dell'Aglio, Emanuele {Della Valle},
+  Yi~Huang, Tony~Kyung{-}il Lee, Seon{-}Ho Kim, and Volker Tresp.
+\newblock {BOTTARI:} an augmented reality mobile application to deliver
+  personalized and location-based recommendations by continuous analysis of
+  social media streams.
+\newblock {\em J. Web Sem.}, 16:33--41, 2012.
+
+\bibitem{DBLP:journals/ws/LecueTHTBST14}
+Freddy L{\'{e}}cu{\'{e}}, Simone Tallevi{-}Diotallevi, Jer Hayes, Robert
+  Tucker, Veli Bicer, Marco~Luca Sbodio, and Pierpaolo Tommasi.
+\newblock Smart traffic analytics in the semantic web with {STAR-CITY:}
+  scenarios, system and lessons learned in dublin city.
+\newblock {\em J. Web Sem.}, 27:26--33, 2014.
+
+\bibitem{cho2011friendship}
+Eunjoon Cho, Seth~A. Myers, and Jure Leskovec.
+\newblock Friendship and mobility: User movement in location-based social
+  networks.
+\newblock In {\em Proceedings of the 17th ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, KDD '11, pages 1082--1090, New York,
+  NY, USA, 2011. ACM.
+
+\bibitem{DBLP:conf/semweb/BalduiniVDTPC13}
+Marco Balduini, Emanuele~Della Valle, Daniele Dell'Aglio, Mikalai Tsytsarau,
+  Themis Palpanas, and Cristian Confalonieri.
+\newblock Social listening of city scale events using the streaming linked data
+  framework.
+\newblock In {\em International Semantic Web Conference {(2)}}, volume 8219 of
+  {\em Lecture Notes in Computer Science}, pages 1--16. Springer, 2013.
+
+\bibitem{eagle2006reality}
+Nathan Eagle and Alex Pentland.
+\newblock Reality mining: sensing complex social systems.
+\newblock {\em Personal and Ubiquitous Computing}, 10(4):255--268, 2006.
+
+\bibitem{becker2011tale}
+Richard~A. Becker, Ram{\'{o}}n C{\'{a}}ceres, Karrie Hanson, Ji~Meng Loh, Simon
+  Urbanek, Alexander Varshavsky, and Chris Volinsky.
+\newblock A tale of one city: Using cellular network data for urban planning.
+\newblock {\em {IEEE} Pervasive Computing}, 10(4):18--26, 2011.
+
+\bibitem{calabrese2011real}
+Francesco Calabrese, Massimo Colonna, Piero Lovisolo, Dario Parata, and Carlo
+  Ratti.
+\newblock Real-time urban monitoring using cell phones: {A} case study in rome.
+\newblock {\em {IEEE} Trans. Intelligent Transportation Systems},
+  12(1):141--151, 2011.
+
+\bibitem{hristova2016if}
+Desislava Hristova, David Liben-Nowell, Anastasios Noulas, and Cecilia Mascolo.
+\newblock If you've got the money, i've got the time: Spatio-temporal
+  footprints of spending at sports events on foursquare.
+\newblock In {\em CitiLab@ ICWSM}, 2016.
+
+\bibitem{DBLP:journals/semweb/BalduiniCDVHLKT14}
+Marco Balduini, Irene Celino, Daniele Dell'Aglio, Emanuele~Della Valle,
+  Yi~Huang, Tony~Kyung{-}il Lee, Seon{-}Ho Kim, and Volker Tresp.
+\newblock Reality mining on micropost streams - deductive and inductive
+  reasoning for personalized and location-based recommendations.
+\newblock {\em Semantic Web}, 5(5):341--356, 2014.
+
+\bibitem{della2009s}
+Emanuele {Della Valle}, Stefano Ceri, Frank van Harmelen, and Dieter Fensel.
+\newblock It's a streaming world! reasoning upon rapidly changing information.
+\newblock {\em {IEEE} Intelligent Systems}, 24(6):83--89, 2009.
+
+\bibitem{DBLP:journals/ijsc/BarbieriBCVG10}
+Davide~Francesco Barbieri, Daniele Braga, Stefano Ceri, Emanuele~Della Valle,
+  and Michael Grossniklaus.
+\newblock {C-SPARQL:} a continuous query language for {RDF} data streams.
+\newblock {\em Int. J. Semantic Computing}, 4(1):3--25, 2010.
+
+\bibitem{DBLP:journals/internet/BalduiniBVHH14}
+Marco Balduini, Alessandro Bozzon, Emanuele~Della Valle, Yi~Huang, and
+  Geert{-}Jan Houben.
+\newblock Recommending venues using continuous predictive social media
+  analytics.
+\newblock {\em {IEEE} Internet Computing}, 18(5):28--35, 2014.
+
+\bibitem{lacasse2015making}
+Jeffrey~R. Lacasse and Eileen Gambrill.
+\newblock Making assessment decisions: Macro, mezzo, and micro perspectives.
+\newblock In {\em Critical Thinking in Clinical Assessment and Diagnosis},
+  pages 69--84. Springer, 2015.
+
+\bibitem{LenzeriniOBDI}
+Maurizio Lenzerini.
+\newblock Data integration: {A} theoretical perspective.
+\newblock In {\em {PODS}}, pages 233--246. {ACM}, 2002.
+
+\bibitem{fernandez1997methontology}
+Mariano Fern{\'a}ndez-L{\'o}pez, Asunci{\'o}n G{\'o}mez-P{\'e}rez, and Natalia
+  Juristo.
+\newblock Methontology: from ontological art towards ontological engineering.
+\newblock 1997.
+
+\bibitem{gruber1995toward}
+Thomas~R. Gruber.
+\newblock Toward principles for the design of ontologies used for knowledge
+  sharing?
+\newblock {\em Int. J. Hum.-Comput. Stud.}, 43(5-6):907--928, 1995.
+
+\bibitem{mcsherry2015scalability}
+Frank McSherry, Michael Isard, and Derek~Gordon Murray.
+\newblock Scalability! but at what cost?
+\newblock In {\em HotOS}. {USENIX} Association, 2015.
+
+\bibitem{DBLP:conf/avi/AntonelliABCVL14}
+Fabrizio Antonelli, Matteo Azzi, Marco Balduini, Paolo Ciuccarelli, Emanuele
+  {Della Valle}, and Roberto Larcher.
+\newblock City sensing: visualising mobile and social data about a city scale
+  event.
+\newblock In {\em {AVI}}, pages 337--338. {ACM}, 2014.
+
+\bibitem{DBLP:conf/semweb/BalduiniV15}
+Marco Balduini and Emanuele {Della Valle}.
+\newblock Frappe: {A} vocabulary to represent heterogeneous spatio-temporal
+  data to support visual analytics.
+\newblock In {\em ISWC {(2)}}, volume 9367 of {\em LNCS}, pages 321--328.
+  Springer, 2015.
+
+\bibitem{DBLP:conf/bis/ValleB15}
+Emanuele {Della Valle} and Marco Balduini.
+\newblock Listening to and visualising the pulse of our cities using social
+  media and call data records.
+\newblock In {\em {BIS} (Workshops)}, volume 228 of {\em LNBIP}, pages 3--14.
+  Springer, 2015.
+
+\bibitem{DBLP:conf/esws/BalduiniV017a}
+Marco Balduini, Emanuele {Della Valle}, and Riccardo Tommasini.
+\newblock {SLD} revolution: {A} cheaper, faster yet more accurate streaming
+  linked data framework.
+\newblock In {\em {ESWC} (Satellite Events)}, volume 10577 of {\em LNCS}, pages
+  263--279. Springer, 2017.
+
+\bibitem{DBLP:journals/ieeemm/BalduiniVALAC15}
+Marco Balduini, Emanuele {Della Valle}, Matteo Azzi, Roberto Larcher, Fabrizio
+  Antonelli, and Paolo Ciuccarelli.
+\newblock Citysensing: Fusing city data for visual storytelling.
+\newblock {\em {IEEE} MultiMedia}, 22(3):44--53, 2015.
+
+\bibitem{DBLP:conf/debs/BalduiniPV18}
+Marco Balduini, Sivam Pasupathipillai, and Emanuele~Della Valle.
+\newblock Cost-aware streaming data analysis: Distributed vs single-thread.
+\newblock In {\em {DEBS}}, pages 160--170. {ACM}, 2018.
+
+\bibitem{BalduiniJBD2018}
+Marco Balduini, Marco Brambilla, Emanuele~Della Valle, Christian Marazzi,
+  Tahereh Arabghalizi, Behnam Rahdari, and Michele Vescovi.
+\newblock Models and practices in urban data science at scale.
+\newblock {\em Big Data Research}, 2018.
+
+\bibitem{BalduiniISWC2018DC}
+Marco Balduini.
+\newblock On the continuous and reactive analysis of a variety of
+  spatio-temporal data.
+\newblock Submitted to ISWC 2018 DC.
+
+\bibitem{garofalakis2016data}
+Minos~N. Garofalakis, Johannes Gehrke, and Rajeev Rastogi, editors.
+\newblock {\em Data Stream Management - Processing High-Speed Data Streams}.
+\newblock Data-Centric Systems and Applications. Springer, 2016.
+
+\bibitem{w3c_sparql}
+Eric Prud{'}hommeaux and Andy Seaborne.
+\newblock {SPARQL Query Language for RDF}.
+\newblock \url{http://www.w3.org/TR/rdf-sparql-query/}.
+
+\bibitem{Barbieri2010b}
+Davide~Francesco Barbieri, Daniele Braga, Stefano Ceri, Emanuele {Della Valle},
+  and Michael Grossniklaus.
+\newblock {Incremental Reasoning on Streams and Rich Background Knowledge}.
+\newblock In {\em ESWC}, 2010.
+
+\bibitem{DBLP:conf/semweb/PhuocDPH11}
+Danh~Le Phuoc, Minh Dao{-}Tran, Josiane~Xavier Parreira, and Manfred Hauswirth.
+\newblock A native and adaptive approach for unified processing of linked
+  streams and linked data.
+\newblock In {\em International Semantic Web Conference {(1)}}, volume 7031 of
+  {\em Lecture Notes in Computer Science}, pages 370--388. Springer, 2011.
+
+\bibitem{DBLP:conf/semweb/CalbimonteCG10}
+Jean{-}Paul Calbimonte, {\'{O}}scar Corcho, and Alasdair J.~G. Gray.
+\newblock Enabling ontology-based access to streaming data sources.
+\newblock In {\em International Semantic Web Conference {(1)}}, volume 6496 of
+  {\em Lecture Notes in Computer Science}, pages 96--111. Springer, 2010.
+
+\bibitem{Anicic2011}
+D.~Anicic, P.~Fodor, S.~Rudolph, and N.~Stojanovic.
+\newblock {EP-SPARQL}: a unified language for event processing and stream
+  reasoning.
+\newblock In {\em WWW2011}, pages 635--644, 2011.
+
+\bibitem{arasu2006cql}
+Arvind Arasu, Shivnath Babu, and Jennifer Widom.
+\newblock The {CQL} continuous query language: semantic foundations and query
+  execution.
+\newblock {\em {VLDB} J.}, 15(2):121--142, 2006.
+
+\bibitem{DBLP:journals/pvldb/BotanDDHMT10}
+Irina Botan, Roozbeh Derakhshan, Nihal Dindar, Laura~M. Haas, Ren{\'{e}}e~J.
+  Miller, and Nesime Tatbul.
+\newblock {SECRET:} {A} model for analysis of the execution semantics of stream
+  processing systems.
+\newblock {\em {PVLDB}}, 3(1):232--243, 2010.
+
+\bibitem{DBLP:journals/csur/CugolaM12}
+Gianpaolo Cugola and Alessandro Margara.
+\newblock Processing flows of information: From data stream to complex event
+  processing.
+\newblock {\em {ACM} Comput. Surv.}, 44(3):15:1--15:62, 2012.
+
+\bibitem{marz2015big}
+Nathan Marz and James Warren.
+\newblock {\em Big Data: Principles and best practices of scalable real-time
+  data systems}.
+\newblock New York; Manning Publications Co., 2015.
+
+\bibitem{kreps2011kafka}
+Jay Kreps, Neha Narkhede, and Jun Rao.
+\newblock Kafka: A distributed messaging system for log processing.
+\newblock In {\em Proceedings of the NetDB}, pages 1--7, 2011.
+
+\bibitem{zaharia2016apache}
+Matei Zaharia, Reynold~S. Xin, Patrick Wendell, Tathagata Das, Michael
+  Armbrust, Ankur Dave, Xiangrui Meng, Josh Rosen, Shivaram Venkataraman,
+  Michael~J. Franklin, Ali Ghodsi, Joseph Gonzalez, Scott Shenker, and Ion
+  Stoica.
+\newblock Apache spark: a unified engine for big data processing.
+\newblock {\em Commun. {ACM}}, 59(11):56--65, 2016.
+
+\bibitem{dean2008mapreduce}
+Jeffrey Dean and Sanjay Ghemawat.
+\newblock Mapreduce: simplified data processing on large clusters.
+\newblock {\em Commun. {ACM}}, 51(1):107--113, 2008.
+
+\bibitem{DBLP:conf/sosp/ZahariaDLHSS13}
+Matei Zaharia, Tathagata Das, Haoyuan Li, Timothy Hunter, Scott Shenker, and
+  Ion Stoica.
+\newblock Discretized streams: fault-tolerant streaming computation at scale.
+\newblock In Michael Kaminsky and Mike Dahlin, editors, {\em {ACM} {SIGOPS}
+  24th Symposium on Operating Systems Principles, {SOSP} '13, Farmington, PA,
+  USA, November 3-6, 2013}, pages 423--438. {ACM}, 2013.
+
+\bibitem{DBLP:conf/sigmod/ArmbrustDTYZX0S18}
+Michael Armbrust, Tathagata Das, Joseph Torres, Burak Yavuz, Shixiong Zhu,
+  Reynold Xin, Ali Ghodsi, Ion Stoica, and Matei Zaharia.
+\newblock Structured streaming: {A} declarative {API} for real-time
+  applications in apache spark.
+\newblock In Gautam Das, Christopher~M. Jermaine, and Philip~A. Bernstein,
+  editors, {\em Proceedings of the 2018 International Conference on Management
+  of Data, {SIGMOD} Conference 2018, Houston, TX, USA, June 10-15, 2018}, pages
+  601--613. {ACM}, 2018.
+
+\bibitem{DBLP:journals/pvldb/ThusooSJSCALWM09}
+Ashish Thusoo, Joydeep~Sen Sarma, Namit Jain, Zheng Shao, Prasad Chakka, Suresh
+  Anthony, Hao Liu, Pete Wyckoff, and Raghotham Murthy.
+\newblock Hive - {A} warehousing solution over a map-reduce framework.
+\newblock {\em {PVLDB}}, 2(2):1626--1629, 2009.
+
+\bibitem{DBLP:journals/debu/CarboneKEMHT15}
+Paris Carbone, Asterios Katsifodimos, Stephan Ewen, Volker Markl, Seif Haridi,
+  and Kostas Tzoumas.
+\newblock Apache flink{\texttrademark}: Stream and batch processing in a single
+  engine.
+\newblock {\em {IEEE} Data Eng. Bull.}, 38(4):28--38, 2015.
+
+\bibitem{DBLP:journals/ijmms/Gruber95}
+Thomas~R. Gruber.
+\newblock Toward principles for the design of ontologies used for knowledge
+  sharing?
+\newblock {\em Int. J. Hum.-Comput. Stud.}, 43(5-6):907--928, 1995.
+
+\bibitem{DBLP:books/daglib/0005829}
+Michael~R. Genesereth and Nils~J. Nilsson.
+\newblock {\em Logical foundations of artificial intelligence}.
+\newblock Morgan Kaufmann, 1988.
+
+\bibitem{cyganiak2014rdf}
+Richard Cyganiak, David Wood, Markus Lanthaler, Graham Klyne, Jeremy~J Carroll,
+  and Brian McBride.
+\newblock Rdf 1.1 concepts and abstract syntax.
+\newblock {\em W3C recommendation}, 25(02), 2014.
+
+\bibitem{harris2013sparql}
+Steve Harris, Andy Seaborne, and Eric Prud{'}hommeaux.
+\newblock Sparql 1.1 query language.
+\newblock {\em W3C recommendation}, 21(10), 2013.
+
+\bibitem{DBLP:journals/tods/PerezAG09}
+Jorge P{\'{e}}rez, Marcelo Arenas, and Claudio Guti{\'{e}}rrez.
+\newblock Semantics and complexity of {SPARQL}.
+\newblock {\em {ACM} Trans. Database Syst.}, 34(3):16:1--16:45, 2009.
+
+\bibitem{DBLP:phd/dnb/Suarez-Figueroa12}
+Mari~Carmen Su{\'{a}}rez{-}Figueroa.
+\newblock {\em NeOn methodology for building ontology networks: specification,
+  scheduling and reuse}.
+\newblock PhD thesis, Technical University of Madrid, 2012.
+
+\bibitem{DBLP:journals/jods/PoggiLCGLR08}
+Antonella Poggi, Domenico Lembo, Diego Calvanese, Giuseppe {De Giacomo},
+  Maurizio Lenzerini, and Riccardo Rosati.
+\newblock Linking data to ontologies.
+\newblock {\em J. Data Semantics}, 10:133--173, 2008.
+
+\bibitem{DBLP:conf/semweb/BroekstraKH02}
+Jeen Broekstra, Arjohn Kampman, and Frank van Harmelen.
+\newblock Sesame: {A} generic architecture for storing and querying {RDF} and
+  {RDF} schema.
+\newblock In {\em International Semantic Web Conference}, volume 2342 of {\em
+  Lecture Notes in Computer Science}, pages 54--68. Springer, 2002.
+
+\bibitem{DBLP:conf/owled/ShearerMH08}
+Rob Shearer, Boris Motik, and Ian Horrocks.
+\newblock Hermit: {A} highly-efficient {OWL} reasoner.
+\newblock In {\em {OWLED}}, volume 432 of {\em {CEUR} Workshop Proceedings}.
+  CEUR-WS.org, 2008.
+
+\bibitem{DBLP:conf/semweb/NenovPMHWB15}
+Yavor Nenov, Robert Piro, Boris Motik, Ian Horrocks, Zhe Wu, and Jay Banerjee.
+\newblock Rdfox: {A} highly-scalable {RDF} store.
+\newblock In {\em International Semantic Web Conference {(2)}}, volume 9367 of
+  {\em Lecture Notes in Computer Science}, pages 3--20. Springer, 2015.
+
+\bibitem{DBLP:conf/aaai/MotikNPH15a}
+Boris Motik, Yavor Nenov, Robert Edgar~Felix Piro, and Ian Horrocks.
+\newblock Incremental update of datalog materialisation: the backward/forward
+  algorithm.
+\newblock In {\em {AAAI}}, pages 1560--1568. {AAAI} Press, 2015.
+
+\bibitem{DBLP:journals/jods/VolzSM05}
+Raphael Volz, Steffen Staab, and Boris Motik.
+\newblock Incrementally maintaining materializations of ontologies stored in
+  logic databases.
+\newblock {\em J. Data Semantics}, 2:1--34, 2005.
+
+\bibitem{DBLP:journals/semweb/CalvaneseCKKLRR17}
+Diego Calvanese, Benjamin Cogrel, Sarah Komla{-}Ebri, Roman Kontchakov, Davide
+  Lanti, Martin Rezk, Mariano Rodriguez{-}Muro, and Guohui Xiao.
+\newblock Ontop: Answering {SPARQL} queries over relational databases.
+\newblock {\em Semantic Web}, 8(3):471--487, 2017.
+
+\bibitem{DBLP:conf/fis/ValleCBBC08}
+Emanuele~Della Valle, Stefano Ceri, Davide~Francesco Barbieri, Daniele Braga,
+  and Alessandro Campi.
+\newblock A first step towards stream reasoning.
+\newblock In {\em {FIS}}, volume 5468 of {\em Lecture Notes in Computer
+  Science}, pages 72--81. Springer, 2008.
+
+\bibitem{DBLP:conf/esws/BarbieriBCVG10}
+Davide~Francesco Barbieri, Daniele Braga, Stefano Ceri, Emanuele~Della Valle,
+  and Michael Grossniklaus.
+\newblock Incremental reasoning on streams and rich background knowledge.
+\newblock In {\em {ESWC} {(1)}}, volume 6088 of {\em Lecture Notes in Computer
+  Science}, pages 1--15. Springer, 2010.
+
+\bibitem{DBLP:conf/debs/KomazecCF12}
+Srdjan Komazec, Davide Cerri, and Dieter Fensel.
+\newblock Sparkwave: continuous schema-enhanced pattern matching over {RDF}
+  data streams.
+\newblock In {\em {DEBS}}, pages 58--68. {ACM}, 2012.
+
+\bibitem{DBLP:conf/cikm/RenP11}
+Yuan Ren and Jeff~Z. Pan.
+\newblock Optimising ontology stream reasoning with truth maintenance system.
+\newblock In {\em {CIKM}}, pages 831--836. {ACM}, 2011.
+
+\bibitem{DBLP:journals/jifs/HeintzD04}
+Fredrik Heintz and Patrick Doherty.
+\newblock Dyknow: An approach to middleware for knowledge processing.
+\newblock {\em Journal of Intelligent and Fuzzy Systems}, 15(1):3--13, 2004.
+
+\bibitem{DBLP:phd/basesearch/Heintz09}
+Fredrik Heintz.
+\newblock {\em DyKnow : {A} Stream-Based Knowledge Processing Middleware
+  Framework}.
+\newblock PhD thesis, Link{\"{o}}ping University, Sweden, 2009.
+
+\bibitem{DBLP:conf/aaai/LengH16}
+Daniel de~Leng and Fredrik Heintz.
+\newblock Qualitative spatio-temporal stream reasoning with unobservable
+  intertemporal spatial relations using landmarks.
+\newblock In {\em {AAAI}}, pages 957--963. {AAAI} Press, 2016.
+
+\bibitem{DBLP:journals/semweb/AnicicRFS12}
+Darko Anicic, Sebastian Rudolph, Paul Fodor, and Nenad Stojanovic.
+\newblock Stream reasoning and complex event processing in {ETALIS}.
+\newblock {\em Semantic Web}, 3(4):397--407, 2012.
+
+\bibitem{DBLP:conf/debs/ValleDM16}
+Emanuele~Della Valle, Daniele Dell'Aglio, and Alessandro Margara.
+\newblock Taming velocity and variety simultaneously in big data with stream
+  reasoning: tutorial.
+\newblock In {\em {DEBS}}, pages 394--401. {ACM}, 2016.
+
+\bibitem{DBLP:conf/www/BarbieriV10}
+Davide~Francesco Barbieri and Emanuele {Della Valle}.
+\newblock A proposal for publishing data streams as linked data - {A} position
+  paper.
+\newblock In {\em Proceedings of the {WWW2010} Workshop on Linked Data on the
+  Web, {LDOW} 2010, Raleigh, USA, April 27, 2010}, 2010.
+
+\bibitem{DBLP:journals/ijswis/DellAglioVCC14}
+Daniele Dell'Aglio, Emanuele~Della Valle, Jean{-}Paul Calbimonte, and
+  {\'{O}}scar Corcho.
+\newblock {RSP-QL} semantics: {A} unifying query model to explain heterogeneity
+  of {RDF} stream processing systems.
+\newblock {\em Int. J. Semantic Web Inf. Syst.}, 10(4):17--44, 2014.
+
+\bibitem{DBLP:journals/ijswis/CalbimonteJCA12}
+Jean{-}Paul Calbimonte, Hoyoung Jeung, {\'{O}}scar Corcho, and Karl Aberer.
+\newblock Enabling query technologies for the semantic sensor web.
+\newblock {\em Int. J. Semantic Web Inf. Syst.}, 8(1):43--63, 2012.
+
+\bibitem{DBLP:conf/semweb/RinneNT12}
+Mikko Rinne, Esko Nuutila, and Seppo T{\"{o}}rm{\"{a}}.
+\newblock {INSTANS:} high-performance event processing with standard {RDF} and
+  {SPARQL}.
+\newblock In {\em International Semantic Web Conference (Posters {\&} Demos)},
+  volume 914 of {\em {CEUR} Workshop Proceedings}. CEUR-WS.org, 2012.
+
+\bibitem{DBLP:conf/semweb/PhuocQVH13}
+Danh~Le Phuoc, Hoan Nguyen~Mau Quoc, Chan~Le Van, and Manfred Hauswirth.
+\newblock Elastic and scalable processing of linked stream data in the cloud.
+\newblock In {\em International Semantic Web Conference {(1)}}, volume 8218 of
+  {\em Lecture Notes in Computer Science}, pages 280--297. Springer, 2013.
+
+\bibitem{DBLP:conf/usenix/HuntKJR10}
+Patrick Hunt, Mahadev Konar, Flavio~Paiva Junqueira, and Benjamin Reed.
+\newblock Zookeeper: Wait-free coordination for internet-scale systems.
+\newblock In {\em {USENIX} Annual Technical Conference}. {USENIX} Association,
+  2010.
+
+\bibitem{DBLP:conf/semweb/RenC17}
+Xiangnan Ren and Olivier Cur{\'{e}}.
+\newblock Strider: {A} hybrid adaptive distributed {RDF} stream processing
+  engine.
+\newblock In {\em International Semantic Web Conference {(1)}}, volume 10587 of
+  {\em Lecture Notes in Computer Science}, pages 559--576. Springer, 2017.
+
+\bibitem{DBLP:journals/ws/PhuocNPH12}
+Danh {Le Phuoc}, Hoan~Quoc Nguyen-Mau, Josiane~Xavier Parreira, and Manfred
+  Hauswirth.
+\newblock A middleware framework for scalable management of linked streams.
+\newblock {\em J. Web Sem.}, 16:42--51, 2012.
+
+\bibitem{DBLP:journals/ijswis/BizerHB09}
+Christian Bizer, Tom Heath, and Tim Berners{-}Lee.
+\newblock Linked data - the story so far.
+\newblock {\em Int. J. Semantic Web Inf. Syst.}, 5(3):1--22, 2009.
+
+\bibitem{DBLP:conf/semweb/SequedaC09}
+Juan~F. Sequeda and {\'{O}}scar Corcho.
+\newblock Linked stream data: {A} position paper.
+\newblock In {\em {SSN}}, volume 522 of {\em {CEUR} Workshop Proceedings},
+  pages 148--157. CEUR-WS.org, 2009.
+
+\bibitem{DBLP:series/synthesis/2011Heath}
+Tom Heath and Christian Bizer.
+\newblock {\em Linked Data: Evolving the Web into a Global Data Space}.
+\newblock Synthesis Lectures on the Semantic Web. Morgan {\&} Claypool
+  Publishers, 2011.
+
+\bibitem{gray1992benchmark}
+Jim Gray, editor.
+\newblock {\em The Benchmark Handbook for Database and Transaction Systems (2nd
+  Edition)}.
+\newblock Morgan Kaufmann, 1993.
+
+\bibitem{arasu2004linear}
+Arvind Arasu, Mitch Cherniack, Eduardo~F. Galvez, David Maier, Anurag Maskey,
+  Esther Ryvkina, Michael Stonebraker, and Richard Tibbetts.
+\newblock Linear road: {A} stream data management benchmark.
+\newblock In {\em {VLDB}}, pages 480--491. Morgan Kaufmann, 2004.
+
+\bibitem{chintapalli2016benchmarking}
+Sanket Chintapalli, Derek Dagit, Bobby Evans, Reza Farivar, Thomas Graves, Mark
+  Holderbaugh, Zhuo Liu, Kyle Nusbaum, Kishorkumar Patil, Boyang Peng, and Paul
+  Poulosky.
+\newblock Benchmarking streaming computation engines: Storm, flink and spark
+  streaming.
+\newblock In {\em {IPDPS} Workshops}, pages 1789--1792. {IEEE} Computer
+  Society, 2016.
+
+\bibitem{karimov2018benchmarking}
+Jeyhun Karimov, Tilmann Rabl, Asterios Katsifodimos, Roman Samarev, Henri
+  Heiskanen, and Volker Markl.
+\newblock Benchmarking distributed stream processing engines.
+\newblock {\em CoRR}, abs/1802.08496, 2018.
+
+\bibitem{toshniwal2014storm}
+Ankit Toshniwal, Siddarth Taneja, Amit Shukla, Karthikeyan Ramasamy, Jignesh~M.
+  Patel, Sanjeev Kulkarni, Jason Jackson, Krishna Gade, Maosong Fu, Jake
+  Donham, Nikunj Bhagat, Sailesh Mittal, and Dmitriy~V. Ryaboy.
+\newblock Storm@twitter.
+\newblock In {\em {SIGMOD} Conference}, pages 147--156. {ACM}, 2014.
+
+\bibitem{carbone2015apache}
+Paris Carbone, Asterios Katsifodimos, Stephan Ewen, Volker Markl, Seif Haridi,
+  and Kostas Tzoumas.
+\newblock Apache flink{\texttrademark}: Stream and batch processing in a single
+  engine.
+\newblock {\em {IEEE} Data Eng. Bull.}, 38(4):28--38, 2015.
+
+\bibitem{DBLP:conf/esws/ScharrenbachUMVB13}
+Thomas Scharrenbach, Jacopo Urbani, Alessandro Margara, Emanuele~Della Valle,
+  and Abraham Bernstein.
+\newblock Seven commandments for benchmarking semantic flow processing systems.
+\newblock In {\em {ESWC}}, volume 7882 of {\em Lecture Notes in Computer
+  Science}, pages 305--319. Springer, 2013.
+
+\bibitem{DBLP:conf/semweb/DellAglioCBCV13}
+Daniele Dell'Aglio, Jean{-}Paul Calbimonte, Marco Balduini, {\'{O}}scar Corcho,
+  and Emanuele~Della Valle.
+\newblock On correctness in {RDF} stream processor benchmarking.
+\newblock In {\em International Semantic Web Conference {(2)}}, volume 8219 of
+  {\em Lecture Notes in Computer Science}, pages 326--342. Springer, 2013.
+
+\bibitem{DBLP:conf/semweb/ZhangDCC12}
+Ying Zhang, Minh{-}Duc Pham, {\'{O}}scar Corcho, and Jean{-}Paul Calbimonte.
+\newblock Srbench: {A} streaming {RDF/SPARQL} benchmark.
+\newblock In {\em International Semantic Web Conference {(1)}}, volume 7649 of
+  {\em Lecture Notes in Computer Science}, pages 641--657. Springer, 2012.
+
+\bibitem{DBLP:conf/semweb/AliGM15}
+Muhammad~Intizar Ali, Feng Gao, and Alessandra Mileo.
+\newblock Citybench: {A} configurable benchmark to evaluate {RSP} engines using
+  smart city datasets.
+\newblock In {\em International Semantic Web Conference {(2)}}, volume 9367 of
+  {\em Lecture Notes in Computer Science}, pages 374--389. Springer, 2015.
+
+\bibitem{DBLP:conf/icwe/KolchinWKT16}
+Maxim Kolchin, Peter Wetz, Elmar Kiesling, and A~Min Tjoa.
+\newblock Yabench: {A} comprehensive framework for {RDF} stream processor
+  correctness and performance assessment.
+\newblock In {\em {ICWE}}, volume 9671 of {\em Lecture Notes in Computer
+  Science}, pages 280--298. Springer, 2016.
+
+\bibitem{DBLP:conf/esws/TommasiniVBD16}
+Riccardo Tommasini, Emanuele~Della Valle, Marco Balduini, and Daniele
+  Dell'Aglio.
+\newblock Heaven: {A} framework for systematic comparative research approach
+  for {RSP} engines.
+\newblock In {\em {ESWC}}, volume 9678 of {\em Lecture Notes in Computer
+  Science}, pages 250--265. Springer, 2016.
+
+\bibitem{bodendistributed}
+Christoph Boden, Tilmann Rabl, and Volker Markl.
+\newblock Distributed machine learning-but at what cost?
+\newblock Private Communication, 2018.
+
+\bibitem{DBLP:journals/csur/CalabreseFB14}
+Francesco Calabrese, Laura Ferrari, and Vincent~D. Blondel.
+\newblock Urban sensing using mobile phone network data: {A} survey of
+  research.
+\newblock {\em {ACM} Comput. Surv.}, 47(2):25:1--25:20, 2014.
+
+\bibitem{gonzalez2008understanding}
+Marta~C Gonzalez, Cesar~A Hidalgo, and A-L Barabasi.
+\newblock Understanding individual human mobility patterns.
+\newblock {\em arXiv preprint arXiv:0806.1256}, 2008.
+
+\bibitem{candia2008uncovering}
+Juli{\'a}n Candia, Marta~C Gonz{\'a}lez, Pu~Wang, Timothy Schoenharl, Greg
+  Madey, and Albert-L{\'a}szl{\'o} Barab{\'a}si.
+\newblock Uncovering individual and collective human dynamics from mobile phone
+  records.
+\newblock {\em Journal of physics A: mathematical and theoretical},
+  41(22):224015, 2008.
+
+\bibitem{mcardleanalyzing}
+Gavin McArdle, Giusy Di~Lorenzo, Fabio Pinelli, Francesco Calabrese, and Erik
+  Van~Lierde.
+\newblock Analyzing social events in real-time using big mobile data.
+\newblock {\em IEEE COMSOC MMTC E-Letter}, 2015.
+
+\bibitem{caceres2012exploring}
+Ram{\'o}n C{\'a}ceres, James Rowl, Christopher Small, and Simon Urbanek.
+\newblock Exploring the use of urban greenspace through cellular network
+  activity, 2012.
+
+\bibitem{ratti2006mobile}
+Carlo Ratti, Dennis Frenchman, Riccardo~Maria Pulselli, and Sarah Williams.
+\newblock Mobile landscapes: using location data from cell phones for urban
+  analysis.
+\newblock {\em Environment and Planning B: Planning and Design},
+  33(5):727--748, 2006.
+
+\bibitem{de2016death}
+Marco De~Nadai, Jacopo Staiano, Roberto Larcher, Nicu Sebe, Daniele Quercia,
+  and Bruno Lepri.
+\newblock The death and life of great italian cities: a mobile phone data
+  perspective.
+\newblock In {\em Proceedings of the 25th International Conference on World
+  Wide Web}, pages 413--423. International World Wide Web Conferences Steering
+  Committee, 2016.
+
+\bibitem{jacobs1961death}
+Jane Jacobs.
+\newblock {\em The death and life of American cities}.
+\newblock 1961.
+
+\bibitem{wesolowski2013impact}
+Amy Wesolowski, Nathan Eagle, Abdisalan~M Noor, Robert~W Snow, and Caroline~O
+  Buckee.
+\newblock The impact of biases in mobile phone ownership on estimates of human
+  mobility.
+\newblock {\em Journal of the Royal Society Interface}, 10(81):20120986, 2013.
+
+\bibitem{lee2016not}
+Myeong Lee, Rosta Farzan, and Brian~S Butler.
+\newblock This is not just a caf{\'e}: Toward capturing the dynamics of urban
+  places.
+\newblock In {\em CitiLab@ ICWSM}, 2016.
+
+\bibitem{psyllidis2015platform}
+Achilleas Psyllidis, Alessandro Bozzon, Stefano Bocconi, and Christiaan~Titos
+  Bolivar.
+\newblock A platform for urban analytics and semantic data integration in city
+  planning.
+\newblock In {\em CAAD Futures}, pages 21--36. Springer, 2015.
+
+\bibitem{singh2010social}
+Vivek~K. Singh, Mingyan Gao, and Ramesh Jain.
+\newblock Social pixels: genesis and evaluation.
+\newblock In {\em {ACM} Multimedia}, pages 481--490. {ACM}, 2010.
+
+\bibitem{botta2015quantifying}
+Federico Botta, Helen~Susannah Moat, and Tobias Preis.
+\newblock Quantifying crowd size with mobile phone and twitter data.
+\newblock {\em Royal Society open science}, 2(5):150162, 2015.
+
+\bibitem{quercia2011mobile}
+Daniele Quercia, Giusy Di~Lorenzo, Francesco Calabrese, and Carlo Ratti.
+\newblock Mobile phones and outdoor advertising: measurable advertising.
+\newblock Institute of Electrical and Electronics Engineers, 2011.
+
+\bibitem{calabrese2010geography}
+Francesco Calabrese, Francisco~C Pereira, Giusy Di~Lorenzo, Liu Liang, and
+  Carlo Ratti.
+\newblock The geography of taste: Analyzing cell-phone mobility and social
+  events.
+\newblock In {\em Pervasive}, volume~10, pages 22--37. Springer, 2010.
+
+\bibitem{quercia2010recommending}
+Daniele Quercia, Neal Lathia, Francesco Calabrese, Giusy Di~Lorenzo, and Jon
+  Crowcroft.
+\newblock Recommending social events from mobile phone location data.
+\newblock In {\em Data Mining (ICDM), 2010 IEEE 10th International Conference
+  on}, pages 971--976. IEEE, 2010.
+
+\bibitem{ahmed2016smart}
+Kaoutar~Ben Ahmed, Mohammed Bouhorma, and Mohamed~Ben Ahmed.
+\newblock Smart citizen sensing: a proposed computational system with visual
+  sentiment analysis and big data architecture.
+\newblock {\em IJCA}, 152(6), 2016.
+
+\bibitem{hawelka2014geo}
+Bartosz Hawelka, Izabela Sitko, Euro Beinat, Stanislav Sobolevsky, Pavlos
+  Kazakopoulos, and Carlo Ratti.
+\newblock Geo-located twitter as proxy for global mobility patterns.
+\newblock {\em Cartography and Geographic Information Science}, 41(3):260--271,
+  2014.
+
+\bibitem{calabrese2010human}
+Francesco Calabrese, Giusy Di~Lorenzo, and Carlo Ratti.
+\newblock Human mobility prediction based on individual and collective
+  geographical preferences.
+\newblock In {\em Intelligent Transportation Systems (ITSC), 2010 13th
+  International IEEE Conference on}, pages 312--317. IEEE, 2010.
+
+\bibitem{habitat2016urbanization}
+UN~Habitat.
+\newblock Urbanization and development: emerging futures; world cities report
+  2016.
+\newblock {\em Nairobi, UN Habitat}, 2016.
+
+\bibitem{sanderson2015world}
+Matthew~R Sanderson, Ben Derudder, Michael Timberlake, and Frank Witlox.
+\newblock Are world cities also world immigrant cities? an international,
+  cross-city analysis of global centrality and immigration.
+\newblock {\em International Journal of Comparative Sociology},
+  56(3-4):173--197, 2015.
+
+\bibitem{deville2014dynamic}
+Pierre Deville, Catherine Linard, Samuel Martin, Marius Gilbert, Forrest~R
+  Stevens, Andrea~E Gaughan, Vincent~D Blondel, and Andrew~J Tatem.
+\newblock Dynamic population mapping using mobile phone data.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  111(45):15888--15893, 2014.
+
+\bibitem{leimgruber2013management}
+Jakob~RE Leimgruber.
+\newblock The management of multilingualism in a city-state.
+\newblock {\em Multilingualism and language diversity in urban areas:
+  Acquisition, identities, space, education}, 1:227, 2013.
+
+\bibitem{garcia2001multilingual}
+Ofelia Garc{\'\i}a and Joshua~A Fishman.
+\newblock {\em The multilingual apple: languages in New York City}.
+\newblock Walter de Gruyter, 2001.
+
+\bibitem{extra2004urban}
+Guus Extra and Kutlay Yaǧmur.
+\newblock {\em Urban multilingualism in Europe: Immigrant minority languages at
+  home and school}, volume 130.
+\newblock Multilingual matters, 2004.
+
+\bibitem{tasse2016generating}
+Dan Tasse, Jennifer~T Chou, and Jason~I Hong.
+\newblock Generating neighborhood guides from social media.
+\newblock In {\em CitiLab@ ICWSM}, 2016.
+
+\bibitem{arnaboldi2016studying}
+Michela Arnaboldi, Marco Brambilla, Beatrice Cassottana, Paolo Ciuccarelli,
+  Davide Ripamonti, Simone Vantini, and Riccardo Volonterio.
+\newblock Studying multicultural diversity of cities and neighborhoods through
+  social media language detection.
+\newblock In {\em CitiLab@ ICWSM}, 2016.
+
+\bibitem{bokanyi2015race}
+Eszter Bok{\'a}nyi, D{\'a}niel Kondor, L{\'a}szl{\'o} Dobos, Tam{\'a}s
+  Seb{\H{o}}k, J{\'o}zsef St{\'e}ger, Istv{\'a}n Csabai, and G{\'a}bor Vattay.
+\newblock Race, religion and the city: twitter word frequency patterns reveal
+  dominant demographic dimensions in the united states.
+\newblock 2015.
+
+\bibitem{quaggiotto2010new}
+Marco Quaggiotto, Donato Ricci, Gaia Scagnetti, Giorgio Caviglia, Daniele
+  Guido, Michele Graffieti, and Samuel Granados~Lopez.
+\newblock New maps from the media-city. citymurmur as a tool for the
+  visualization of urban space.
+\newblock In {\em Nouvelles cartographies, nouvelles villes. HyperUrbain.2}.
+  Europia Production, 2010.
+
+\bibitem{yitzhaki1983extension}
+Shlomo Yitzhaki.
+\newblock On an extension of the gini inequality index.
+\newblock {\em International economic review}, pages 617--628, 1983.
+
+\bibitem{DBLP:journals/internet/ValleCDGST11}
+Emanuele~Della Valle, Irene Celino, Daniele Dell'Aglio, Ralph Grothmann,
+  Florian Steinke, and Volker Tresp.
+\newblock Semantic traffic-aware routing using the larkc platform.
+\newblock {\em {IEEE} Internet Computing}, 15(6):15--23, 2011.
+
+\bibitem{DBLP:conf/semco/FenselHABCVFHKLSTWWZ08}
+Dieter Fensel, Frank van Harmelen, Bo~Andersson, Paul Brennan, Hamish
+  Cunningham, Emanuele~Della Valle, Florian Fischer, Zhisheng Huang, Atanas
+  Kiryakov, Tony~Kyung{-}il Lee, Lael Schooler, Volker Tresp, Stefan Wesner,
+  Michael~J. Witbrock, and Ning Zhong.
+\newblock Towards larkc: {A} platform for web-scale reasoning.
+\newblock In {\em {ICSC}}, pages 524--529. {IEEE} Computer Society, 2008.
+
+\bibitem{tresp2009materializing}
+Volker Tresp, Yi~Huang, Markus Bundschus, and Achim Rettinger.
+\newblock Materializing and querying learned knowledge.
+\newblock {\em Proc. of IRMLeS}, 2009, 2009.
+
+\bibitem{huang2010multivariate}
+Yi~Huang, Volker Tresp, Markus Bundschus, Achim Rettinger, and Hans-Peter
+  Kriegel.
+\newblock Multivariate prediction for learning on the semantic web.
+\newblock In {\em International Conference on Inductive Logic Programming},
+  pages 92--104. Springer, 2010.
+
+\bibitem{cook2005illuminating}
+Kristin~A Cook and James~J Thomas.
+\newblock Illuminating the path: The research and development agenda for visual
+  analytics.
+\newblock 2005.
+
+\bibitem{moyes1993icon}
+Jackie Moyes and Patrick {W Jordan}.
+\newblock Icon design and its effect on guessability, learnability, and
+  experienced user performance.
+\newblock {\em People and computers}, (8):49--60, 1993.
+
+\bibitem{battle2011geosparql}
+Robert Battle and Dave Kolas.
+\newblock Geosparql: enabling a geospatial semantic web.
+\newblock {\em Semantic Web Journal}, 3(4):355--370, 2011.
+
+\bibitem{Hobbs2006}
+Jerry~R. Hobbs and Feng Pan.
+\newblock {Time Ontology in OWL}, September 2006.
+
+\bibitem{RaimondAbdallahEventOntology2007}
+Yves Raimond and Samer Abdallah.
+\newblock The event ontology, 2007.
+\newblock http://motools.sf.net/event.
+
+\bibitem{w3c-prov-o}
+Khalid Belhajjame, James Cheney, David Corsar, Daniel Garijo, Stian
+  Soiland-Reyes, Stephan Zednik, and Jun Zhao.
+\newblock {PROV-O}: The {PROV Ontology}.
+\newblock Technical report, {W3C}, 2012.
+
+\bibitem{DBLP:journals/ijwbc/BreslinDHB06}
+John~G. Breslin, Stefan Decker, Andreas Harth, and Uldis Bojars.
+\newblock {SIOC:} an approach to connect web-based communities.
+\newblock {\em {IJWBC}}, 2(2):133--142, 2006.
+
+\bibitem{DBLP:conf/dagstuhl/1998gp}
+Mehdi Jazayeri, R{\"{u}}diger Loos, and David~R. Musser, editors.
+\newblock {\em Generic Programming, International Seminar on Generic
+  Programming, Dagstuhl Castle, Germany, April 27 - May 1, 1998, Selected
+  Papers}, volume 1766 of {\em Lecture Notes in Computer Science}. Springer,
+  2000.
+
+\bibitem{krings2009urban}
+Gautier Krings, Francesco Calabrese, Carlo Ratti, and Vincent~D Blondel.
+\newblock Urban gravity: a model for inter-city telecommunication flows.
+\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
+  2009(07):L07003, 2009.
+
+\bibitem{aggarwal2015outlier}
+Charu~C Aggarwal.
+\newblock Outlier analysis.
+\newblock In {\em Data mining}, pages 237--263. Springer, 2015.
+
+\bibitem{pentland2007social}
+Alex Pentland.
+\newblock Social signal processing [exploratory dsp].
+\newblock {\em IEEE Signal Processing Magazine}, 24(4):108--111, 2007.
+
+\bibitem{DBLP:conf/semweb/BalduiniV13}
+Marco Balduini and Emanuele~Della Valle.
+\newblock A restful interface for {RDF} stream processors.
+\newblock In {\em International Semantic Web Conference (Posters {\&} Demos)},
+  volume 1035 of {\em {CEUR} Workshop Proceedings}, pages 209--212.
+  CEUR-WS.org, 2013.
+
+\bibitem{kalekar2004time}
+Prajakta~S Kalekar.
+\newblock Time series forecasting using holt-winters exponential smoothing.
+\newblock {\em Kanwal Rekhi School of Information Technology}, 4329008:1--13,
+  2004.
+
+\bibitem{Brambilla2017}
+Marco Brambilla, Stefano Ceri, Florian Daniel, and Gianmarco Donetti.
+\newblock Temporal analysis of social media response to live events: The milano
+  fashion week.
+\newblock In Jordi Cabot, Roberto De~Virgilio, and Riccardo Torlone, editors,
+  {\em Web Engineering: 17th International Conference, ICWE 2017, Rome, Italy,
+  June 5-8, 2017, Proceedings}, pages 134--150, Cham, 2017. Springer
+  International Publishing.
+
+\bibitem{BrambillaSpatial2017}
+Marco Brambilla, Stefano Ceri, Florian Daniel, and Gianmarco Donetti.
+\newblock Spatial analysis of social media response to live events: The case of
+  the milano fashion week.
+\newblock In {\em Proceedings of the 26th International Conference on World
+  Wide Web Companion}, WWW '17 Companion, pages 1457--1462, Republic and Canton
+  of Geneva, Switzerland, 2017. International World Wide Web Conferences
+  Steering Committee.
+
+\bibitem{DBLP:conf/esws/EiterPS17}
+Thomas Eiter, Josiane~Xavier Parreira, and Patrik Schneider.
+\newblock Spatial ontology-mediated query answering over mobility streams.
+\newblock In {\em {ESWC} {(1)}}, volume 10249 of {\em Lecture Notes in Computer
+  Science}, pages 219--237, 2017.
+
+\bibitem{DBLP:journals/itsr/EiterKPRSS16}
+Thomas Eiter, Thomas Krennwallner, Matthias Prandtstetter, Christian Rudloff,
+  Patrik Schneider, and Markus Straub.
+\newblock Semantically enriched multi-modal routing.
+\newblock {\em Int. J. Intelligent Transportation Systems Research},
+  14(1):20--35, 2016.
+
+\bibitem{DBLP:conf/ijcai/KontchakovPPRZ16}
+Roman Kontchakov, Laura Pandolfo, Luca Pulina, Vladislav Ryzhikov, and Michael
+  Zakharyaschev.
+\newblock Temporal and spatial {OBDA} with many-dimensional halpern-shoham
+  logic.
+\newblock In {\em {IJCAI}}, pages 1160--1166. {IJCAI/AAAI} Press, 2016.
+
+\bibitem{DBLP:conf/ijcai/MehdiBRR16}
+Gulnar Mehdi, Sebastian Brandt, Mikhail Roshchin, and Thomas~A. Runkler.
+\newblock Semantic framework for industrial analytics and diagnostics.
+\newblock In {\em {IJCAI}}, pages 4016--4017. {IJCAI/AAAI} Press, 2016.
+
+\bibitem{DBLP:journals/ws/KharlamovMMNORS17}
+Evgeny Kharlamov, Theofilos Mailis, Gulnar Mehdi, Christian Neuenstadt,
+  {\"{O}}zg{\"{u}}r~L. {\"{O}}z{\c{c}}ep, Mikhail Roshchin, Nina Solomakhina,
+  Ahmet Soylu, Christoforos Svingos, Sebastian Brandt, Martin Giese, Yannis~E.
+  Ioannidis, Steffen Lamparter, Ralf M{\"{o}}ller, Yannis Kotidis, and Arild
+  Waaler.
+\newblock Semantic access to streaming and static data at siemens.
+\newblock {\em J. Web Sem.}, 44:54--74, 2017.
+
+\bibitem{DBLP:conf/dlog/BienvenuKKPZ16}
+Meghyn Bienvenu, Stanislav Kikot, Roman Kontchakov, Vladimir~V. Podolskii, and
+  Michael Zakharyaschev.
+\newblock Theoretically optimal datalog rewritings for {OWL} 2 {QL}
+  ontology-mediated queries.
+\newblock In {\em Description Logics}, volume 1577 of {\em {CEUR} Workshop
+  Proceedings}. CEUR-WS.org, 2016.
+
+\bibitem{DBLP:conf/aaai/BrandtKKRXZ17}
+Sebastian Brandt, Elem~G{\"{u}}zel Kalayci, Roman Kontchakov, Vladislav
+  Ryzhikov, Guohui Xiao, and Michael Zakharyaschev.
+\newblock Ontology-based data access with a horn fragment of metric temporal
+  logic.
+\newblock In {\em {AAAI}}, pages 1070--1076. {AAAI} Press, 2017.
+
+\end{thebibliography}
