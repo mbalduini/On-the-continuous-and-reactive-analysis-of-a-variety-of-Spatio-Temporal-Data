@@ -101,12 +101,12 @@ As a first evaluation step, we compared \sti{} against SLD (see Section~\ref{sec
 Differently from SLD, \sti{} i) uses time-stamped generic data items (instead of focusing only time-stamped RDF graphs) and ii) processes them according to their original nature.
 In particular, we test if a system exploiting i) and ii) results a cheaper (using less memory and CPU), faster (reaching higher maximum input throughput) and more accurate (better approximating the correct answer) version of a streaming computational model.
 
-In the following sections, we expose the problem, the solution design and the experimental settings, and, fianlly, we bring experimental evidences that validate the hypothesis \textsf{Hp.2.1}.
+In the following sections, we expose the problem, the solution design and the experimental settings, and, finally, we bring experimental evidences that validate the hypothesis \textsf{Hp.2.1}.
 
 \subsection{Problem Settings}
 As domain, we chose Social Media analysis as done by the Linked Data Benchmark Council (LDBC) in the SNBench\footnote{\url{http://www.ldbcouncil.org/benchmarks/snb}}. 
 
-SLD and \sti{} receive information in the same way, they both connect to a web socket server and handle JSON-LD files. 
+SLD and \sti{} receive information in the same way, they both connect to a web socket and handle JSON-LD files. 
 
 \begin{figure}[ht]
 \begin{minipage}{0.95\linewidth}
@@ -169,10 +169,10 @@ The \textit{Actor} has a unique identifier  \textit{@id}, a \textit{displayName}
 \end{minipage}
 \end{figure}
 
-Listing~\ref{lst:rdf-post} shows the RDF produced by the SLD adapter in transforming the JSON-LD in Listing~\ref{lst:json-post}. The translation exploits well known vocabularies, in particular SIOC\footnote{\url{http://sioc-project.org/}} to represent the online community information, PROV-~O~\cite{w3c-prov-o} to track the provenance of an item and DCTERMS\footnote{\url{http://dublincore.org/documents/dcmi-terms/}} to represents information about the \textit{object}.
+Listing~\ref{lst:rdf-post} shows the RDF produced by SLD in transforming the JSON-LD in Listing~\ref{lst:json-post} at ingestion time. The translation exploits well known vocabularies, in particular SIOC\footnote{\url{http://sioc-project.org/}} to represent the online community information, PROV-~O~\cite{w3c-prov-o} to track the provenance of an item and DCTERMS\footnote{\url{http://dublincore.org/documents/dcmi-terms/}} to represents information about the \textit{object}.
 
 \subsection{Solution Design and Experimental Settings} 
-A test consists of sending a constant amount of synthetic data using the JSON-LD serialization presented in Listing~\ref{lst:json-post}.
+A test consists of sending a constant amount of JSON-LD synthetic data.
 The data is sent in chunks three times per minute (i.e. at the 10$^{th}$, the 30$^{th}$ and the 50$^{th}$ seconds of the minute).  Each chunk contains the same amount of posts. We tested the configuration for different rates: 1500 posts per minute (i.e., three chunks of 500 posts), 3000 posts per minute, 6000 posts per minute, 9000 posts per minute, 12000 posts per minute and 18000 posts per minute.
 
 The rates and the input methodology test a normal situation for SLD (1500 and 3000 posts per minutes) as well as situations that we know to overload SLD (more than 6000 posts per minute)~\cite{DBLP:conf/esws/BalduiniV017a}.
@@ -187,12 +187,13 @@ The rates and the input methodology test a normal situation for SLD (1500 and 30
 	\includegraphics[width=0.8\textwidth]{img/comp-mod-natron-pipeline}
 	\label{fig:natron-pl}
 }
-\caption{(a) SLD pipeline. Even if both the input and the output data are in json format, SLD use RDF graph for the internal computation.
-(b) \sti{} pipeline. The input and the output data are both in JSON format, \sti{} try to keep the data in tree format as long as possible during the internal computation.
-For graphic syntax legend, please refer to Figure~\ref{fig:sti_ex}.}
+\caption{(a) SLD pipeline. Even if both the input and the output data are in JSON-LD format, SLD use RDF graph for the internal computation.
+(b) \sti{} pipeline. The input and the output data are both in JSON-LD format, \sti{} keeps the data in tree format as long as possible during the internal computation.
+Both the pipelines are presented exploiting the Pipeline Definition Language (see Chapter~\ref{ch:computational})}
 \end{figure}
 
-We tested SLD and \sti{} with different pipelines (depicted in Figure~\ref{fig:sld-pl} and in Figure~\ref{fig:natron-pl}): an \textit{area chart} pipeline that computes the number of tweets observed over time, and a \textit{bar chart} pipeline that counts how often hashtags appear in the tweets received in the last 15 minutes.
+the pipelines used for testing the systems (depicted in Figure~\ref{fig:sld-pl} and in Figure~\ref{fig:natron-pl}) are both split into two branch. The first branch produces an \textit{area chart} by computing the number of tweets observed over time, the second one produces a \textit{bar chart} by counting how often hashtags appear in the tweets received in the last 15 minutes.
+
 The two pipelines are coded in SLD and \sti{} in two different ways. 
 SLD performs the transformations of JSON-LD in RDF by default, on all the input data, independently from the task to perform. \sti{} keeps the data in its original format as much as possible, i.e., it implements the \textit{Lazy Transformations} approach.
 In \sti{}, the results can be continuously computed \textit{i}) using a generic sliding window S2C$\langle Tree \rangle$ operator, which works looking only to the time-stamps of the data items in the generic stream, and \textit{ii}) accessing with C2C$\langle Tree \rangle$ operator implemented as a path expression the \textit{totalItems} property in the JSON-LD file, i.e., the number of items in the collection.
@@ -366,13 +367,7 @@ In the follows, we describe the tuning of both solutions to our particular use c
 
 The design of an industrial solution also requires operational considerations. With the term operational, we refer to the choices regarding when and how data is ingested, stored, and processed. Depending on the use case, there might be different operational requirements. In our use case, data is generated continuously from the mobile phone network. To avoid data losses, our only operational requirement is that data must be ingested continuously (see Section~\ref{sec:comp-mod-intro}). For our analysis, we consider the following two consumption policies: (i) \textit{continuous} -- data is consumed in real-time as soon as it is ingested -- and (ii) \textit{periodic} -- data is consumed at regular time intervals (e.g., once a day, or  once a week). Those choices influence the total solution cost. For example, if we want to analyze data continuously, we need dedicated hardware running 24/7.
 
-\subsection{Problem Settings}\label{sec:comp-mod-eval-cost-prob}
-%\subsubsection{Data Description}
-\label{sec:desc}
-% Mobile phone data can offer relevant and real-time hints about the presence of people in a geographical area~\cite{balduini2015citysensing,DBLP:journals/pervasive/CalabreseKRBFBKFWMFGBNPTBKHSSMK07,calabrese2011real,krings2009urban,calabrese2010geography,della2015listening}. 
-% Such analyses can be used to describe a territory's macro-dynamics. In particular, we refer to mobile phone connection data, commonly known as \textit{Call Detail Records} (or CDRs). Every mobile phone generates a CDR every time a call, SMS or Internet connection is made. The CDR contains information about the customer, the type of connection, and the cellular tower instantiating the connection. This data is used by telco companies for billing purposes.
-
-% Each CDR can be associated to a base tower, and each tower can be associated to a geographical location. Then, it is possible to map mobile phone activity to geographical locations. The number of active mobile phones at a location, computed following a privacy-preserving methodology, can approximate the number of people in the area. To make analysis more understandable, the mobile network is often approximated with a regular grid\footnote{For an industrial implementation of this solution see TIM Big Data \url{https://www.olivetti.com/en/retail/data-driven-solutions/tim-big-data}}. In our case, each grid cell represents a 250x250 meters square. We term each square a \textit{pixel} and we represent the city as a series of frames composed by pixels \cite{DBLP:conf/semweb/BalduiniV15}.
+\subsection{Problem Settings}\label{sec:comp-mod-eval-cost-prob} \label{sec:desc}
 
 In this work, we use mobile phone data, in particular the CDRs (see Section~\ref{sec:uda-motivation}), collected in the city of Milan, Italy, during the months of February, March, April and June 2016. Data was made available thanks to the collaboration with TIM -- Telecom Italia.
 

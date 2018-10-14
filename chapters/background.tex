@@ -48,7 +48,7 @@ We finally present a formal definition of Relation, an unordered bag of tuples a
 The Continuous Query Language(CQL)~\cite{arasu2006cql} represents both an expressive SQL-based declarative language for managing continuous queries against streams and updatable relations, and a processing model. 
 It was originally proposed by the DB group of the Stanford university.
 
-\begin{figure}[h]
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=.65\textwidth]{img/cql-model}\\
     \caption{The CQL processing model.}
@@ -138,7 +138,7 @@ In 2000s, different systems try to implement a streaming processing model (see S
 In order to explain the differences in the behavior of window operators in the existing stream processing engines, Botan et el. present SECRET~\cite{DBLP:journals/pvldb/BotanDDHMT10}.
 Differently from CQL, it assigns two time instants to each stream item: (i) the application and (ii) the system time. The former, already defined by CQL processing model, refers to the instant related to the event represented by the element in the stream. It is not unique (contemporaneity is allowed) and defines a partial order among the stream elements. The latter must be unique and introduces a total order in the stream. From a conceptual point of view, the application time represents the most relevant information, but the system time is also important to understand the correct behavior of the stream engine.
 
-\begin{figure}[h]
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.8\textwidth]{img/secret}\\
     \caption{SECRET of a query plan (source \cite{DBLP:journals/pvldb/BotanDDHMT10}).}
@@ -166,7 +166,7 @@ Cugola et al. in~\cite{DBLP:journals/csur/CugolaM12} proposed the Information Fl
 
 From an high-level point of view, an IFP takes data flows from multiple sources as input, processes them and produces other information flows as output. This output is then directed toward a set of sinks.
 
-\begin{figure}[h]
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=\textwidth]{img/ifp}
     \caption{The functional architecture of an IFP system (source \cite{DBLP:journals/csur/CugolaM12}).}
@@ -205,7 +205,7 @@ In recent years the complexity and the maintenance cost of $\lambda$ architectur
 \begin{figure}[t]
   \begin{center}
     \includegraphics[width=\textwidth]{img/kappa-arch}
-    \caption{The $\kappa$ architecture}
+    \caption{The $\kappa$ architecture.}
     \label{fig:kappa-arch}
   \end{center}
 \end{figure}
@@ -396,7 +396,7 @@ We report a briefly overview of METHONTOLOGY, an ontology development methodolog
 
 \textbf{METHONTOLOGY}~\cite{fernandez1997methontology} is a methodology for creating ontologies from scratch, by reusing other ontologies or by re-engineering them. The framework enables the construction of ontologies at the "knowledge level". 
 
-\begin{figure}[h]
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.8\textwidth]{img/methontology}
     \caption{Ontology lifecycle (source~\cite{fernandez1997methontology}).}
@@ -513,10 +513,10 @@ G : \mathcal{T} \rightarrow {g | g\, is\, an\, RDF\, graph}
 An instantaneous RDF graph $G(t)$ is the RDF graph identified by the time-varying graph G at the given time instant t.
 \end{Definition}
 
-\begin{figure}[h]
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=.65\textwidth]{img/cql-rdf-model}\\
-    \caption{The CQL processing model adapted for RSP}
+    \caption{The CQL processing model adapted for RSP.}
     \label{fig:cql-rdf-model}
   \end{center}
 \end{figure}
@@ -618,7 +618,7 @@ CQELS Cloud~\cite{DBLP:conf/semweb/PhuocQVH13} presents an elastic and distribut
 The input of the CQELS Cloud execution model is a set of CQELS-QL queries to be executed against a set of RDF input streams and the output is a set of output streams (in RDF or relational format).
 The input queries are compiled to produce a logical query network that defines the algebras for each input stream. The logical query network is, then, mapped on a processing network made of processing nodes, namely the Operator Containers (OCs). The tasks are distributed among the OCs by the Global Scheduler.
 
-\begin{figure}[h]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=0.85\textwidth]{img/cqels-cloud}
 \caption{CQELS Cloud architecture (source~\cite{DBLP:conf/semweb/PhuocQVH13}).}
@@ -629,7 +629,7 @@ The input queries are compiled to produce a logical query network that defines t
 Figure~\ref{fig:cqels-cloud} depicts the general architecture of the system. CQELS Cloud implements the elastic execution model and the parallel algorithms exploiting ZooKeeper~\cite{DBLP:conf/usenix/HuntKJR10}, Storm\footnote{\url{http://storm-project.net/}} and HBase\footnote{\url{http://hbase.apache.org/}}. 
 
 \paragraph{Strider}
-Strider \cite{DBLP:conf/semweb/RenC17} is a distributed and adaptive RDF Stream Processing engine that optimizes logical query plan according to the data stream evolution developed to guarantee scalability, availability, fault-tolerance, high throughput and acceptable latency. 
+Strider~\cite{DBLP:conf/semweb/RenC17} is a distributed and adaptive RDF Stream Processing engine that optimizes logical query plan according to the data stream evolution developed to guarantee scalability, availability, fault-tolerance, high throughput and acceptable latency. 
 
 Strider relies on well known distributed technology and is composed by two main components: (i) the data flow management and (ii) the Computing core. 
 The former is based on Apache Kafka, it categorizes the input RDF streams into different message topics which represent the different family of RDF events.
@@ -655,7 +655,7 @@ SLD is designed to address five different requirements:
 \item[\textbf{(R5)}] \emph{minimizes latency by using main memory}. SLD minimizes latency by using main memory and avoiding disk I/O bottlenecks.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=.9\textwidth]{img/SLD-arch}
 \caption{The architecture of the Streaming Linked Data framework.}
@@ -685,10 +685,10 @@ SLD represents the first attempts to create a streaming computational model with
 Le-Phuoc et al.~\cite{DBLP:journals/ws/PhuocNPH12} proposes Linked Stream Middleware (LSM), a platform to create a bridge between data streams and Semantic Web.
 LSM offers: (i) a wide range of extendable wrappers to access streaming sources and transform the raw data into Linked Stream Data~\cite{DBLP:conf/semweb/SequedaC09}, (ii) components for annotating and visualizing data through a Web interface and live querying functionalities over unified Linked Stream Data and data coming from the Linked Open Data cloud exploiting a standard SPARQL query processor and CQELS.
 
-\begin{figure}[h]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=0.7\textwidth]{img/lsm}
-\caption{Linked Stream Middleware architecture (source~\cite{DBLP:journals/ws/PhuocNPH12})}
+\caption{Linked Stream Middleware architecture (source~\cite{DBLP:journals/ws/PhuocNPH12}.)}
 \label{fig:lsm-arch}
 \end{center}
 \end{figure}

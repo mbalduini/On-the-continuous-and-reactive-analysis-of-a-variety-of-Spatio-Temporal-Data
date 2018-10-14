@@ -1,26 +1,22 @@
 \chapter{Conclusion}\label{ch:conclusion}
 
-During the PhD research work reported in this thesis we develop the research question on different level, exploiting the Macro, Mezzo and Micro methodology.
+During the PhD research work reported in this thesis we develop the research question exploiting the Macro, Mezzo and Micro methodology.
 At Macro level, we focus on relevancy and formulate the question: \textit{Is it possible to support reactive decisions by managing data characterized by velocity and variety without forgetting volume?}
 
-In order to specify a problem for which we can find a viable solution, at Mezzo Level, we concentrate our effort on the 
-the task of visually making sense of spatio-temporal streaming data. The result of those reflections is the question: \textit{Is it possible to visually making sense of a variety of spatio-temporal streaming data by enabling continuous ingestion and reactive analysis?}
+In order to specify a problem for which we can find a viable solution, at Mezzo Level, we concentrate our effort on the task of visually making sense of spatio-temporal streaming data. The result of those reflections is the question: \textit{Is it possible to visually making sense of a variety of spatio-temporal streaming data by enabling continuous ingestion and reactive analysis?}
 
-Finally, at Micro level, we formalize a question for which we can find a solution that can be evaluated.
-We focus our effort on supporting reactive decision making exploiting visual analytics instrument on streaming urban data in order to find emerging patterns and data dynamics.
+While trying to formalize a question for which we can find a solution that can be evaluated, we start looking for spatio-temporal data sources to enable the processes of formal and empirical evaluations.
+We observed that the modern cities offer a growing volume of heterogeneous flowing data from sensors, telecommunication infrastructures, time tables of public services, and, last but not least, from the people who leave the city every day (e.g., citizens, commuters, tourists, etc.).
+Thanks to the nature and the availability of those urban data, the interest around them are growing fast.
 So, in this PhD thesis we investigate the question: \textit{Is it possible to continuously ingest and reactively analyses a variety of streaming urban data in order to visualize emerging patterns and their dynamics?}
-
-The usage of urban data is motivated by the growing interest and availability of such spatio-temporal data.
-The modern cities offer a growing volume of heterogeneous flowing data from sensors, telecommunication infrastructures, time tables of public services, and, last but not least, from the people who leave the city every day (e.g., citizens, commuters, tourists).
-
 
 \section{Review of the Contributions}
 
-In this section we offer an overview of the thesis' contributions in terms of which problem they solved and how they can be a valid solution for the research question.
-The development of each contribution is related to one or more research problems and it is guided by the formulation of one or more hypotheses.
+In this section, we offer an overview of the thesis' contributions in terms of the problems solved and how they offer a valid solution for the research question.
+The development of each contribution is related to one or more research problems and its validation is guided by the formulation of one or more hypotheses.
 
 Reflecting on the research question, we split the research work in two different sub-lines.
-From the one hand we face the problem of data modeling, form the other hand we tackle the data computation problem.
+On the one hand, we face the problem of data modeling, on the other hand, we tackle the data computation problem.
 
 While focusing on the problem of modeling spatio-temporal data to enable time, space and content analyses a first problem emerges:
 
@@ -28,7 +24,7 @@ While focusing on the problem of modeling spatio-temporal data to enable time, s
 \item Defining a conceptual model to represent a variety of streaming data.
 \end{enumerate}
 
-While addressing \textsf{Rp.1} we formulate the hypotheses \textsf{Hp.1.1} and \textsf{Hp.1.2}
+To address \textsf{Rp.1} we formulate the hypotheses \textsf{Hp.1.1} and \textsf{Hp.1.2}:
 \begin{itemize}[leftmargin=42pt]
 \item[\textsf{Hp.1.1}] A conceptual model containing terms from the image processing domain can represent spatio-temporal data in an extendable and coherent way with a minimal encoding bias and a minimal ontological commitment.
 \item[\textsf{Hp.1.2}] Visual analytics interfaces built directly on data represented with the conceptual model of Hp.1.1 are guessable.
@@ -36,7 +32,7 @@ While addressing \textsf{Rp.1} we formulate the hypotheses \textsf{Hp.1.1} and \
 
 In order to validate \textsf{Hp.1.1} and \textsf{Hp.1.2}, we propose \frappe{} ontology (see Chapter~\ref{ch:conceptual}) that exploits digital image processing terms to tame three main dimensions of analysis (i.e., space, time, and content) and enables OBDA operations on heterogeneous spatio-temporal data.
 
-\frappe{} tries to bridge the gap between the data engineer perspective and the visual analytics perspective.
+\frappe{} bridges the gap between the data engineer perspective and the visual analytics perspective.
 We formally evaluated \frappe{} by checking its adherence to the Tom Gruber's principle and, in doing so, we validate the Hypothesis \textsf{Hp.1.1}.
 From the visual analytics perspective, we validate the Hypothesis \textsf{Hp.1.2} by empirically checking the guessability of the visualizations created exploiting the data modeled using \frappe{}.
 
@@ -47,7 +43,7 @@ While focusing on the data computation research line two problems emerge:
 \item Defining appropriate technical instantiations of the computational model in \textsf{Rp.2}.
 \end{enumerate}
 
-In order to investigate the research questions and solve \textsf{Rp.2} and \textsf{Rp.3}, we formulate the hypotheses: 
+In order to investigate the research questions and address \textsf{Rp.2} and \textsf{Rp.3}, we formulate the hypotheses: 
 \begin{itemize}[leftmargin=42pt]
 \item[\textsf{Hp.2.1}] The implementation of a streaming computational model that defers as long as possible the data transformation demands less resources and better approximates the correct answer under stress conditions than an implementation of a computational model that cast data into RDF at ingestion time.
 \item[\textsf{Hp.2.2}] A single-threaded implementation of the streaming computational model from \textsf{Hp.2.1} is more cost-effective than a distributed implementation of the same model while guaranteeing the reactiveness of the system.
@@ -55,12 +51,13 @@ In order to investigate the research questions and solve \textsf{Rp.2} and \text
 
 Aiming at validating the hypotheses, we propose \river{} computational model and its implementations (see Chapter~\ref{ch:computational} and Chapter~\ref{ch:computational-impl}).
 
-\river{} is a streaming computational model inspired by two principles \textbf{(P1)} \textit{everything is a data stream}, and \textbf{(P2)} \textit{Continuous Ingestion} and built around the idea of \textit{Lazy Transformation}.
-A system that implements \river{} postpones data transformations until it can really benefits from it.
+\river{} is a streaming computational model inspired by two principles: \textbf{(P1)} \textit{everything is a data stream}, and \textbf{(P2)} \textit{continuous ingestion}.
+It is built around the idea of \textit{Lazy Transformation}.
+A system that implements \river{} postpones data transformations until it can really benefits from them.
 
-In order to test the validity of the \textit{Lazy Transformation} approach, we propose \sti{} a single-threaded, vertically scalable implementation of \river{} and evaluated it against Streaming Linked Data Framework (SLD) that  apply data transformation (to RDF) at ingestion time.
-We evaluated the systems in terms of correctness and resource consumption.
-The result of such evaluation validated the Hypothesis \textsf{Hp.2.1} and convince us in assuming the \textsf{Lazy Transformation} as a third principle \textbf{(P3)}.
+In order to test the validity of the \textit{Lazy Transformation} approach, we propose \sti{} a single-threaded vertically scalable implementation of \river{} and evaluated it against our Streaming Linked Data (SLD) engine that  apply data transformation (to RDF) at ingestion time.
+We evaluate the systems in terms of correctness and resource consumption.
+The result of such evaluation validates the Hypothesis \textsf{Hp.2.1} and convince us in assuming the \textsf{Lazy Transformation} as a third principle \textbf{(P3)}.
 
 In order to prove the adequacy of \river{} in different work conditions, we propose two horizontally scalable implementations based on distributed technologies (\sparkdi{} and \hivedi{}).
 Aiming at reaffirming the importance of cost-effectiveness in Stream Processing field we evaluate \sti{} against \sparkdi{}.
@@ -77,45 +74,50 @@ In order to solve \textsf{Rp.4}, we formulate the hypothesis:
 \item[\textsf{Hp.3}] An implementation of \river{} computational model presented in Chapter~\ref{ch:computational}, can create a bridge between data analytics and data visualization that enhances the comprehension of a variety of spatio-temporal data and, at the same time, allows reactive decisions.
 \end{itemize}
 
-The week-long case studies in Milan (MDW and MFW) and the long-lasting use case in Como validate the Hypothesis \textsf{Hp.3} and demonstrate the validity of the \frappe{} approach in the data representation, and the robustness of the implementations of \river{}.
+Aiming at validating Hypothesis \textsf{Hp.3}, we put at work \frappe{} and \river{}'s implementations in four week-long case studies in Milan (during the Milano Design Week in 2014, 2015 and 2016, and the Milano Fashion Week 2016) and a 6 months-long use case in Como.
+We evaluate the guessability of the visualizations by collecting the answers to a questionnaire proposed to the public audiences and by organizing workshops for the use cases' stakeholders -- Studiolabo\footnote{\url{http://www.studiolabo.it}}, one of the biggest organizer of the Milano Design Week events and the Municipalities of Como.
+Both of the audiences were asked to visually correlate event and to find data patterns through the visualizations.
+The collected results demonstrate the validity of the \frappe{} approach in the data representation, and the robustness of the implementations of \river{}.
 
 \section{Limitations and Future Directions}
-In this section, we discuss the limitations we identified in this research work and the future directions of the research in order to eliminate those limitations.
+In this section, we discuss the limitations we identified in this research work and the future directions of the research in order to overcome those limitations.
 
 The \frappe{} evaluation shows its effectiveness in making spatio-temporal data ready for visual analytics.
 We prove the validity of the model at Micro and Mezzo level, but we have no evidence of it at Macro level.
-In the future, it is worth to keep working on the validation of the model by involving different data for different tasks.
+In the future, it is worth to keep working on the validation of the model by involving different data for different reactive tasks.
 
 Moreover, in order to reduce the ontology complexity and enable OBDA operations, \frappe{} exploits only the terms of external ontologies, without any axiomatization.
-The relation between OBDA and data model complexity represents a challenge in multiple fields and it is an hot topic.
-For instance, in spatial reasoning, the transitive relations play a crucial role, but they are not compatible with an OWL-QL data model and, consequently, impede OBDA operations.
+The relation between OBDA and data model complexity represents a challenge in multiple fields and it is an hot research topic.
+For instance, in spatial reasoning, the transitive relations play a crucial role, but they are not compatible with an OWL-QL data model and, consequently, with OBDA.
 In this field, Eiter et al. in~\cite{DBLP:conf/esws/EiterPS17} exploit a DL-Lite data model to present a query rewriting approach for the traffic, while in~\cite{DBLP:journals/itsr/EiterKPRSS16} they present two automatic routing use cases. In parallel, Kontchakov et al. in~\cite{DBLP:conf/ijcai/KontchakovPPRZ16} propose a new query language, based on datalog, for performing spatial analysis.
-Also data analytics world suffers the problem. Mehdi et al. in~\cite{DBLP:conf/ijcai/MehdiBRR16} propose an innovative approach to create ontologies for the data analysis, while Kharlamov et al. in~\cite{DBLP:journals/ws/KharlamovMMNORS17} present a typical use cases of reasoning vs. data analysis.
+Also the data analytics world suffers the problem. Mehdi et al. in~\cite{DBLP:conf/ijcai/MehdiBRR16} propose an innovative approach to create ontologies for the data analysis, while Kharlamov et al. in~\cite{DBLP:journals/ws/KharlamovMMNORS17} present a typical use cases of reasoning for data analysis.
 Artale et al. in the survey~\cite{DBLP:conf/dlog/BienvenuKKPZ16} on time series analysis methods demonstrate how this problem is hot and wide, while Brandt et al. in ~\cite{DBLP:conf/aaai/BrandtKKRXZ17} proposes different methodology for dealing with it.
-In the future it is worth to keep working in the field.
+In the future it is worth to keep working in the field by improving \frappe{} expressiveness, by broadening the range of usage fields and by pushing for the \frappe{} adoption.
 
-From the data computation point of view, \river{} and the Pipeline Definition Language (PDL), at this development stage, help users in designing computational plans without offering any concrete help in abstracting from the physical implementation of each operator.
-In particular, PDL, is only a graphic syntax, and it is still missing an editor and a compiler.
-As a future work, it is possible to keep investigating the automation approach.
-Future developments of \river{} and PDL should concern static optimization -- with particular regards to the automation of the pipeline operators choice -- and dynamic optimization -- regarding the automation of the the decision on when it is worth to perform a data transformation.
-Investigating on the formal definition of operator's cost model concept represents a suitable solution to ease the proposed optimizations.
-The operator's cost model enable a formal evaluation of the overall cost of the pipelines and allows automatic  detection of the best computational plan from the cost-effectiveness perspective. 
-From the external evaluation perspective, a formal cost model allows a formal comparison of \river{} against already existing computational model.
-Aiming at automating the code generation, in the future, it is worth to work on the operator's algebra alignment, in order to enable the automation of optimized code generation across frameworks/implementation languages.
+From the data computation point of view, \river{} and the Pipeline Definition Language (PDL), at this development stage, help users in designing computational plans.
+Moreover, they do not offer any concrete help in abstracting from the physical implementation of each operator.
+In particular, PDL, is only a graphical syntax, and it is still missing an editor and a compiler.
+Next step is to use \river{} and PDL for automating optimizations of the streaming computation.
+Future developments of \river{} and PDL should concern static optimization -- regarding the automatic selection of the physical operators -- and dynamic optimization -- regarding the automatic decision about the best moment to perform a data transformation.
+Investigating on the formal definition of operators' cost model represents a viable solution to ease the proposed optimizations.
+The operators' cost model allows to estimate the overall cost of the pipelines and to automatically detect the best computational plan from the cost-effectiveness perspective. 
+From the external evaluation point of view, a formal cost model allows a formal comparison of \river{} against already existing computational model.
+Last but not least, we also aim at automating the code generation.
+To this end, we need to work on the alignment of the algebraic representations of \river{} to the existing stream processing engines that we want to target with our code generation.
 
 As for \frappe{}, it is worth to keep working on the validation of \river{} through its implementation by broadening the type of involved tasks and data.
 In particular, the development of the distributed implementation of \river{} is still at an early stage. 
 Distributed framework is an hot topic and, in the future, it is worth to keep working on \sparkdi{} and \hivedi{} in order to exploit their potential.
-Moreover, it is worth to keep working on comparison by broadening the range of the involved system (e.g., CQELS Cloud, Strider, etc.) and exploiting well known benchmark (e.g. Yahoo! benchmark).
+Moreover, it is worth to keep working on comparison by broadening the range of the involved system (e.g., CQELS Cloud~\cite{DBLP:conf/semweb/PhuocQVH13}, Strider~\cite{DBLP:conf/semweb/RenC17}, etc.) and exploiting well known benchmark (e.g. Yahoo! benchmark).
 
 \section{Reflections}
 
-In this thesis, we proposed a complete set of instruments for enabling reactive decision making processes through the visual analysis of spatio-temporal data.
-The results of the formal and empirical evaluations show that \frappe{} conceptual model, \river{} streaming computational model and its implementations (\sti{}, \sparkdi{} and \hivedi{}) represent valid, effective and feasible solution to the research question and improve the state of the art.
+In this thesis, we proposed a complete set of instruments to enable reactive decision making through the visual analysis of a variety of spatio-temporal data.
+The results of the formal and empirical evaluations show that \frappe{} conceptual model, \river{} streaming computational model and its implementations (\sti{}, \sparkdi{} and \hivedi{}) represent valid, effective and feasible solutions to the research questions and improve the state of the art.
 
 From the data modeling point of view the presented conceptual model propose an holistic perspective on the spatio-temporal data in order to enable data visualization and different analysis.
-From the data computation perspective, the proposed conceptual model with its implementation represent a valid solution for ingest, analyze and emit a variety of streaming data.
-Moreover, we validated the proposed solutions in three different urban use cases.
+From the data computation perspective, the proposed computational model with its implementation represent a valid solution to ingest, analyze and emit a variety of streaming data.
+Moreover, we validated the proposed solutions in five different urban use cases.
 
-However, our approach presents different limitations from both the perspective, such as the missing axiomatizations of the terms from the imported ontologies in the conceptual model and the missing formal cost-model for the computational model.
+However, our approach presents different limitations from both the perspective, such as the missing axiomatizations of the terms from the imported ontologies in the conceptual model and the missing definition of a formal cost-model for the computational model.
 Those limitations open the door to further investigations and optimizations.

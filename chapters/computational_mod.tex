@@ -34,7 +34,7 @@ Finally, in Section~\ref{sec:comp-mod-sol-arch}, we present a reference architec
 \subsection{Preliminaries}\label{sec:comp-mod-sol-pre}
 Based on the considerations resulting from the development of our conceptual model (see Chapter~\ref{ch:conceptual}) and on our past experiences (see Chapter~\ref{ch:case-studies}), we identify two principles that inspire \river{}.
 
-\textbf{(P1)} \textit{everything is a data stream}. According to this principle, a variety-proof stream processing engine must indifferently ingest data with different velocities from any sources and of any size. 
+\textbf{(P1)} \textit{Everything is a data stream}. According to this principle, a variety-proof stream processing engine must indifferently ingest data with different velocities from any sources and of any size. 
 
 For instance, the movements of a car is a \textit{fast} data stream where the information flow records the identity, the positions and the speeds of the cars. In this case, the distance between two subsequent observations can be seconds. On the other side, a city road is a \textit{slowly evolving} data stream, where the information flow contains, for instance, the information about the addition of a bike lane.
 In this second case, the distance between two subsequent observations can be days or months. 
@@ -229,8 +229,8 @@ For instance, the S2C$\langle\mathrm{T}\rangle$ operators O$_3$ and O$_4$, propo
 Operator O$_3$ is a S2C$\langle Tree \rangle$, while O$_4$ implements a S2C$\langle Graph \rangle$
 
 As anticipated in the introduction, we report the physical implementation of some operators. 
-In this case, both O$_3$ and O$_4$ can be implemented exploiting ESPER engine (See Section~\ref{sec:esper-epl}) and using the EPL clause TIME to create sliding windows with 1 minute duration.
-Note that the operators are completely agnostic to the data type. O$_3$ and O$_4$ are the same query, except for the name of the stream (See Linting~\ref{lst:epl-win-03} and Linting~\ref{lst:epl-win-04}).
+In this case, both O$_3$ and O$_4$ can be implemented exploiting ESPER engine (see Section~\ref{sec:esper-epl}) and using the EPL clause TIME to create sliding windows with 1 minute duration.
+Note that the operators are completely agnostic to the data type. O$_3$ and O$_4$ are the same query, except for the name of the stream (see Linting~\ref{lst:epl-win-03} and Linting~\ref{lst:epl-win-04}).
 
 \begin{figure}[ht]
 \begin{minipage}{0.95\linewidth}

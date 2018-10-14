@@ -85,8 +85,6 @@ In Section~\ref{sec:uda-london} we propose an overview of the infrastructure we 
 Finally, Section~\ref{sec:uda-bottari} presents BOTTARI, a mobile application that performs \textit{content}, \textit{spatial} and \textit{temporal} analysis on social network and urban data to recommend restaurants to the user.
 
 \subsection{Monitoring Traffic Using Semantic and Stream Technologies} \label{sec:uda-starcity}
-In recent years, public administrations and governments are embracing Open Data in the attempt to made available information to increase transparency and improve accountability of public services. Many cities are offering data regarding transportation, environment, energy and planning. Web sources offer an abundance of information (e.g., ~weather information, bike sharing usage, etc.) and non-public data can also be accessed (e.g., current location and state of public transportation, CCTV images, etc.).
-Lecue et al.\cite{DBLP:journals/ws/LecueTHTBST14} proposes Semantic Traffic Analytics and Reasoning for CITY (STAR-CITY), a solution designed to ease the integration of data characterized by variety (structured and unstructured), velocity (static and real time streaming data) and volume (large amount of historical data).
 
 \begin{figure}[t]
 	\centering
@@ -95,12 +93,14 @@ Lecue et al.\cite{DBLP:journals/ws/LecueTHTBST14} proposes Semantic Traffic Anal
     \label{fig:star-city}
 \end{figure}
 
+In recent years, public administrations and governments are embracing Open Data in the attempt to made available information to increase transparency and improve accountability of public services. Many cities are offering data regarding transportation, environment, energy and planning. Web sources offer an abundance of information (e.g., ~weather information, bike sharing usage, etc.) and non-public data can also be accessed (e.g., current location and state of public transportation, CCTV images, etc.).
+Lecue et al.\cite{DBLP:journals/ws/LecueTHTBST14} proposes Semantic Traffic Analytics and Reasoning for CITY (STAR-CITY), a solution designed to ease the integration of data characterized by variety (structured and unstructured), velocity (static and real time streaming data) and volume (large amount of historical data).
+
 STAR-CITY exploits the W3C Semantic Web stack to represent the semantics of information and to elaborate the outcomes through a combination of reasoning techniques (Figure~\ref{fig:star-city} shows STAR-CITY semantic stream enrichment architecture). The solution was mainly designed to perform \textit{spatial} and \textit{temporal} analysis on heterogeneous data, on order to provide insights on historical and real-time traffic conditions.
 The traffic scenario was chosen because most of the industrial countries are suffering of traffic congestion and transportation issues that can reduce the health of citizenship and can interfere with the passage of emergency vehicles.
 The system was successfully tested in various scenario involving different cities (Dublin, Bologna, Miami and Rio).
 
 \subsection{Semantic Traffic-Aware Routing} \label{sec:uda-trafficlark}
-In the late 2000s, the increasing usage of mobile technologies to get directions and information about the surrounding presented various challenges. Those challenges were only partially solved by the existing research: operation research solved the routing problem, machine learning addressed traffic forecasting, and semantic technologies managed data integration and information retrieval. Therefore, the research of location-based comprehensive solution was still an open problem.
 
 \begin{figure}[t]
 	\centering
@@ -109,6 +109,8 @@ In the late 2000s, the increasing usage of mobile technologies to get directions
     \label{fig:traffic-lark}
 \end{figure}
 
+In the late 2000s, the increasing usage of mobile technologies to get directions and information about the surrounding presented various challenges. Those challenges were only partially solved by the existing research: operation research solved the routing problem, machine learning addressed traffic forecasting, and semantic technologies managed data integration and information retrieval. Therefore, the research of location-based comprehensive solution was still an open problem.
+
 Traffic LarKC~\cite{DBLP:journals/internet/ValleCDGST11} is a fist attempt to build a comprehensive system able to tame of those challenges simultaneously.
 It offers a mix of conceptual query answering, machine learning, and operations research.
 It can answer questions like "What Asian restaurant can I reach in less than 15 minutes if I get into my car at 6 p.m.?". 
@@ -116,12 +118,6 @@ It can answer questions like "What Asian restaurant can I reach in less than 15 
 Figure \ref{fig:traffic-lark} depicts the Traffic LarKC workflows. The service exploits the LarkC platform\cite{DBLP:conf/semco/FenselHABCVFHKLSTWWZ08} to offer a comprehensive solution to periodically perform \textit{spatial} and \textit{temporal} analysis on the data and compute the best route taking in account weather, traffic and other data from external dataset.
 
 \subsection{Monitoring Crowd Movement During London 2012 Olympics Games} \label{sec:uda-london}
-The work presented in this section shows how to track the movements of the crowds in big events exploiting the analysis of geo-tagged tweets.
-Previous work shows that the data from social network is incomplete and inconsistent (see Section~\ref{sec:vel-var-solutions}) and the proposed system must deal with these data characteristics.
-
-The presented system exploits the C-SPARQL Engine~\cite{DBLP:journals/ijsc/BarbieriBCVG10} within SLD (see Section \ref{sec:sld}) framework in order to perform \textit{content}, \textit{spatial} and \textit{temporal} analysis on Social Media streams (i.e., Twitter). 
-It models the data in a convenient format and exploits OBDA to extract the position on the interesting geo-tagged tweets. 
-Being public not only the position of the tweet but also the content, the system can track the people attention and select only the tweets with content related to the event. 
 
 \begin{figure}[t]
 \centering
@@ -135,15 +131,19 @@ Being public not only the position of the tweet but also the content, the system
 \label{fig:london-move}
 \end{figure}
 
+The work presented in this section shows how to track the movements of the crowds in big events exploiting the analysis of geo-tagged tweets.
+Previous work shows that the data from social network is incomplete and inconsistent (see Section~\ref{sec:vel-var-solutions}) and the proposed system must deal with these data characteristics.
+
+The presented system exploits the C-SPARQL Engine~\cite{DBLP:journals/ijsc/BarbieriBCVG10} within SLD (see Section \ref{sec:sld}) framework in order to perform \textit{content}, \textit{spatial} and \textit{temporal} analysis on Social Media streams (i.e., Twitter). 
+It models the data in a convenient format and exploits OBDA to extract the position on the interesting geo-tagged tweets. 
+Being public not only the position of the tweet but also the content, the system can track the people attention and select only the tweets with content related to the event. 
+
 Figure~\ref{fig:london-move}(a) shows the attention of the people at different space granularity, i.e. World, Europe, City of London, during the London 2012 Open Ceremony. The information was extracted from Tweets selected exploiting keywords present in text of the content.
 Figure~\ref{fig:london-move}(b) shows movements of the crowd before, during and after the Olympics open ceremony. Exploiting the Tweets position the system can clearly shows people arriving at the Olympic Stadium, entering the Olympic Stadium and leaving the Olympic Stadium.
 Figure~\ref{fig:london-move}(a) and Figure~\ref{fig:london-move}(b) shows how the infrastructure can enable visual analytics. 
 Both of the figure are based on the same data, but, while the former enables the observation of world-wide attention pattern, the latter offers insights of crowds' movements in a given area.
 
 \subsection{Bottari} \label{sec:uda-bottari}
-In 2011, an average of three million tweets per day was posted in Seoul and many of that carry the user's live opinion about restaurants, bars, cafes, and many other semi-public points of interest (POIs) in the city. 
-The stream of data, which we continuously collected, results (i) incomplete, i.e. only 41\% of users rated at least the same POI, and (ii) inconsistent, i.e. many users rates a POI several times in different way.
-BOTTARI~\cite{DBLP:journals/ws/BalduiniCDVHLKT12} exploits inductive and deductive stream reasoning (see Section \ref{sec:sr-rsp}) to continuously perform \textit{content}, \textit{spatial} and \textit{temporal} analysis on Social Media streams (i.e., Twitter) in order to understand how the Social Media users collectively perceive the POIs in a given area (e.g., Insadong's restaurants) and build a recommendation engine.
 
 \begin{figure}[t]
 	\centering
@@ -151,6 +151,10 @@ BOTTARI~\cite{DBLP:journals/ws/BalduiniCDVHLKT12} exploits inductive and deducti
     \caption{BOTTARI visualizations (source~\cite{DBLP:conf/semweb/BalduiniVDTPC13}).}
     \label{fig:bottari-vis}
 \end{figure}
+
+In 2011, an average of three million tweets per day was posted in Seoul and many of that carry the user's live opinion about restaurants, bars, cafes, and many other semi-public points of interest (POIs) in the city. 
+The stream of data, which we continuously collected, results (i) incomplete, i.e. only 41\% of users rated at least the same POI, and (ii) inconsistent, i.e. many users rates a POI several times in different way.
+BOTTARI~\cite{DBLP:journals/ws/BalduiniCDVHLKT12} exploits inductive and deductive stream reasoning (see Section \ref{sec:sr-rsp}) to continuously perform \textit{content}, \textit{spatial} and \textit{temporal} analysis on Social Media streams (i.e., Twitter) in order to understand how the Social Media users collectively perceive the POIs in a given area (e.g., Insadong's restaurants) and build a recommendation engine.
 
 BOTTARI is designed following an OBDI architecture (see Section \ref{sec:obdi-obda}). 
 The infrastructure behind BOTTARI application is pluggable and is based on SLD framework (see Section \ref{sec:sld}). 
