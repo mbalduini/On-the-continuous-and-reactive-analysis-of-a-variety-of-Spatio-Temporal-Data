@@ -1,7 +1,5 @@
 \chapter{\texorpdfstring{\protect\river{}}{RIVER} Implementations and Evaluations}\label{ch:computational-impl}
 
-\textcolor{red}{FINAL - TO BE READ ONE LAST TIME - READ FROM \ref{sec:comp-mod-eval-performace} ON}
-
 In this chapter, we propose different implementations of \river{} computational model (see Chapter~\ref{ch:computational}) and the evaluations of such implementations from different points of view.
 Section~\ref{sec:comp-mod-impl-intro} introduces the problem of implementing \river{} from the scalability perspective.
 In Section~\ref{sec:comp-mod-impl} we propose \sti{} -- a vertically-scalable implementation of \river{} --, \sparkdi{} and \hivedi{} -- two horizontally-scalable implementations of \river{}.
@@ -85,7 +83,7 @@ The final result is then served to the user through implementations of different
 
 As for the \sparkdi{}, we now focus on the S2C$\langle\mathrm{T}\rangle$ window operator in \hivedi{} that exploits the Hive window operator. Differently from Spark, the window operator is not natively supported due to the batch nature of the framework. However, if we augment the data items with a frame ID during the Augmentation \& Synthesis Phase, tumbling windows can be implemented grouping by Frame ID. 
 
-\begin{figure}[ht]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.92\textwidth]{img/hive_example}
 \caption{Example of Window operator using Hive.}
@@ -348,10 +346,8 @@ In general, the results show that \sti{} is more accurate (the result error is s
 
 Figure~\ref{fig:timeplots} and Figure~\ref{fig:errors} show the deep correlation between resources usage and errors. Clearly, a growing input throughput drives the systems to be less reliable. For both \sti{} and SLD the correctness of the results decreases as soon as the machine is overloaded and the resources usage starts rising out of control.
 
-{\color{red}
 Differently from SLD, that uses only the ingestion time to optimize the reactiveness, \sti{}, also accept the application time. It guarantees the accuracy of the computation at the expense of reactiveness. 
 It is worth to note that it is important to find a good trade-off between the two KPIs, this trade-off is domain dependent. 
-}
 
 \section{COST-Aware Evaluation: Distributed vs. Single-Threaded} \label{sec:comp-mod-eval-cost}
 %\section{COST Driven Evaluation} \label{sec:comp-mod-eval-cost}
@@ -411,7 +407,7 @@ Note that there exists a plethora of more advanced anomaly detection techniques 
 \subsection{Solution Design} \label{sec:solutions}
 The cost of an analytics solution depends on infrastructural, architectural, and operational choices. The proposed solution is a specialization of the reference architecture presented in Section~\ref{sec:comp-mod-sol-arch}.
 
-\begin{figure}[ht]
+\begin{figure}[t]
   \centering
   \includegraphics[width=.7\textwidth]{img/eval-arch-1}.
     \caption{General architecture of our solution}
@@ -462,12 +458,12 @@ Nevertheless, reported costs do not differ significantly from those of other clo
 
 %\subsubsection{Implementation Details}
 
-\begin{figure}[ht]
+\begin{figure}[t]
   \subfloat[]{
-      \includegraphics[width=.49\textwidth]{img/eval-arch-2}.
+      \includegraphics[width=.47\textwidth]{img/eval-arch-2}.
     }
     \subfloat[]{
-      \includegraphics[width=.49\textwidth]{img/eval-arch-3}.
+      \includegraphics[width=.47\textwidth]{img/eval-arch-3}.
     }
 \caption{(a) Architecture for the single-threaded solution. (b) Architecture for the distributed solution}
 \label{fig:arch_impl}
@@ -641,13 +637,13 @@ The resulting monthly solution costs per scenario are represented in Table \ref{
 \begin{figure}[p]
   \centering
   \subfloat[]{
-      \includegraphics[width=0.47\textwidth]{img/eval-N1_vs_spark}.
-    } 
+      \includegraphics[width=0.51\textwidth]{img/eval-N1_vs_spark}.
+    } \\
     \subfloat[]{
-      \includegraphics[width=0.47\textwidth]{img/eval-N2_vs_spark}.
-    }\\
+      \includegraphics[width=0.51\textwidth]{img/eval-N2_vs_spark}.
+    } \\
     \subfloat[]{
-      \includegraphics[width=0.47\textwidth]{img/eval-N3_vs_spark}.
+      \includegraphics[width=0.51\textwidth]{img/eval-N3_vs_spark}.
     }
 \caption{(a) Total solution cost for S3: \sti{}1 vs \sparkdi{}1. \sti{}1 is the lowest cost solution, but it can handle only datasets of modest size. (b) Total solution cost for S3: \sti{}2 vs \sparkdi{}1. The two solutions are cost-equivalent at a scale factor around 10. After that, \sparkdi{}1 becomes the most cost-effective solution. (c) Total solution cost for S3: \sti{}3 vs \sparkdi{}1. \sti{}3 can handle all datasets considered, however it is less cost-effective than the distributed system at all scales.}
 \label{fig:NvsSpark}

@@ -1,7 +1,5 @@
 \chapter{Computational Model}\label{ch:computational}
 
-\textcolor{red}{FINAL - TO BE READ ONE LAST TIME}
-
 In this chapter, we propose \river{}\footnote{The name \river, and its graphics, is inspired by the data continuously flowing one way into the system.} -- a variety-proof computational model to deal with streaming data.
 Section~\ref{sec:comp-mod-intro} introduces the problem of dealing with data characterized by high \textit{Variety} and \textit{Velocity} without forgetting \textit{Volume}.
 In Section~\ref{sec:comp-mod-sol}, we propose a) the background concepts that underpin \river{}, b) the semantics and textual syntax of the operators of \river{} and c) the Pipeline Definition Language -- a graphic language to ease the modeling of \river{} plans.
@@ -111,10 +109,12 @@ In the next paragraphs, we report the details of the operators and present, for 
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/computational-model-operators}
+    \includegraphics[width=0.7\textwidth]{img/computational-model-operators}
     \caption{Overview of \textnormal{\protect\river{}} operators.}
     \label{fig:cm-op}
 \end{figure}
+
+\pagebreak
 
 \medskip
 \noindent
@@ -175,6 +175,8 @@ Listing~\ref{lst:o2_res} shows the resulting RDF Graph.
 \end{figure}
 
 \end{Example}
+
+\pagebreak
 
 \medskip
 \noindent
@@ -437,6 +439,8 @@ It contains the personal information of the users with at least one Friend in co
 \end{table}
 \end{Example}
 
+\pagebreak
+
 \medskip
 \noindent
 \textbf{Collection-to-stream Operator}
@@ -484,6 +488,8 @@ In PDL, we propose the symbol $\Diamond$ to represent the C2S$\langle\mathrm{T}\
 \end{minipage}
 \end{figure}
 \end{Example}
+
+\pagebreak
 
 \medskip
 \noindent

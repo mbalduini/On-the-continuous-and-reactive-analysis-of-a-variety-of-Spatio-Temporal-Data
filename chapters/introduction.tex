@@ -1,7 +1,5 @@
 \chapter{Introduction}\label{ch:intro}
 
-\textcolor{red}{FINAL - TO BE READ ONE LAST TIME}
-
 \section{Relevancy}\label{sec:relevancy}
 In an increasing number of situations, a decision must be reactive\footnote{Deciding an action in response to a stimulus before new incoming information makes the planned action ineffective.} and must be based on a variety of streaming data.
 In the electricity management domain, a reactive anomaly detection system, which processes the consumption data, must react in \textit{seconds} to avoid network problems. In oil and gas extraction sites, the analyses of sensors' readings from the wells have at most \textit{minutes} for the reactive detection of dangerous situations.
@@ -81,13 +79,16 @@ We, finally, put at work a complete system, composed by an implementation of the
 \section{Outline}
 The thesis is structured as follows:
 \begin{itemize}
-\item Chapter \ref{ch:background} offers an overview on the relevant background concepts used by the Semantic Web community to tame velocity, variety and both of them in a single system. It, then, defines the basic concepts of RSP Middleware systems and offers an overview of the benchmarking principles.
+\item Chapter~\ref{ch:background} offers an overview on the relevant background concepts used by the Semantic Web community to tame velocity, variety and both of them in a single system. It, then, defines the basic concepts of RSP Middleware systems and offers an overview of the benchmarking principles.
 
-\item Chapter \ref{ch:uda} offers an overview on the urban data analysis by setting the main characteristics of urban data, by reviewing the state of the art, and ,finally, by offering significant examples of application of RDF stream processing in the field.
+\item Chapter~\ref{ch:uda} offers an overview on the urban data analysis by setting the main characteristics of urban data, by reviewing the state of the art, and ,finally, by offering significant examples of application of RDF stream processing in the field.
 
-\item Chapter \ref{ch:conceptual} introduces \frappe{} ontology, the conceptual model we proposed to tame with the problem \textsf{Rp.1}. The chapter presents the motivation, the genesis and a first evaluation of the original \frappe{} 1.0. Moreover, it offers an overview of the \frappe{} 2.0 extension while casting some light on how the proposed conceptual model helps the user in spotting emerging patterns and understanding data dynamics in the urban data analysis field.
+\item Chapter~\ref{ch:conceptual} introduces \frappe{} ontology, the conceptual model we proposed to tame with the problem \textsf{Rp.1}. The chapter presents the motivation, the genesis and a first evaluation of the original \frappe{} 1.0. Moreover, it offers an overview of the \frappe{} 2.0 extension while casting some light on how the proposed conceptual model helps the user in spotting emerging patterns and understanding data dynamics in the urban data analysis field.
 
-\item Chapter \ref{ch:computational} introduces \river{} the streaming computational model we proposed to face the research problems \textsf{Rp.2} and \textsf{Rp.3}. In this chapter we present an overview of the principles at the basis of \river{}, its genesis, its internals, its implementations and different evaluations based on performance and cost-effectiveness metrics.
+\item Chapter~\ref{ch:computational} introduces \river{} the streaming computational model we proposed to face the research problems \textsf{Rp.2}. In this chapter we present an overview of the principles that underpin \river{}, its genesis and its internals.
+
+\item Chapter~\ref{ch:computational-impl} proposes three \river{}'s implementation based on single-threaded and distributed technologies. 
+Moreover, in this chapter, we present the evaluations of our implementations, a first one based on performance metric, and a second one based cost-effectiveness metric.
 
 \item Chapter \ref{ch:case-studies} presents real world use-cases where we put at work \frappe{} and the different implementations of \river{} in order to verify the solution to the research problem \textsf{Rp.4} and, consequently, validate the solutions proposed for the problems \textsf{Rp.1}, \textsf{Rp.2}, \textsf{Rp.3}. 
 
@@ -96,23 +97,31 @@ The thesis is structured as follows:
 
 \section{Publications}
 
-This thesis is based on the articles \cite{DBLP:conf/avi/AntonelliABCVL14,DBLP:conf/semweb/BalduiniV15,DBLP:conf/bis/ValleB15,DBLP:conf/esws/BalduiniV017a,DBLP:journals/ieeemm/BalduiniVALAC15,DBLP:conf/debs/BalduiniPV18,BalduiniJBD2018,BalduiniISWC2018DC}
+This thesis is based on the articles \cite{DBLP:conf/avi/AntonelliABCVL14,DBLP:conf/semweb/BalduiniV15,DBLP:conf/bis/ValleB15,DBLP:conf/esws/BalduiniV017a,DBLP:journals/ieeemm/BalduiniVALAC15,DBLP:conf/debs/BalduiniPV18,BalduiniJBD2018,BalduiniISWC2018DC}, listed above.
 
 \begin{itemize}
 \item Fabrizio Antonelli, Matteo Azzi, Marco Balduini, Paolo Ciuccarelli, Emanuele Della Valle, Roberto Larcher:
 "City sensing: visualising mobile and social data about a city scale event". AVI 2014: 337-338
+
 \item Marco Balduini, Emanuele Della Valle:
 "FraPPE: A Vocabulary to Represent Heterogeneous Spatio-temporal Data to Support Visual Analytics". International Semantic Web Conference (2) 2015: 321-328
+
 \item 	Emanuele Della Valle, Marco Balduini:
 "Listening to and Visualising the Pulse of Our Cities Using Social Media and Call Data Records". BIS (Workshops) 2015: 3-14
-\item 	Marco Balduini, Emanuele Della Valle, Riccardo Tommasini:
-"SLD Revolution: A Cheaper, Faster yet More Accurate Streaming Linked Data Framework". ESWC (Satellite Events) 2017: 263-279
+
 \item Marco Balduini, Emanuele Della Valle, Matteo Azzi, Roberto Larcher, Fabrizio Antonelli, Paolo Ciuccarelli:
 "CitySensing: Fusing City Data for Visual Storytelling". IEEE MultiMedia 22(3): 44-53 (2015)
+
+\item 	Marco Balduini, Emanuele Della Valle, Riccardo Tommasini:
+"SLD Revolution: A Cheaper, Faster yet More Accurate Streaming Linked Data Framework". ESWC (Satellite Events) 2017: 263-279
+
 \item Marco Balduini, Sivam Pasupathipillai, Emanuele Della Valle:
 "Cost-Aware Streaming Data Analysis: Distributed vs Single-Thread". DEBS 2018: 160-170
-\item \textcolor{red}{Marco Balduini, Marco Brambilla, Emanuele Della Valle, Christian Marazzi, Tahereh Arabghalizi, Behnam Rahdari, and Michele Vescovi:
-"Models and prac- tices in urban data science at scale". Big Data Research, 2018: In Press}
-\item \textcolor{red}{Marco Balduini:
-"On the continuous and reactive analysis of a variety of Spatio-Temporal Data". ISWC-DC 2018}
+
+\item Marco Balduini, Marco Brambilla, Emanuele Della Valle, Christian Marazzi, Tahereh Arabghalizi, Behnam Rahdari, and Michele Vescovi:
+"Models and practices in urban data science at scale". Big Data Research, 2018: In Press
+
+\item Marco Balduini:
+"On the Continuous and Reactive Analysis of a Variety of Spatio-Temporal Data". ISWC-DC 2018: 10-17
+
 \end{itemize}

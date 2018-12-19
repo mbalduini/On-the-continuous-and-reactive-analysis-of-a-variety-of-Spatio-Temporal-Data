@@ -1,7 +1,5 @@
 \chapter{Urban Data analysis}\label{ch:uda}
 
-\textcolor{red}{FINAL - TO BE READ ONE LAST TIME - ADD CONCLUSION IF HAVE TIME}
-
 In this chapter, we introduce the state-of-the-art on urban data analysis.
 We justify the choice of urban data as a privileged form of spatio-temporal data useful for a PhD thesis like this one, due to its variety and availability.
 Section~\ref{sec:uda-motivation} presents relevance and motivations of the urban data analysis with an overview of the most important research works in the field.
@@ -79,19 +77,19 @@ Furthermore, one can define time series of values that are aggregated or calcula
 
 \section{Existing Semantic Web-Based Solutions}\label{sec:uda-solution}
 
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=0.75\textwidth]{img/starcity}.
+    \caption{The STAR-CITY semantic stream enrichment (source~\cite{DBLP:journals/ws/LecueTHTBST14}).}
+    \label{fig:star-city}
+\end{figure}
+
 The next sections present four different solutions for urban data analysis based on Semantic Web technologies.
 Section~\ref{sec:uda-starcity} and Section~\ref{sec:uda-trafficlark} present respectively STAR-CITY and Traffic LarKC, two works that face the problem, from architectural point of view. Both of the presented solutions perform \textit{spatial} and \textit{temporal} analysis on the collected data to offer the best route to the user based on weather, traffic and other multiple external sources.
 In Section~\ref{sec:uda-london} we propose an overview of the infrastructure we created for monitoring crowds movement during the 2012 Olympic Games in London. The solution exploits data from social network and perform \textit{content}, \textit{spatial} and \textit{temporal} analysis to spot emerging pattern and mobility dynamics and enables the creation of complex data visualizations.
 Finally, Section~\ref{sec:uda-bottari} presents BOTTARI, a mobile application that performs \textit{content}, \textit{spatial} and \textit{temporal} analysis on social network and urban data to recommend restaurants to the user.
 
 \subsection{Monitoring Traffic Using Semantic and Stream Technologies} \label{sec:uda-starcity}
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.75\textwidth]{img/starcity}.
-    \caption{The STAR-CITY semantic stream enrichment (source~\cite{DBLP:journals/ws/LecueTHTBST14}).}
-    \label{fig:star-city}
-\end{figure}
 
 In recent years, public administrations and governments are embracing Open Data in the attempt to made available information to increase transparency and improve accountability of public services. Many cities are offering data regarding transportation, environment, energy and planning. Web sources offer an abundance of information (e.g., ~weather information, bike sharing usage, etc.) and non-public data can also be accessed (e.g., current location and state of public transportation, CCTV images, etc.).
 Lecue et al.\cite{DBLP:journals/ws/LecueTHTBST14} proposes Semantic Traffic Analytics and Reasoning for CITY (STAR-CITY), a solution designed to ease the integration of data characterized by variety (structured and unstructured), velocity (static and real time streaming data) and volume (large amount of historical data).
@@ -105,7 +103,7 @@ The system was successfully tested in various scenario involving different citie
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.75\textwidth]{img/traffic-lark.pdf}.
-    \caption{The Traffic LarKC workflows and external datasets (source~\cite{DBLP:journals/internet/ValleCDGST11})}
+    \caption{The Traffic LarKC workflows and external datasets (source~\cite{DBLP:journals/internet/ValleCDGST11}).}
     \label{fig:traffic-lark}
 \end{figure}
 
@@ -134,7 +132,7 @@ Figure \ref{fig:traffic-lark} depicts the Traffic LarKC workflows. The service e
 The work presented in this section shows how to track the movements of the crowds in big events exploiting the analysis of geo-tagged tweets.
 Previous work shows that the data from social network is incomplete and inconsistent (see Section~\ref{sec:vel-var-solutions}) and the proposed system must deal with these data characteristics.
 
-The presented system exploits the C-SPARQL Engine~\cite{DBLP:journals/ijsc/BarbieriBCVG10} within SLD (see Section \ref{sec:sld}) framework in order to perform \textit{content}, \textit{spatial} and \textit{temporal} analysis on Social Media streams (i.e., Twitter). 
+The presented system exploits the C-SPARQL Engine~\cite{DBLP:journals/ijsc/BarbieriBCVG10} within SLD (see Section~\ref{sec:sld}) framework in order to perform \textit{content}, \textit{spatial} and \textit{temporal} analysis on Social Media streams (i.e., Twitter). 
 It models the data in a convenient format and exploits OBDA to extract the position on the interesting geo-tagged tweets. 
 Being public not only the position of the tweet but also the content, the system can track the people attention and select only the tweets with content related to the event. 
 

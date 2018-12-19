@@ -1,39 +1,42 @@
 \chapter*{Abstract}
 
 In recent years, an increasing number of situations call for reactive decisions making process based on a heterogeneous streaming data.
-In this context, the urban environment results particularly relevant, there is a dense network of interactions between people and urban spaces that produces a great amount of spatio-temporal fast evolving data. Moreover, in a modern city there is a multitude of stakeholders who are interested in reactive decisions for urban planning, commuters, tourists, etc.
+In this context, the urban environment results particularly relevant, because there is a dense network of interactions between people and urban spaces that produces a great amount of spatio-temporal fast evolving data. Moreover, in a modern city there is a multitude of stakeholders who are interested in reactive decisions for urban planning, mobility management, tourism, etc.
 The growing usage of location-based social networks, and, in general, the diffusion of mobile devices improved the ability to create an accurate and up-to-date representation of reality (a.k.a. Digital footprint or Digital reflection or Digital twin).
-When I started this thesis the state of the art was exploiting either social media or mobile phones data as a single source.
+Five years ago, the state of the art was exploiting only a single data source either social media or mobile phones.
 However, better decisions can result from the analyses of multiple data sources simultaneously.
-Multiple heterogeneous data sources, and its simultaneous usage, offer a more accurate digital reflection of the reality.
+Multiple heterogeneous data sources, and their simultaneous usage, offer a more accurate digital reflection of the reality.
 In this context, we investigate the problem of how to create an holistic conceptual model to represent multiple heterogeneous spatio-temporal data and how to develop a streaming computational model to enable reactive decisions.
 The main outcomes of this research are \frappe{} conceptual model and \river{} streaming computational model with its implementations.
 
 \frappe{} is a conceptual model, more precisely an ontology, that exploits digital image processing terms to model spatio-temporal data and to enable space, time, and content analysis.
-It uses image processing common terms to bridge the gap between the data engineer perspective and visual data analysis perspective and to enable visual analytics on spatio-temporal data.
-During my PhD, we first formalize the spatial and temporal concepts in \frappe{} 1.0, and then we add concepts related to the provenance and the content in \frappe{} 2.0.
+It uses image processing common terms to bridge the gap between the data engineer perspective and visual data analysis perspective.
+It does so to enable visual analytics on spatio-temporal data.
+During my PhD, we first formalize the spatial and temporal concepts in \frappe{} 1.0, and, then, we add concepts related to the provenance and the content in \frappe{} 2.0.
 We check the adherence of both versions of \frappe{} to the five Tom Gruber's principles, and demonstrate the validity of the conceptual model in real world use cases.
 
 \river{} is a streaming computational inspired by two principles: \textbf{(P1)} \textit{everything is a data stream} -- a variety-proof stream processing engine must indifferently ingest data with different velocities from any sources and of any size --, and \textbf{(P2)} \textit{Continuous Ingestion} -- the data in input is continuously captured by the system and, once arrived, it is marked with an increasing timestamp.
-Most of the stream processing engine in the state of the art transforms and adapts data at ingestion time.
+Most of the stream processing engines in the state of the art transform and adapt data at ingestion time.
 Contrariwise, \river{} is built around the idea of \textit{Lazy Transformation}.
-So, a system that implements \river{} postpones data transformations until it can really benefits from them, in order to save time and resources.
-\river{} relies on two main concepts, the Generic Data Stream -- S$\langle\mathrm{T}\rangle$ -- and the Generic Time-Varying Collection -- C$\langle\mathrm{T}\rangle$ -- and it proposes five different operators in order to ingest, process and emit data.
-The IN$\langle\mathrm{T}\rangle$ operator is the door of the system, it takes an external data flow and inject the items into the system creating a new S$\langle\mathrm{T}\rangle$.
-The S2C$\langle\mathrm{T}\rangle$, C2C$\langle\mathrm{T},\mathrm{T^{\prime}}\rangle$ and C2S$\langle\mathrm{T}\rangle$ in \river{}, inspired to the CQL processing model, allows to move from S$\langle\mathrm{T}\rangle$ to C$\langle\mathrm{T}\rangle$ and vice-versa.
+So, a system that implements \river{} postpones data transformations until it can really benefits from them.
+Our hypothesis is that \textit{Lazy Transformation} saves time and resources.
+\river{} relies on two main concepts: the Generic Data Stream (S$\langle\mathrm{T}\rangle$) and the Generic Time-Varying Collection (C$\langle\mathrm{T}\rangle$) and it proposes five different operators in order to ingest, process and emit data.
+The IN$\langle\mathrm{T}\rangle$ operator is the entry point of the system, it takes an external data flow and injects the items into the system creating a new S$\langle\mathrm{T}\rangle$.
+The S2C$\langle\mathrm{T}\rangle$, C2C$\langle\mathrm{T},\mathrm{T^{\prime}}\rangle$ and C2S$\langle\mathrm{T}\rangle$ operators in \river{}, inspired to the CQL processing model, allows to move from S$\langle\mathrm{T}\rangle$ to C$\langle\mathrm{T}\rangle$ and vice-versa.
 The OUT$\langle\mathrm{T}\rangle$ operator transform an S$\langle\mathrm{T}\rangle$ into a new external data flow.
-Exploiting the Pipeline Definition Language (PDL) -- a graphical language to abstract the operators' implementation complexity --, \river{} allows users to define computational plans, in the form of pipelines.
+Exploiting the Pipeline Definition Language (PDL) -- our graphical language to abstract the operators' implementation complexity --, \river{} allows users to define computational plans, in the form of pipelines.
 
-In this thesis, we propose different implementations of \river{}: \sti{} -- a single-threaded vertically scalable implementation --, \sparkdi{} and \hivedi{} -- two horizontally scalable implementations based on distributed technologies (Spark and Hive).
-In order to prove the validity of the \textit{Lazy Transformation} approach, we first evaluate \sti{} against our Streaming Linked Data (SLD) engine that performs the data transformation at ingestion time. The result of this evaluation shows that \sti{} is cheaper -- it consumes less resources in terms of memory and CPU load -- and better approximates the correct answer under stress conditions.
+In this thesis, we propose three different implementations of \river{}: \sti{} -- a single-threaded vertically scalable implementation --, \sparkdi{} and \hivedi{} -- two horizontally scalable implementations based on distributed technologies (Spark and Hive).
+In order to prove the validity of the \textit{Lazy Transformation} approach, we first evaluate \sti{} against our Streaming Linked Data engine that performs the data transformation at ingestion time. The result of this evaluation shows that \sti{} is cheaper -- it consumes less resources in terms of memory and CPU load -- and better approximates the correct answer under stress conditions.
 Moreover, we evaluate the cost effectiveness of \sti{} against \sparkdi{} to prove that a distributed solution does not pay in all the situations.
-The results of those evaluations demonstrate the validity of the concepts that underpin \river{} streaming computational model.
+Indeed, in a mobile telco analysis, we observe that \sti{} is more cost-effective than \sparkdi{} up to the scale of a nation.
+The results of those evaluations demonstrate the validity of the \textit{Lazy Transformation} approach and confirm, in the stream processing engine field, that the a distributed solution does not pay at all scale.
 
 In order to prove the feasibility and the effectiveness of \frappe{} and \river{} in enabling reactive decision-making processes on heterogeneous streaming spatio-temporal data, we present five real world use cases in Milan and Como.
-Moreover, during those case studies, we propose the data visualizations to different audiences (public users and stakeholders) in order to prove the guessability of such visual interfaces.
+Moreover, during those case studies, we propose the data visualizations to different audiences (public users and stakeholders) in order to prove the guessability of our visual analytics interfaces.
 
 Finally, we reflect on limitations and state the future directions of this research work.
-In particular, those reflections involve the reasoning capabilities enabled by \frappe{}, the future evaluations of \river{} and the evolution of the Pipeline Definition Language (PDL).
+In particular, those reflections involve the reasoning capabilities enabled by \frappe{}, the future evaluations of \river{} aginst longer and more complex use cases and the evolution out the Pipeline Definition Language (PDL).
 
 
 
