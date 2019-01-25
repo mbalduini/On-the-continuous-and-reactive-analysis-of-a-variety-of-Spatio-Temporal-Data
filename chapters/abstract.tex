@@ -22,7 +22,7 @@ So, a system that implements \river{} postpones data transformations until it ca
 Our hypothesis is that \textit{Lazy Transformation} saves time and resources.
 \river{} relies on two main concepts: the Generic Data Stream (S$\langle\mathrm{T}\rangle$) and the Generic Time-Varying Collection (C$\langle\mathrm{T}\rangle$) and it proposes five different operators in order to ingest, process and emit data.
 The IN$\langle\mathrm{T}\rangle$ operator is the entry point of the system, it takes an external data flow and injects the items into the system creating a new S$\langle\mathrm{T}\rangle$.
-The S2C$\langle\mathrm{T}\rangle$, C2C$\langle\mathrm{T},\mathrm{T^{\prime}}\rangle$ and C2S$\langle\mathrm{T}\rangle$ operators in \river{}, inspired to the CQL processing model, allows to move from S$\langle\mathrm{T}\rangle$ to C$\langle\mathrm{T}\rangle$ and vice-versa.
+The S2C$\langle\mathrm{T}\rangle$, C2C$\langle\mathrm{T},\mathrm{T^{\prime}}\rangle$ and C2S$\langle\mathrm{T}\rangle$ operators in \river{}, inspired to the Continuous Query Language(CQL, the work on streaming data proposed by the Stanford DB Group) processing model, allows to move from S$\langle\mathrm{T}\rangle$ to C$\langle\mathrm{T}\rangle$ and vice-versa.
 The OUT$\langle\mathrm{T}\rangle$ operator transform an S$\langle\mathrm{T}\rangle$ into a new external data flow.
 Exploiting the Pipeline Definition Language (PDL) -- our graphical language to abstract the operators' implementation complexity --, \river{} allows users to define computational plans, in the form of pipelines.
 
@@ -36,7 +36,7 @@ In order to prove the feasibility and the effectiveness of \frappe{} and \river{
 Moreover, during those case studies, we propose the data visualizations to different audiences (public users and stakeholders) in order to prove the guessability of our visual analytics interfaces.
 
 Finally, we reflect on limitations and state the future directions of this research work.
-In particular, those reflections involve the reasoning capabilities enabled by \frappe{}, the future evaluations of \river{} aginst longer and more complex use cases and the evolution out the Pipeline Definition Language (PDL).
+In particular, those reflections involve the reasoning capabilities enabled by \frappe{}, the future evaluations of \river{} against longer and more complex use cases and the evolution out the Pipeline Definition Language (PDL).
 
 
 

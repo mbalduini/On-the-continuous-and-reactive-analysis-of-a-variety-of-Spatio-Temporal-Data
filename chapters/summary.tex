@@ -1,2 +1,41 @@
-\chapter*{Summary}
-\lettrine{S}{ummary} goes here.
+\chapter*{Sommario}
+Negli ultimi anni, in un numero sempre crescente di situazioni, \'e nata la necessit\'a di prendere decisioni in modo reattivo basandosi su flussi di dati continui ed eterogenei.
+In questo contesto, l'ambiente urbano risulta particolarmente rilevante grazie alla presenza di una fitta rete di interazioni tra le persone e lo spazio cittadino.
+Questa rete produce un'enorme quantit\'a di dati spazio-temporali che si evolvono velocemente nel tempo.
+Inoltre, in ambito cittadino convivono una moltitudine di stakeholder interessati allo sviluppo di un processo decisionale reattivo per la pianificazione urbana, la gestione della mobilit\'a, il turismo, ecc.
+
+L'uso sempre pi\'u ampio della geo-localizzazione nei social network e, pi\'u in generale, la diffusione di dispositivi di comunicazione mobili, ha migliorato la capacit\'a di creare un'accurata rappresentazione della realt\'a in tempo reale, in inglese spesso denominata Digital footprint o Digital reflection o Digital twin.
+Cinque anni fa, lo stato dell'arte sfruttava solo una singola fonte di dati, ad esempio, i social media o i dati telefonici.
+Tuttavia, un uso simultaneo di pi\'u fonti dati eterogenee, aiuta a creare una pi\'u accurata rappresentazione digitale della realt\'a.
+
+In questo contesto, abbiamo affrontato il problema della creazione di un modello concettuale olistico per rappresentare dati spazio-temporali eterogenei e il problema dello sviluppo di un modello computazionale per flussi di dati continui.
+I principali risultati di questa ricerca sono un modello concettuale chiamato \frappe{} e un modello computazionale denominato \river{} con le sue implementazioni.
+
+\sloppy
+\frappe{} \'e un modello concettutale, pi\'u precisamente un'ontologia, che sfrutta termini dell'elaborazione delle immagini (in inglese, Image Processing) per modellare dati spazio-temporali e abilitare analisi nell'ambito spaziale, temporale e di contenuto.
+\frappe{} sfrutta termini comuni nell'ambito dell'image processing per colmare il divario tra la prospettiva del data engineer e quella dell'analista.
+L'annullamento di questo divario permette di abilitare analisi visuale su dati spazio-temporali.
+Durante questo percorso di dottorato, abbiamo per prima cosa formalizzato in \frappe{} 1.0 i concetti spaziali e temporali, abbiamo poi aggiunto i frammenti relativi alla provenienza del dato (Data Provenance in inglese) del dato e al suo contenuto in \frappe{} 2.0.
+Abbiamo controllato che entrambe le versioni di \frappe{} rispettassero i cinque principi di Tom Gruber, e abbiamo dimostrato la validit\'a del modello concettuale attraverso casi d'uso reali.
+
+\river{} \'e un modello computazionale per flussi di dati continui ed \'e basato su due principi: \textbf{(P1)} \textit{tutti i dati possono essere modellati come flussi continui} -- un motore per l'analisi di flussi di dati deve essere in grado di accettare in ingresso flussi di dati con differenti velocit\'a, di qualsiasi dimensione e provenienti da qualsiasi fonte --, e \textbf{(P2)} \textit{\textcolor{Ingestion Continua} -- il sistema deve catturare continuamente i dati che, una volta arrivati, vengono marcati con un timestamp crescente.
+Al contrario della maggior parte dei motori per l'analisi di flussi, che trasforma e adatta il dato non appena questo entra nel sistema, \river{} \'e costruito intorno all'idea della \textit{Lazy Transformation}.
+Un sistema che implementa \river{}, ritarda la trasformazione del dato in ingresso fino a quando il sistema puó beneficiare di tale trasformazione.
+Abbiamo formulato l'ipotesi secondo cui la \textit{Lazy Transformation} permette di risparmiare tempo e risorse durante la computazione.
+\river{} si basa principalmente su due concetti: il Generic Data Stream (S$\langle\mathrm{T}\rangle$) e la Generic Time-Varying Collection (C$\langle\mathrm{T}\rangle$) e propone cinque operatori per l'ingestion, l'eleaborazione e l'emissione di flussi di dati.
+L'operatore IN$\langle\mathrm{T}\rangle$ rappresenta la porta d'ingresso del sistema, prende un flusso di dati esterno e crea un nuovo S$\langle\mathrm{T}\rangle$.
+Gli operatori S2C$\langle\mathrm{T}\rangle$, C2C$\langle\mathrm{T},\mathrm{T^{\prime}}\rangle$ e C2S$\langle\mathrm{T}\rangle$ sono ispirati al Continuous Query Language(CQL, il lavoro seminale dell'Università di Standford sull'elaborazione di flussi continui di dati) e permettono la trasformazione da S$\langle\mathrm{T}\rangle$ a C$\langle\mathrm{T}\rangle$ e vice-versa.
+L'operatore OUT$\langle\mathrm{T}\rangle$ trasforma un S$\langle\mathrm{T}\rangle$ in un nuovo flusso di dati esterno.
+Sfruttando il Pipeline Definition Language (PDL) -- il nostro linguaggio visuale che astrae la complessit\'a implementativa degli operatori --, \river{} abilita l'utente a definire piani computazionali sotto forma di pipeline di operatori. 
+
+\sloppy
+In questa tesi, proponiamo tre implementazioni di \river{}: \sti{} -- un'implementazione single-threaded scalabile verticalmente --, \sparkdi{} e \hivedi{} -- due implementazioni a scalabilit\'a orizzontale basate su framework distribuiti (Spark e Hive).
+Con l'intento di provare la validit\'a dell'approccio basato sulla \textit{Lazy Transformation}, abbiamo valutato \sti{} rispetto al nostro motore Streaming Linked Data che trasforma il dato non appena questo entra nel sistema. Il risultato di questa valutazione dimostra che \sti{} consuma meno risorse, in termini di processore e memoria, e approssima meglio la risposta corretta in condizioni di stress.
+Per determinare l'efficacia di \sti{} sotto l'aspetto dei costi, l'abbiamo valutato rispetto a \sparkdi{}, in modo da provare che una soluzione distribuita non \'e la migliore in tutte le condizioni.
+Analizzando dati telefonici a diversa scala (cittadina, regionale, nazionale ed estrema), abbiamo osservato che \sti{} risulta pi\'u efficace, sotto l'aspetto dei costi, rispetto a \sparkdi{} per dati fino alla scala nazionale.
+I risultati di questa valutazioni dimostrano la validit\'a dell'approccio basato sulla \textit{Lazy Transformation} e confermano che, nell'ambito dei motori di analisi di flussi di dati, la soluzione distribuita non \'e sempre la migliore.
+
+Per dimostrare la capacit\'a di \frappe{} e \river{} di abilitare un processo decisionale reattivo basato su flussi di dati spazio-temporali eterogenei, abbiamo presentato cinque casi d'uso reali portati avanti nelle citt\'a di Milano e Como. Durante questi casi di studio, abbiamo presentato le visualizzazioni a platee diverse (partecipanti ad eventi e stackeholder cittadini) per dimostrare la validit\'a delle nostre interfacce visuali.
+
+Infine, abbiamo riflettuto sulle limitazioni delle soluzioni proposte e preso decisioni riguardo la direzione futura di questo lavoro di ricerca.
+In particolare, le nostre riflessioni hanno riguardato le capacit\'a di di ragionamento automatico abilitate da \frappe{}, le future valutazioni di \river{} basate su casi d'uso pi\'u piú lunghi e complessi, e l’evoluzione del Pipeline Definition Language (PDL).
