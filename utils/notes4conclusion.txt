@@ -82,15 +82,15 @@ FW:
 \textbf{EDV Pointers}
 
 Per FW2 in C1
-https://dblp.org/rec/bibtex/conf/esws/EiterPS17 -> approccio per query rewriting nell'abito traffico, basato sull'utilizzo di un modello DL-lite
-https://dblp.org/rec/bibtex/journals/itsr/EiterKPRSS16 -> due casi d'uso nell'ambito dell'automatic routing (neighborhood routing per esplorare il vicinato e via routing su strada)
-https://dblp.org/rec/bibtex/conf/ijcai/KontchakovPPRZ16 -> caso d'uso nell'ambito della spatial analysis, nuovo linguaggio di query basato su datalog (buono anche per FW4 in C1)
+https://dblp.org/rec/bibtex/conf/esws/EiterPS17 - DBLP:conf/esws/EiterPS17 -> approccio per query rewriting nell'abito traffico, basato sull'utilizzo di un modello DL-lite
+https://dblp.org/rec/bibtex/journals/itsr/EiterKPRSS16 - DBLP:journals/itsr/EiterKPRSS16 -> due casi d'uso nell'ambito dell'automatic routing (neighborhood routing per esplorare il vicinato e via routing su strada)
+https://dblp.org/rec/bibtex/conf/ijcai/KontchakovPPRZ16 - DBLP:conf/ijcai/KontchakovPPRZ16 -> caso d'uso nell'ambito della spatial analysis, nuovo linguaggio di query basato su datalog (buono anche per FW4 in C1)
 
 Per FW3 in C1
-https://dblp.org/rec/bibtex/conf/ijcai/MehdiBRR16 -> approccio per ontologia e data analysis (vedi anche related work per estrarre qualcos'altro)
-https://dblp.org/rec/bibtex/journals/ws/KharlamovMMNORS17 -> caso d'uso di esplorazione della problematica
+https://dblp.org/rec/bibtex/conf/ijcai/MehdiBRR16 - DBLP:conf/ijcai/MehdiBRR16 -> approccio per ontologia e data analysis (vedi anche related work per estrarre qualcos'altro)
+https://dblp.org/rec/bibtex/journals/ws/KharlamovMMNORS17 - DBLP:journals/ws/KharlamovMMNORS17 -> caso d'uso di esplorazione della problematica
 
 Per FW4 in C1
-https://dblp.org/rec/bibtex/conf/dlog/BienvenuKKPZ16 -> metodologia
-https://dblp.org/rec/bibtex/conf/time/ArtaleKKRWZ17 -> il tema è caldo e lo si vede da questa survey
-https://dblp.org/rec/bibtex/conf/aaai/BrandtKKRXZ17 -> metodologia
+https://dblp.org/rec/bibtex/conf/dlog/BienvenuKKPZ16 - DBLP:conf/dlog/BienvenuKKPZ16 -> metodologia
+https://dblp.org/rec/bibtex/conf/time/ArtaleKKRWZ17 - DBLP:conf/time/ArtaleKKRWZ17 -> il tema è caldo e lo si vede da questa survey
+https://dblp.org/rec/bibtex/conf/aaai/BrandtKKRXZ17 - DBLP:conf/aaai/BrandtKKRXZ17 -> metodologia
